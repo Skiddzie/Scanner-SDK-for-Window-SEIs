@@ -15,6 +15,38 @@ namespace Scanner_SDK_Sample_Application
 {
     public partial class frmScannerApp
     {
+        public String filePath;
+        public void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("hello");
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Title = "Save File";
+                saveFileDialog.Filter = "Text Files|*.txt|All Files|*.*"; // Add more file types if needed
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = saveFileDialog.FileName; // Assign the selected file path to the class-level variable
+                }
+            }
+        }
+
+        private void WriteStringToFile(string filePath, string content)
+        {
+            try
+            {
+                // Append the string content to the specified file path
+                File.AppendAllText(filePath, content + ",");
+
+                // Optionally, you can log a message indicating that the file has been written successfully
+                System.Diagnostics.Debug.WriteLine("String successfully appended to file: " + filePath);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur during file writing
+                System.Diagnostics.Debug.WriteLine("Error appending string to file: " + ex.Message);
+            }
+        }
         /// <summary>
         /// Flush Macro PDF
         /// </summary>
@@ -329,6 +361,7 @@ namespace Scanner_SDK_Sample_Application
                     txtSyblogy.Text = GetSymbology((int)Convert.ToInt32(symbology));
                 }));
             }
+            WriteStringToFile(filePath, strData);
         }
 
 

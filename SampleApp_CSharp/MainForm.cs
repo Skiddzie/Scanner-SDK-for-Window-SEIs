@@ -2399,5 +2399,6 @@ namespace Scanner_SDK_Sample_Application
             ExecCmd(opcode, ref inXML, out outXml, out status);
             DisplayResult(status, "ERASE_ELECTRIC_FENCE_CUSTOM_TONE");
         }
+
     } 
 }

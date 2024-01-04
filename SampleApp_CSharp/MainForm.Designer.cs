@@ -40,6 +40,7 @@ namespace Scanner_SDK_Sample_Application
             this.tabCtrl = new System.Windows.Forms.TabControl();
             this.tabBarcode = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnScriptEditor = new System.Windows.Forms.Button();
             this.btnBrowseScript = new System.Windows.Forms.Button();
             this.chkBoxAppADF = new System.Windows.Forms.CheckBox();
@@ -354,6 +355,7 @@ namespace Scanner_SDK_Sample_Application
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnScriptEditor);
             this.groupBox1.Controls.Add(this.btnBrowseScript);
             this.groupBox1.Controls.Add(this.chkBoxAppADF);
@@ -364,9 +366,19 @@ namespace Scanner_SDK_Sample_Application
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Application ADF";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "File Path...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnScriptEditor
             // 
-            this.btnScriptEditor.Location = new System.Drawing.Point(283, 16);
+            this.btnScriptEditor.Location = new System.Drawing.Point(205, 16);
             this.btnScriptEditor.Name = "btnScriptEditor";
             this.btnScriptEditor.Size = new System.Drawing.Size(103, 23);
             this.btnScriptEditor.TabIndex = 2;
@@ -376,7 +388,7 @@ namespace Scanner_SDK_Sample_Application
             // 
             // btnBrowseScript
             // 
-            this.btnBrowseScript.Location = new System.Drawing.Point(163, 16);
+            this.btnBrowseScript.Location = new System.Drawing.Point(96, 16);
             this.btnBrowseScript.Name = "btnBrowseScript";
             this.btnBrowseScript.Size = new System.Drawing.Size(103, 23);
             this.btnBrowseScript.TabIndex = 1;
@@ -437,7 +449,7 @@ namespace Scanner_SDK_Sample_Application
             // txtBarcode
             // 
             this.txtBarcode.BackColor = System.Drawing.Color.White;
-            this.txtBarcode.Location = new System.Drawing.Point(19, 15);
+            this.txtBarcode.Location = new System.Drawing.Point(19, 10);
             this.txtBarcode.Multiline = true;
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.ReadOnly = true;
@@ -3051,6 +3063,7 @@ namespace Scanner_SDK_Sample_Application
         private System.Windows.Forms.TextBox textBoxElectricFenceWaveFile;
         private System.Windows.Forms.Button buttonElectricFenceWavFileBrowse;
         private System.Windows.Forms.GroupBox grpElectricFenceCustomTone;
+        private System.Windows.Forms.Button button1;
     }
 }
 
