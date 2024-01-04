@@ -32,10 +32,10 @@ namespace Scanner_SDK_Sample_Application
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScannerApp));
             this.grpTrigger = new System.Windows.Forms.GroupBox();
             this.btnReleaseTrigger = new System.Windows.Forms.Button();
@@ -56,6 +56,8 @@ namespace Scanner_SDK_Sample_Application
             this.btnGetScanners = new System.Windows.Forms.Button();
             this.openFileDialogFW = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtNewEpcId = new System.Windows.Forms.TextBox();
+            this.chkAutoIncrement = new System.Windows.Forms.CheckBox();
             this.openFileDialogAttr = new System.Windows.Forms.OpenFileDialog();
             this.stStripResult = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLbl = new System.Windows.Forms.ToolStripStatusLabel();
@@ -71,228 +73,202 @@ namespace Scanner_SDK_Sample_Application
             this.openFileDialogDADF = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialogBarcodePath = new System.Windows.Forms.FolderBrowserDialog();
             this.tabXml = new System.Windows.Forms.TabPage();
-            this.grpOutXml = new System.Windows.Forms.GroupBox();
-            this.txtOutXml = new System.Windows.Forms.TextBox();
+            this.btnClearXmlArea = new System.Windows.Forms.Button();
+            this.btnClearLogsArea = new System.Windows.Forms.Button();
             this.grpResult = new System.Windows.Forms.GroupBox();
             this.txtResults = new System.Windows.Forms.TextBox();
-            this.btnClearLogsArea = new System.Windows.Forms.Button();
-            this.btnClearXmlArea = new System.Windows.Forms.Button();
+            this.grpOutXml = new System.Windows.Forms.GroupBox();
+            this.txtOutXml = new System.Windows.Forms.TextBox();
             this.tabSSW = new System.Windows.Forms.TabPage();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtUpcaBarcode = new System.Windows.Forms.TextBox();
-            this.lblUserBank = new System.Windows.Forms.Label();
-            this.txtNewEpcId = new System.Windows.Forms.TextBox();
-            this.txtUserBank = new System.Windows.Forms.TextBox();
-            this.txtSerialNumber = new System.Windows.Forms.TextBox();
-            this.chkAutoIncrement = new System.Windows.Forms.CheckBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.statusIcon = new System.Windows.Forms.PictureBox();
-            this.cmbFilterValue = new System.Windows.Forms.ComboBox();
-            this.cmbPartition = new System.Windows.Forms.ComboBox();
-            this.btnWriteTag = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnVerifyTag = new System.Windows.Forms.Button();
-            this.rdoASCII = new System.Windows.Forms.RadioButton();
-            this.rdoHex = new System.Windows.Forms.RadioButton();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtEpcId = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.txtEpcId = new System.Windows.Forms.TextBox();
+            this.txtSerialNumber = new System.Windows.Forms.TextBox();
+            this.txtUserBank = new System.Windows.Forms.TextBox();
+            this.txtUpcaBarcode = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.rdoHex = new System.Windows.Forms.RadioButton();
+            this.rdoASCII = new System.Windows.Forms.RadioButton();
+            this.btnVerifyTag = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnWriteTag = new System.Windows.Forms.Button();
+            this.cmbPartition = new System.Windows.Forms.ComboBox();
+            this.cmbFilterValue = new System.Windows.Forms.ComboBox();
+            this.statusIcon = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblUserBank = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabScale = new System.Windows.Forms.TabPage();
             this.grpScale = new System.Windows.Forms.GroupBox();
-            this.btnReadWeight = new System.Windows.Forms.Button();
-            this.btnZeroScale = new System.Windows.Forms.Button();
-            this.btnSystemRest = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtWeight = new System.Windows.Forms.TextBox();
-            this.txtWeightUnit = new System.Windows.Forms.TextBox();
             this.lblScalStatusDesc = new System.Windows.Forms.Label();
+            this.txtWeightUnit = new System.Windows.Forms.TextBox();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSystemRest = new System.Windows.Forms.Button();
+            this.btnZeroScale = new System.Windows.Forms.Button();
+            this.btnReadWeight = new System.Windows.Forms.Button();
             this.tabMisc = new System.Windows.Forms.TabPage();
             this.grpMiscOther = new System.Windows.Forms.GroupBox();
+            this.grpSCdcSwitch = new System.Windows.Forms.GroupBox();
+            this.btnSCdcSwitchDevices = new System.Windows.Forms.Button();
+            this.chkSCdcSIsPermanent = new System.Windows.Forms.CheckBox();
+            this.chkSCdcSIsSilent = new System.Windows.Forms.CheckBox();
+            this.comboSCdcSHostMode = new System.Windows.Forms.ComboBox();
+            this.lblSCdcSHostMode = new System.Windows.Forms.Label();
+            this.grpMiscCmd = new System.Windows.Forms.GroupBox();
+            this.btnGetDevTopology = new System.Windows.Forms.Button();
+            this.btnSdkVersion = new System.Windows.Forms.Button();
             this.grpAsync = new System.Windows.Forms.GroupBox();
             this.chkAsync = new System.Windows.Forms.CheckBox();
-            this.grpMiscCmd = new System.Windows.Forms.GroupBox();
-            this.btnSdkVersion = new System.Windows.Forms.Button();
-            this.btnGetDevTopology = new System.Windows.Forms.Button();
-            this.grpSCdcSwitch = new System.Windows.Forms.GroupBox();
-            this.lblSCdcSHostMode = new System.Windows.Forms.Label();
-            this.comboSCdcSHostMode = new System.Windows.Forms.ComboBox();
-            this.chkSCdcSIsSilent = new System.Windows.Forms.CheckBox();
-            this.chkSCdcSIsPermanent = new System.Windows.Forms.CheckBox();
-            this.btnSCdcSwitchDevices = new System.Windows.Forms.Button();
             this.tabScan2Connect = new System.Windows.Forms.TabPage();
             this.grpScan2Connect = new System.Windows.Forms.GroupBox();
-            this.cmbProtocol = new System.Windows.Forms.ComboBox();
-            this.cmbDefaultOption = new System.Windows.Forms.ComboBox();
-            this.cmbImageSize = new System.Windows.Forms.ComboBox();
-            this.picBBarcode = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cmbScannerType = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbHostName = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnSaveBarcode = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbHostName = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbScannerType = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.picBBarcode = new System.Windows.Forms.PictureBox();
+            this.cmbImageSize = new System.Windows.Forms.ComboBox();
+            this.cmbDefaultOption = new System.Windows.Forms.ComboBox();
+            this.cmbProtocol = new System.Windows.Forms.ComboBox();
             this.tabConfig = new System.Windows.Forms.TabPage();
-            this.grpElectricFenceCustomTone = new System.Windows.Forms.GroupBox();
-            this.buttonElectricFenceWavFileBrowse = new System.Windows.Forms.Button();
-            this.textBoxElectricFenceWaveFile = new System.Windows.Forms.TextBox();
-            this.buttonElectricFenceWavFileUpload = new System.Windows.Forms.Button();
-            this.btnElectricFenceEraseTone = new System.Windows.Forms.Button();
-            this.grpScannerProp = new System.Windows.Forms.GroupBox();
-            this.chkClaim = new System.Windows.Forms.CheckBox();
-            this.grpFrmWrUpdate = new System.Windows.Forms.GroupBox();
-            this.txtFWFile = new System.Windows.Forms.TextBox();
-            this.buttonFWBrowse = new System.Windows.Forms.Button();
-            this.progressBarFWUpdate = new System.Windows.Forms.ProgressBar();
-            this.grpFWoptns = new System.Windows.Forms.GroupBox();
-            this.btnLaunchNewFW = new System.Windows.Forms.Button();
-            this.btnFWUpdate = new System.Windows.Forms.Button();
-            this.btnAbortFWUpdate = new System.Windows.Forms.Button();
-            this.chkBulk = new System.Windows.Forms.CheckBox();
+            this.grpCustomDecodeTone = new System.Windows.Forms.GroupBox();
+            this.btnEraseTone = new System.Windows.Forms.Button();
+            this.buttonWavFileUpload = new System.Windows.Forms.Button();
+            this.textBoxWavFile = new System.Windows.Forms.TextBox();
+            this.buttonWavFileBrowse = new System.Windows.Forms.Button();
             this.filterScnrs = new System.Windows.Forms.GroupBox();
             this.comboFilterScnrs = new System.Windows.Forms.ComboBox();
-            this.grpCustomDecodeTone = new System.Windows.Forms.GroupBox();
-            this.buttonWavFileBrowse = new System.Windows.Forms.Button();
-            this.textBoxWavFile = new System.Windows.Forms.TextBox();
-            this.buttonWavFileUpload = new System.Windows.Forms.Button();
-            this.btnEraseTone = new System.Windows.Forms.Button();
+            this.grpFrmWrUpdate = new System.Windows.Forms.GroupBox();
+            this.grpFWoptns = new System.Windows.Forms.GroupBox();
+            this.chkBulk = new System.Windows.Forms.CheckBox();
+            this.btnAbortFWUpdate = new System.Windows.Forms.Button();
+            this.btnFWUpdate = new System.Windows.Forms.Button();
+            this.btnLaunchNewFW = new System.Windows.Forms.Button();
+            this.progressBarFWUpdate = new System.Windows.Forms.ProgressBar();
+            this.buttonFWBrowse = new System.Windows.Forms.Button();
+            this.txtFWFile = new System.Windows.Forms.TextBox();
+            this.grpScannerProp = new System.Windows.Forms.GroupBox();
+            this.chkClaim = new System.Windows.Forms.CheckBox();
+            this.grpElectricFenceCustomTone = new System.Windows.Forms.GroupBox();
+            this.btnElectricFenceEraseTone = new System.Windows.Forms.Button();
+            this.buttonElectricFenceWavFileUpload = new System.Windows.Forms.Button();
+            this.textBoxElectricFenceWaveFile = new System.Windows.Forms.TextBox();
+            this.buttonElectricFenceWavFileBrowse = new System.Windows.Forms.Button();
             this.tabRsm = new System.Windows.Forms.TabPage();
             this.grpRSM = new System.Windows.Forms.GroupBox();
-            this.dgvAttributes = new System.Windows.Forms.DataGridView();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.property = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attrType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attrNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpBoxSetRset = new System.Windows.Forms.GroupBox();
-            this.btnStore = new System.Windows.Forms.Button();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnGetNext = new System.Windows.Forms.Button();
-            this.btnGet = new System.Windows.Forms.Button();
-            this.btnGetAll = new System.Windows.Forms.Button();
             this.grpBoxClrSlect = new System.Windows.Forms.GroupBox();
-            this.btnSelectAll = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnSelectAll = new System.Windows.Forms.Button();
+            this.grpBoxSetRset = new System.Windows.Forms.GroupBox();
+            this.btnGetAll = new System.Windows.Forms.Button();
+            this.btnGet = new System.Windows.Forms.Button();
+            this.btnGetNext = new System.Windows.Forms.Button();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnStore = new System.Windows.Forms.Button();
+            this.dgvAttributes = new System.Windows.Forms.DataGridView();
+            this.attrNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attrType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.property = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabScnAction = new System.Windows.Forms.TabPage();
             this.grpScnActions = new System.Windows.Forms.GroupBox();
-            this.grpAim = new System.Windows.Forms.GroupBox();
-            this.btnAimOff = new System.Windows.Forms.Button();
-            this.btnAimOn = new System.Windows.Forms.Button();
-            this.grpLed = new System.Windows.Forms.GroupBox();
-            this.btnLedOn = new System.Windows.Forms.Button();
-            this.btnLedOff = new System.Windows.Forms.Button();
-            this.cmbLed = new System.Windows.Forms.ComboBox();
-            this.grpBeeper = new System.Windows.Forms.GroupBox();
-            this.btnSoundBeeper = new System.Windows.Forms.Button();
-            this.comboBeep = new System.Windows.Forms.ComboBox();
-            this.grpEnbDisScanner = new System.Windows.Forms.GroupBox();
-            this.btnScannerEnable = new System.Windows.Forms.Button();
-            this.btnScannerDisable = new System.Windows.Forms.Button();
-            this.grpReboot = new System.Windows.Forms.GroupBox();
-            this.btnRebootScanner = new System.Windows.Forms.Button();
-            this.grpHVS = new System.Windows.Forms.GroupBox();
-            this.btnSwitchHostMode = new System.Windows.Forms.Button();
-            this.chkShmSilentSwitch = new System.Windows.Forms.CheckBox();
-            this.chkShmPermChange = new System.Windows.Forms.CheckBox();
-            this.cmbMode = new System.Windows.Forms.ComboBox();
+            this.grpPagerMotor = new System.Windows.Forms.GroupBox();
+            this.lblPagerMotorTimeout = new System.Windows.Forms.Label();
+            this.txtPagerMotorDuration = new System.Windows.Forms.TextBox();
+            this.btnEnablePagerMotor = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnDisconnect = new System.Windows.Forms.Button();
-            this.grpPagerMotor = new System.Windows.Forms.GroupBox();
-            this.btnEnablePagerMotor = new System.Windows.Forms.Button();
-            this.txtPagerMotorDuration = new System.Windows.Forms.TextBox();
-            this.lblPagerMotorTimeout = new System.Windows.Forms.Label();
-            this.tabISO15434 = new System.Windows.Forms.TabPage();
-            this.grpIDC = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDocCapDecodeData = new System.Windows.Forms.TextBox();
-            this.txtDocCapDecodeDataSymbol = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmbSnapiParams = new System.Windows.Forms.ComboBox();
-            this.btnSnapiGet = new System.Windows.Forms.Button();
-            this.btnSnapiSet = new System.Windows.Forms.Button();
-            this.cmbSnapiParamValue = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnSnapiStore = new System.Windows.Forms.Button();
-            this.checkUseHID = new System.Windows.Forms.CheckBox();
-            this.btnClearpbx = new System.Windows.Forms.Button();
-            this.pbxISO15434Image = new System.Windows.Forms.PictureBox();
-            this.btnSaveIdc = new System.Windows.Forms.Button();
+            this.grpHVS = new System.Windows.Forms.GroupBox();
+            this.cmbMode = new System.Windows.Forms.ComboBox();
+            this.chkShmPermChange = new System.Windows.Forms.CheckBox();
+            this.chkShmSilentSwitch = new System.Windows.Forms.CheckBox();
+            this.btnSwitchHostMode = new System.Windows.Forms.Button();
+            this.grpReboot = new System.Windows.Forms.GroupBox();
+            this.btnRebootScanner = new System.Windows.Forms.Button();
+            this.grpEnbDisScanner = new System.Windows.Forms.GroupBox();
+            this.btnScannerDisable = new System.Windows.Forms.Button();
+            this.btnScannerEnable = new System.Windows.Forms.Button();
+            this.grpBeeper = new System.Windows.Forms.GroupBox();
+            this.comboBeep = new System.Windows.Forms.ComboBox();
+            this.btnSoundBeeper = new System.Windows.Forms.Button();
+            this.grpLed = new System.Windows.Forms.GroupBox();
+            this.cmbLed = new System.Windows.Forms.ComboBox();
+            this.btnLedOff = new System.Windows.Forms.Button();
+            this.btnLedOn = new System.Windows.Forms.Button();
+            this.grpAim = new System.Windows.Forms.GroupBox();
+            this.btnAimOn = new System.Windows.Forms.Button();
+            this.btnAimOff = new System.Windows.Forms.Button();
             this.tabBarcode = new System.Windows.Forms.TabPage();
-            this.grpboxBarcodeLbl = new System.Windows.Forms.GroupBox();
-            this.btnFlushMacroPdf = new System.Windows.Forms.Button();
-            this.btnBarcodeClear = new System.Windows.Forms.Button();
-            this.btnAbortMacroPdf = new System.Windows.Forms.Button();
-            this.txtBarcodeLbl = new System.Windows.Forms.TextBox();
-            this.lblDecdBarCde = new System.Windows.Forms.Label();
-            this.txtSyblogy = new System.Windows.Forms.TextBox();
-            this.lblSyblogy = new System.Windows.Forms.Label();
-            this.txtBarcode = new System.Windows.Forms.TextBox();
-            this.grpBoxLanguage = new System.Windows.Forms.GroupBox();
-            this.cmbEmulation = new System.Windows.Forms.ComboBox();
-            this.chkBoxEmulation = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkBoxAppADF = new System.Windows.Forms.CheckBox();
-            this.btnBrowseScript = new System.Windows.Forms.Button();
-            this.btnScriptEditor = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnScriptEditor = new System.Windows.Forms.Button();
+            this.btnBrowseScript = new System.Windows.Forms.Button();
+            this.chkBoxAppADF = new System.Windows.Forms.CheckBox();
+            this.grpBoxLanguage = new System.Windows.Forms.GroupBox();
+            this.chkBoxEmulation = new System.Windows.Forms.CheckBox();
+            this.cmbEmulation = new System.Windows.Forms.ComboBox();
+            this.txtBarcode = new System.Windows.Forms.TextBox();
+            this.grpboxBarcodeLbl = new System.Windows.Forms.GroupBox();
+            this.lblSyblogy = new System.Windows.Forms.Label();
+            this.txtSyblogy = new System.Windows.Forms.TextBox();
+            this.lblDecdBarCde = new System.Windows.Forms.Label();
+            this.txtBarcodeLbl = new System.Windows.Forms.TextBox();
+            this.btnAbortMacroPdf = new System.Windows.Forms.Button();
+            this.btnBarcodeClear = new System.Windows.Forms.Button();
+            this.btnFlushMacroPdf = new System.Windows.Forms.Button();
             this.tabCtrl = new System.Windows.Forms.TabControl();
             this.grpTrigger.SuspendLayout();
             this.grpGeneral.SuspendLayout();
             this.grpScanners.SuspendLayout();
             this.stStripResult.SuspendLayout();
             this.tabXml.SuspendLayout();
-            this.grpOutXml.SuspendLayout();
             this.grpResult.SuspendLayout();
+            this.grpOutXml.SuspendLayout();
             this.tabSSW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusIcon)).BeginInit();
             this.tabScale.SuspendLayout();
             this.grpScale.SuspendLayout();
             this.tabMisc.SuspendLayout();
             this.grpMiscOther.SuspendLayout();
-            this.grpAsync.SuspendLayout();
-            this.grpMiscCmd.SuspendLayout();
             this.grpSCdcSwitch.SuspendLayout();
+            this.grpMiscCmd.SuspendLayout();
+            this.grpAsync.SuspendLayout();
             this.tabScan2Connect.SuspendLayout();
             this.grpScan2Connect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBBarcode)).BeginInit();
             this.tabConfig.SuspendLayout();
-            this.grpElectricFenceCustomTone.SuspendLayout();
-            this.grpScannerProp.SuspendLayout();
+            this.grpCustomDecodeTone.SuspendLayout();
+            this.filterScnrs.SuspendLayout();
             this.grpFrmWrUpdate.SuspendLayout();
             this.grpFWoptns.SuspendLayout();
-            this.filterScnrs.SuspendLayout();
-            this.grpCustomDecodeTone.SuspendLayout();
+            this.grpScannerProp.SuspendLayout();
+            this.grpElectricFenceCustomTone.SuspendLayout();
             this.tabRsm.SuspendLayout();
             this.grpRSM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).BeginInit();
-            this.grpBoxSetRset.SuspendLayout();
             this.grpBoxClrSlect.SuspendLayout();
+            this.grpBoxSetRset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).BeginInit();
             this.tabScnAction.SuspendLayout();
             this.grpScnActions.SuspendLayout();
-            this.grpAim.SuspendLayout();
-            this.grpLed.SuspendLayout();
-            this.grpBeeper.SuspendLayout();
-            this.grpEnbDisScanner.SuspendLayout();
-            this.grpReboot.SuspendLayout();
-            this.grpHVS.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.grpPagerMotor.SuspendLayout();
-            this.tabISO15434.SuspendLayout();
-            this.grpIDC.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxISO15434Image)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.grpHVS.SuspendLayout();
+            this.grpReboot.SuspendLayout();
+            this.grpEnbDisScanner.SuspendLayout();
+            this.grpBeeper.SuspendLayout();
+            this.grpLed.SuspendLayout();
+            this.grpAim.SuspendLayout();
             this.tabBarcode.SuspendLayout();
-            this.grpboxBarcodeLbl.SuspendLayout();
-            this.grpBoxLanguage.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.grpBoxLanguage.SuspendLayout();
+            this.grpboxBarcodeLbl.SuspendLayout();
             this.tabCtrl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -455,6 +431,30 @@ namespace Scanner_SDK_Sample_Application
             // 
             this.openFileDialogFW.Filter = "Firmware files (*.dat)|*.dat|Plugin Files (*.SCNPLG)|*.SCNPLG";
             // 
+            // txtNewEpcId
+            // 
+            this.txtNewEpcId.BackColor = System.Drawing.Color.White;
+            this.txtNewEpcId.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtNewEpcId.Location = new System.Drawing.Point(94, 80);
+            this.txtNewEpcId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNewEpcId.Name = "txtNewEpcId";
+            this.txtNewEpcId.ReadOnly = true;
+            this.txtNewEpcId.Size = new System.Drawing.Size(193, 20);
+            this.txtNewEpcId.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtNewEpcId, "SGTIN 96 encoded");
+            // 
+            // chkAutoIncrement
+            // 
+            this.chkAutoIncrement.AutoSize = true;
+            this.chkAutoIncrement.Location = new System.Drawing.Point(408, 107);
+            this.chkAutoIncrement.Margin = new System.Windows.Forms.Padding(2);
+            this.chkAutoIncrement.Name = "chkAutoIncrement";
+            this.chkAutoIncrement.Size = new System.Drawing.Size(97, 17);
+            this.chkAutoIncrement.TabIndex = 8;
+            this.chkAutoIncrement.Text = "Auto increment";
+            this.toolTip1.SetToolTip(this.chkAutoIncrement, "Increment provided serial number and write tags continuously.");
+            this.chkAutoIncrement.UseVisualStyleBackColor = true;
+            // 
             // openFileDialogAttr
             // 
             this.openFileDialogAttr.Filter = "xml files (*.xml)|*.xml";
@@ -561,27 +561,25 @@ namespace Scanner_SDK_Sample_Application
             this.tabXml.Text = "Logs";
             this.tabXml.UseVisualStyleBackColor = true;
             // 
-            // grpOutXml
+            // btnClearXmlArea
             // 
-            this.grpOutXml.BackColor = System.Drawing.SystemColors.Window;
-            this.grpOutXml.Controls.Add(this.txtOutXml);
-            this.grpOutXml.Location = new System.Drawing.Point(4, 186);
-            this.grpOutXml.Name = "grpOutXml";
-            this.grpOutXml.Size = new System.Drawing.Size(490, 244);
-            this.grpOutXml.TabIndex = 1;
-            this.grpOutXml.TabStop = false;
-            this.grpOutXml.Text = "XML Log";
+            this.btnClearXmlArea.Location = new System.Drawing.Point(306, 436);
+            this.btnClearXmlArea.Name = "btnClearXmlArea";
+            this.btnClearXmlArea.Size = new System.Drawing.Size(91, 23);
+            this.btnClearXmlArea.TabIndex = 3;
+            this.btnClearXmlArea.Text = "Clear XML Log";
+            this.btnClearXmlArea.UseVisualStyleBackColor = true;
+            this.btnClearXmlArea.Click += new System.EventHandler(this.btnClearXmlArea_Click);
             // 
-            // txtOutXml
+            // btnClearLogsArea
             // 
-            this.txtOutXml.BackColor = System.Drawing.Color.White;
-            this.txtOutXml.Location = new System.Drawing.Point(8, 16);
-            this.txtOutXml.Multiline = true;
-            this.txtOutXml.Name = "txtOutXml";
-            this.txtOutXml.ReadOnly = true;
-            this.txtOutXml.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOutXml.Size = new System.Drawing.Size(476, 219);
-            this.txtOutXml.TabIndex = 0;
+            this.btnClearLogsArea.Location = new System.Drawing.Point(124, 436);
+            this.btnClearLogsArea.Name = "btnClearLogsArea";
+            this.btnClearLogsArea.Size = new System.Drawing.Size(96, 23);
+            this.btnClearLogsArea.TabIndex = 2;
+            this.btnClearLogsArea.Text = "Clear Event Log";
+            this.btnClearLogsArea.UseVisualStyleBackColor = true;
+            this.btnClearLogsArea.Click += new System.EventHandler(this.btnClearLogsArea_Click);
             // 
             // grpResult
             // 
@@ -606,25 +604,27 @@ namespace Scanner_SDK_Sample_Application
             this.txtResults.Size = new System.Drawing.Size(476, 152);
             this.txtResults.TabIndex = 0;
             // 
-            // btnClearLogsArea
+            // grpOutXml
             // 
-            this.btnClearLogsArea.Location = new System.Drawing.Point(124, 436);
-            this.btnClearLogsArea.Name = "btnClearLogsArea";
-            this.btnClearLogsArea.Size = new System.Drawing.Size(96, 23);
-            this.btnClearLogsArea.TabIndex = 2;
-            this.btnClearLogsArea.Text = "Clear Event Log";
-            this.btnClearLogsArea.UseVisualStyleBackColor = true;
-            this.btnClearLogsArea.Click += new System.EventHandler(this.btnClearLogsArea_Click);
+            this.grpOutXml.BackColor = System.Drawing.SystemColors.Window;
+            this.grpOutXml.Controls.Add(this.txtOutXml);
+            this.grpOutXml.Location = new System.Drawing.Point(4, 186);
+            this.grpOutXml.Name = "grpOutXml";
+            this.grpOutXml.Size = new System.Drawing.Size(490, 244);
+            this.grpOutXml.TabIndex = 1;
+            this.grpOutXml.TabStop = false;
+            this.grpOutXml.Text = "XML Log";
             // 
-            // btnClearXmlArea
+            // txtOutXml
             // 
-            this.btnClearXmlArea.Location = new System.Drawing.Point(306, 436);
-            this.btnClearXmlArea.Name = "btnClearXmlArea";
-            this.btnClearXmlArea.Size = new System.Drawing.Size(91, 23);
-            this.btnClearXmlArea.TabIndex = 3;
-            this.btnClearXmlArea.Text = "Clear XML Log";
-            this.btnClearXmlArea.UseVisualStyleBackColor = true;
-            this.btnClearXmlArea.Click += new System.EventHandler(this.btnClearXmlArea_Click);
+            this.txtOutXml.BackColor = System.Drawing.Color.White;
+            this.txtOutXml.Location = new System.Drawing.Point(8, 16);
+            this.txtOutXml.Multiline = true;
+            this.txtOutXml.Name = "txtOutXml";
+            this.txtOutXml.ReadOnly = true;
+            this.txtOutXml.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtOutXml.Size = new System.Drawing.Size(476, 219);
+            this.txtOutXml.TabIndex = 0;
             // 
             // tabSSW
             // 
@@ -657,57 +657,36 @@ namespace Scanner_SDK_Sample_Application
             this.tabSSW.Text = "Scan Scan Write";
             this.tabSSW.UseVisualStyleBackColor = true;
             // 
-            // label23
+            // btnClear
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(14, 28);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(74, 13);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Scan barcode";
+            this.btnClear.Location = new System.Drawing.Point(237, 103);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(50, 24);
+            this.btnClear.TabIndex = 35;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label25
+            // txtEpcId
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(14, 83);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(65, 13);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "New EPC Id";
+            this.txtEpcId.BackColor = System.Drawing.Color.White;
+            this.txtEpcId.Location = new System.Drawing.Point(94, 53);
+            this.txtEpcId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEpcId.Name = "txtEpcId";
+            this.txtEpcId.ReadOnly = true;
+            this.txtEpcId.Size = new System.Drawing.Size(193, 20);
+            this.txtEpcId.TabIndex = 33;
             // 
-            // txtUpcaBarcode
+            // txtSerialNumber
             // 
-            this.txtUpcaBarcode.BackColor = System.Drawing.Color.White;
-            this.txtUpcaBarcode.Location = new System.Drawing.Point(94, 25);
-            this.txtUpcaBarcode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUpcaBarcode.Name = "txtUpcaBarcode";
-            this.txtUpcaBarcode.ReadOnly = true;
-            this.txtUpcaBarcode.Size = new System.Drawing.Size(193, 20);
-            this.txtUpcaBarcode.TabIndex = 0;
-            // 
-            // lblUserBank
-            // 
-            this.lblUserBank.AutoSize = true;
-            this.lblUserBank.Location = new System.Drawing.Point(14, 150);
-            this.lblUserBank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUserBank.Name = "lblUserBank";
-            this.lblUserBank.Size = new System.Drawing.Size(56, 13);
-            this.lblUserBank.TabIndex = 12;
-            this.lblUserBank.Text = "User bank";
-            // 
-            // txtNewEpcId
-            // 
-            this.txtNewEpcId.BackColor = System.Drawing.Color.White;
-            this.txtNewEpcId.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtNewEpcId.Location = new System.Drawing.Point(94, 80);
-            this.txtNewEpcId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNewEpcId.Name = "txtNewEpcId";
-            this.txtNewEpcId.ReadOnly = true;
-            this.txtNewEpcId.Size = new System.Drawing.Size(193, 20);
-            this.txtNewEpcId.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.txtNewEpcId, "SGTIN 96 encoded");
+            this.txtSerialNumber.Location = new System.Drawing.Point(408, 80);
+            this.txtSerialNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSerialNumber.Name = "txtSerialNumber";
+            this.txtSerialNumber.Size = new System.Drawing.Size(90, 20);
+            this.txtSerialNumber.TabIndex = 7;
+            this.txtSerialNumber.TextChanged += new System.EventHandler(this.txtSerialNumber_TextChanged);
+            this.txtSerialNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSerialNumber_KeyPress);
             // 
             // txtUserBank
             // 
@@ -723,59 +702,103 @@ namespace Scanner_SDK_Sample_Application
             this.txtUserBank.Size = new System.Drawing.Size(193, 81);
             this.txtUserBank.TabIndex = 9;
             // 
-            // txtSerialNumber
+            // txtUpcaBarcode
             // 
-            this.txtSerialNumber.Location = new System.Drawing.Point(408, 80);
-            this.txtSerialNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSerialNumber.Name = "txtSerialNumber";
-            this.txtSerialNumber.Size = new System.Drawing.Size(90, 20);
-            this.txtSerialNumber.TabIndex = 7;
-            this.txtSerialNumber.TextChanged += new System.EventHandler(this.txtSerialNumber_TextChanged);
-            this.txtSerialNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSerialNumber_KeyPress);
+            this.txtUpcaBarcode.BackColor = System.Drawing.Color.White;
+            this.txtUpcaBarcode.Location = new System.Drawing.Point(94, 25);
+            this.txtUpcaBarcode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUpcaBarcode.Name = "txtUpcaBarcode";
+            this.txtUpcaBarcode.ReadOnly = true;
+            this.txtUpcaBarcode.Size = new System.Drawing.Size(193, 20);
+            this.txtUpcaBarcode.TabIndex = 0;
             // 
-            // chkAutoIncrement
+            // label14
             // 
-            this.chkAutoIncrement.AutoSize = true;
-            this.chkAutoIncrement.Location = new System.Drawing.Point(408, 107);
-            this.chkAutoIncrement.Margin = new System.Windows.Forms.Padding(2);
-            this.chkAutoIncrement.Name = "chkAutoIncrement";
-            this.chkAutoIncrement.Size = new System.Drawing.Size(97, 17);
-            this.chkAutoIncrement.TabIndex = 8;
-            this.chkAutoIncrement.Text = "Auto increment";
-            this.toolTip1.SetToolTip(this.chkAutoIncrement, "Increment provided serial number and write tags continuously.");
-            this.chkAutoIncrement.UseVisualStyleBackColor = true;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(14, 54);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 13);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Existing EPC Id";
             // 
-            // label22
+            // rdoHex
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(332, 28);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 13);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "Filter value";
+            this.rdoHex.AutoSize = true;
+            this.rdoHex.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rdoHex.Location = new System.Drawing.Point(152, 233);
+            this.rdoHex.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoHex.Name = "rdoHex";
+            this.rdoHex.Size = new System.Drawing.Size(44, 17);
+            this.rdoHex.TabIndex = 32;
+            this.rdoHex.TabStop = true;
+            this.rdoHex.Text = "Hex";
+            this.rdoHex.UseVisualStyleBackColor = true;
+            this.rdoHex.CheckedChanged += new System.EventHandler(this.rdoASCII_Binary_CheckedChanged);
             // 
-            // label21
+            // rdoASCII
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(332, 55);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 13);
-            this.label21.TabIndex = 14;
-            this.label21.Text = "Partition";
+            this.rdoASCII.AutoSize = true;
+            this.rdoASCII.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rdoASCII.Location = new System.Drawing.Point(95, 232);
+            this.rdoASCII.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoASCII.Name = "rdoASCII";
+            this.rdoASCII.Size = new System.Drawing.Size(52, 17);
+            this.rdoASCII.TabIndex = 31;
+            this.rdoASCII.TabStop = true;
+            this.rdoASCII.Text = "ASCII";
+            this.rdoASCII.UseVisualStyleBackColor = true;
+            this.rdoASCII.CheckedChanged += new System.EventHandler(this.rdoASCII_Binary_CheckedChanged);
             // 
-            // statusIcon
+            // btnVerifyTag
             // 
-            this.statusIcon.ErrorImage = null;
-            this.statusIcon.InitialImage = null;
-            this.statusIcon.Location = new System.Drawing.Point(291, 80);
-            this.statusIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.statusIcon.Name = "statusIcon";
-            this.statusIcon.Size = new System.Drawing.Size(17, 19);
-            this.statusIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.statusIcon.TabIndex = 23;
-            this.statusIcon.TabStop = false;
+            this.btnVerifyTag.Location = new System.Drawing.Point(160, 103);
+            this.btnVerifyTag.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerifyTag.Name = "btnVerifyTag";
+            this.btnVerifyTag.Size = new System.Drawing.Size(72, 24);
+            this.btnVerifyTag.TabIndex = 30;
+            this.btnVerifyTag.Text = "Verify Tag";
+            this.btnVerifyTag.UseVisualStyleBackColor = true;
+            this.btnVerifyTag.Click += new System.EventHandler(this.btnVerifyTag_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(332, 83);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Serial Number";
+            // 
+            // btnWriteTag
+            // 
+            this.btnWriteTag.Location = new System.Drawing.Point(94, 103);
+            this.btnWriteTag.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWriteTag.Name = "btnWriteTag";
+            this.btnWriteTag.Size = new System.Drawing.Size(63, 24);
+            this.btnWriteTag.TabIndex = 27;
+            this.btnWriteTag.Text = "Write Tag";
+            this.btnWriteTag.UseVisualStyleBackColor = true;
+            this.btnWriteTag.Click += new System.EventHandler(this.btnWriteTag_Click);
+            // 
+            // cmbPartition
+            // 
+            this.cmbPartition.FormattingEnabled = true;
+            this.cmbPartition.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbPartition.Location = new System.Drawing.Point(408, 52);
+            this.cmbPartition.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPartition.Name = "cmbPartition";
+            this.cmbPartition.Size = new System.Drawing.Size(92, 21);
+            this.cmbPartition.TabIndex = 25;
+            this.cmbPartition.SelectedIndexChanged += new System.EventHandler(this.cmbPartition_SelectedIndexChanged);
             // 
             // cmbFilterValue
             // 
@@ -796,114 +819,67 @@ namespace Scanner_SDK_Sample_Application
             this.cmbFilterValue.TabIndex = 24;
             this.cmbFilterValue.SelectedIndexChanged += new System.EventHandler(this.cmbFilterValue_SelectedIndexChanged);
             // 
-            // cmbPartition
+            // statusIcon
             // 
-            this.cmbPartition.FormattingEnabled = true;
-            this.cmbPartition.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cmbPartition.Location = new System.Drawing.Point(408, 52);
-            this.cmbPartition.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbPartition.Name = "cmbPartition";
-            this.cmbPartition.Size = new System.Drawing.Size(92, 21);
-            this.cmbPartition.TabIndex = 25;
-            this.cmbPartition.SelectedIndexChanged += new System.EventHandler(this.cmbPartition_SelectedIndexChanged);
+            this.statusIcon.ErrorImage = null;
+            this.statusIcon.InitialImage = null;
+            this.statusIcon.Location = new System.Drawing.Point(291, 80);
+            this.statusIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.statusIcon.Name = "statusIcon";
+            this.statusIcon.Size = new System.Drawing.Size(17, 19);
+            this.statusIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.statusIcon.TabIndex = 23;
+            this.statusIcon.TabStop = false;
             // 
-            // btnWriteTag
+            // label21
             // 
-            this.btnWriteTag.Location = new System.Drawing.Point(94, 103);
-            this.btnWriteTag.Margin = new System.Windows.Forms.Padding(2);
-            this.btnWriteTag.Name = "btnWriteTag";
-            this.btnWriteTag.Size = new System.Drawing.Size(63, 24);
-            this.btnWriteTag.TabIndex = 27;
-            this.btnWriteTag.Text = "Write Tag";
-            this.btnWriteTag.UseVisualStyleBackColor = true;
-            this.btnWriteTag.Click += new System.EventHandler(this.btnWriteTag_Click);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(332, 55);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 13);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "Partition";
             // 
-            // label7
+            // label22
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(332, 83);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Serial Number";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(332, 28);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 13);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Filter value";
             // 
-            // btnVerifyTag
+            // lblUserBank
             // 
-            this.btnVerifyTag.Location = new System.Drawing.Point(160, 103);
-            this.btnVerifyTag.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVerifyTag.Name = "btnVerifyTag";
-            this.btnVerifyTag.Size = new System.Drawing.Size(72, 24);
-            this.btnVerifyTag.TabIndex = 30;
-            this.btnVerifyTag.Text = "Verify Tag";
-            this.btnVerifyTag.UseVisualStyleBackColor = true;
-            this.btnVerifyTag.Click += new System.EventHandler(this.btnVerifyTag_Click);
+            this.lblUserBank.AutoSize = true;
+            this.lblUserBank.Location = new System.Drawing.Point(14, 150);
+            this.lblUserBank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserBank.Name = "lblUserBank";
+            this.lblUserBank.Size = new System.Drawing.Size(56, 13);
+            this.lblUserBank.TabIndex = 12;
+            this.lblUserBank.Text = "User bank";
             // 
-            // rdoASCII
+            // label25
             // 
-            this.rdoASCII.AutoSize = true;
-            this.rdoASCII.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rdoASCII.Location = new System.Drawing.Point(95, 232);
-            this.rdoASCII.Margin = new System.Windows.Forms.Padding(2);
-            this.rdoASCII.Name = "rdoASCII";
-            this.rdoASCII.Size = new System.Drawing.Size(52, 17);
-            this.rdoASCII.TabIndex = 31;
-            this.rdoASCII.TabStop = true;
-            this.rdoASCII.Text = "ASCII";
-            this.rdoASCII.UseVisualStyleBackColor = true;
-            this.rdoASCII.CheckedChanged += new System.EventHandler(this.rdoASCII_Binary_CheckedChanged);
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(14, 83);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(65, 13);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "New EPC Id";
             // 
-            // rdoHex
+            // label23
             // 
-            this.rdoHex.AutoSize = true;
-            this.rdoHex.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rdoHex.Location = new System.Drawing.Point(152, 233);
-            this.rdoHex.Margin = new System.Windows.Forms.Padding(2);
-            this.rdoHex.Name = "rdoHex";
-            this.rdoHex.Size = new System.Drawing.Size(44, 17);
-            this.rdoHex.TabIndex = 32;
-            this.rdoHex.TabStop = true;
-            this.rdoHex.Text = "Hex";
-            this.rdoHex.UseVisualStyleBackColor = true;
-            this.rdoHex.CheckedChanged += new System.EventHandler(this.rdoASCII_Binary_CheckedChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 54);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 13);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Existing EPC Id";
-            // 
-            // txtEpcId
-            // 
-            this.txtEpcId.BackColor = System.Drawing.Color.White;
-            this.txtEpcId.Location = new System.Drawing.Point(94, 53);
-            this.txtEpcId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEpcId.Name = "txtEpcId";
-            this.txtEpcId.ReadOnly = true;
-            this.txtEpcId.Size = new System.Drawing.Size(193, 20);
-            this.txtEpcId.TabIndex = 33;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(237, 103);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(50, 24);
-            this.btnClear.TabIndex = 35;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(14, 28);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 13);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Scan barcode";
             // 
             // tabScale
             // 
@@ -932,25 +908,47 @@ namespace Scanner_SDK_Sample_Application
             this.grpScale.TabIndex = 20;
             this.grpScale.TabStop = false;
             // 
-            // btnReadWeight
+            // lblScalStatusDesc
             // 
-            this.btnReadWeight.Location = new System.Drawing.Point(17, 24);
-            this.btnReadWeight.Name = "btnReadWeight";
-            this.btnReadWeight.Size = new System.Drawing.Size(128, 23);
-            this.btnReadWeight.TabIndex = 0;
-            this.btnReadWeight.Text = "Read weight";
-            this.btnReadWeight.UseVisualStyleBackColor = true;
-            this.btnReadWeight.Click += new System.EventHandler(this.btnReadWeight_Click);
+            this.lblScalStatusDesc.AutoSize = true;
+            this.lblScalStatusDesc.Location = new System.Drawing.Point(91, 216);
+            this.lblScalStatusDesc.Name = "lblScalStatusDesc";
+            this.lblScalStatusDesc.Size = new System.Drawing.Size(0, 13);
+            this.lblScalStatusDesc.TabIndex = 21;
             // 
-            // btnZeroScale
+            // txtWeightUnit
             // 
-            this.btnZeroScale.Location = new System.Drawing.Point(167, 24);
-            this.btnZeroScale.Name = "btnZeroScale";
-            this.btnZeroScale.Size = new System.Drawing.Size(128, 23);
-            this.btnZeroScale.TabIndex = 1;
-            this.btnZeroScale.Text = "Zero scale";
-            this.btnZeroScale.UseVisualStyleBackColor = true;
-            this.btnZeroScale.Click += new System.EventHandler(this.btnZeroScale_Click);
+            this.txtWeightUnit.Location = new System.Drawing.Point(293, 144);
+            this.txtWeightUnit.Name = "txtWeightUnit";
+            this.txtWeightUnit.ReadOnly = true;
+            this.txtWeightUnit.Size = new System.Drawing.Size(100, 20);
+            this.txtWeightUnit.TabIndex = 4;
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.Location = new System.Drawing.Point(94, 144);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.ReadOnly = true;
+            this.txtWeight.Size = new System.Drawing.Size(100, 20);
+            this.txtWeight.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(307, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Weight Unit";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(91, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Weight Measured";
             // 
             // btnSystemRest
             // 
@@ -962,47 +960,25 @@ namespace Scanner_SDK_Sample_Application
             this.btnSystemRest.UseVisualStyleBackColor = true;
             this.btnSystemRest.Click += new System.EventHandler(this.btnSystemRest_Click);
             // 
-            // label1
+            // btnZeroScale
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Weight Measured";
+            this.btnZeroScale.Location = new System.Drawing.Point(167, 24);
+            this.btnZeroScale.Name = "btnZeroScale";
+            this.btnZeroScale.Size = new System.Drawing.Size(128, 23);
+            this.btnZeroScale.TabIndex = 1;
+            this.btnZeroScale.Text = "Zero scale";
+            this.btnZeroScale.UseVisualStyleBackColor = true;
+            this.btnZeroScale.Click += new System.EventHandler(this.btnZeroScale_Click);
             // 
-            // label2
+            // btnReadWeight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(307, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Weight Unit";
-            // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(94, 144);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.ReadOnly = true;
-            this.txtWeight.Size = new System.Drawing.Size(100, 20);
-            this.txtWeight.TabIndex = 3;
-            // 
-            // txtWeightUnit
-            // 
-            this.txtWeightUnit.Location = new System.Drawing.Point(293, 144);
-            this.txtWeightUnit.Name = "txtWeightUnit";
-            this.txtWeightUnit.ReadOnly = true;
-            this.txtWeightUnit.Size = new System.Drawing.Size(100, 20);
-            this.txtWeightUnit.TabIndex = 4;
-            // 
-            // lblScalStatusDesc
-            // 
-            this.lblScalStatusDesc.AutoSize = true;
-            this.lblScalStatusDesc.Location = new System.Drawing.Point(91, 216);
-            this.lblScalStatusDesc.Name = "lblScalStatusDesc";
-            this.lblScalStatusDesc.Size = new System.Drawing.Size(0, 13);
-            this.lblScalStatusDesc.TabIndex = 21;
+            this.btnReadWeight.Location = new System.Drawing.Point(17, 24);
+            this.btnReadWeight.Name = "btnReadWeight";
+            this.btnReadWeight.Size = new System.Drawing.Size(128, 23);
+            this.btnReadWeight.TabIndex = 0;
+            this.btnReadWeight.Text = "Read weight";
+            this.btnReadWeight.UseVisualStyleBackColor = true;
+            this.btnReadWeight.Click += new System.EventHandler(this.btnReadWeight_Click);
             // 
             // tabMisc
             // 
@@ -1026,59 +1002,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpMiscOther.TabStop = false;
             this.grpMiscOther.Text = "Miscellaneous";
             // 
-            // grpAsync
-            // 
-            this.grpAsync.BackColor = System.Drawing.SystemColors.Window;
-            this.grpAsync.Controls.Add(this.chkAsync);
-            this.grpAsync.Location = new System.Drawing.Point(326, 25);
-            this.grpAsync.Name = "grpAsync";
-            this.grpAsync.Size = new System.Drawing.Size(150, 63);
-            this.grpAsync.TabIndex = 1;
-            this.grpAsync.TabStop = false;
-            this.grpAsync.Text = "Command Mode";
-            // 
-            // chkAsync
-            // 
-            this.chkAsync.AutoSize = true;
-            this.chkAsync.Location = new System.Drawing.Point(19, 19);
-            this.chkAsync.Name = "chkAsync";
-            this.chkAsync.Size = new System.Drawing.Size(93, 17);
-            this.chkAsync.TabIndex = 0;
-            this.chkAsync.Text = "Asynchronous";
-            this.chkAsync.UseVisualStyleBackColor = true;
-            // 
-            // grpMiscCmd
-            // 
-            this.grpMiscCmd.BackColor = System.Drawing.SystemColors.Window;
-            this.grpMiscCmd.Controls.Add(this.btnGetDevTopology);
-            this.grpMiscCmd.Controls.Add(this.btnSdkVersion);
-            this.grpMiscCmd.Location = new System.Drawing.Point(10, 26);
-            this.grpMiscCmd.Name = "grpMiscCmd";
-            this.grpMiscCmd.Size = new System.Drawing.Size(280, 66);
-            this.grpMiscCmd.TabIndex = 0;
-            this.grpMiscCmd.TabStop = false;
-            this.grpMiscCmd.Text = "Miscellaneous Commands";
-            // 
-            // btnSdkVersion
-            // 
-            this.btnSdkVersion.Location = new System.Drawing.Point(19, 26);
-            this.btnSdkVersion.Name = "btnSdkVersion";
-            this.btnSdkVersion.Size = new System.Drawing.Size(118, 23);
-            this.btnSdkVersion.TabIndex = 0;
-            this.btnSdkVersion.Text = "CoreScanner Version";
-            this.btnSdkVersion.UseVisualStyleBackColor = true;
-            this.btnSdkVersion.Click += new System.EventHandler(this.btnSdkVersion_Click);
-            // 
-            // btnGetDevTopology
-            // 
-            this.btnGetDevTopology.Location = new System.Drawing.Point(143, 26);
-            this.btnGetDevTopology.Name = "btnGetDevTopology";
-            this.btnGetDevTopology.Size = new System.Drawing.Size(119, 23);
-            this.btnGetDevTopology.TabIndex = 1;
-            this.btnGetDevTopology.Text = "Get Device Topology";
-            this.btnGetDevTopology.UseVisualStyleBackColor = true;
-            this.btnGetDevTopology.Click += new System.EventHandler(this.btnGetDevTopology_Click);
-            // 
             // grpSCdcSwitch
             // 
             this.grpSCdcSwitch.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1096,15 +1019,37 @@ namespace Scanner_SDK_Sample_Application
             this.grpSCdcSwitch.TabStop = false;
             this.grpSCdcSwitch.Text = "CDC Switching";
             // 
-            // lblSCdcSHostMode
+            // btnSCdcSwitchDevices
             // 
-            this.lblSCdcSHostMode.AutoSize = true;
-            this.lblSCdcSHostMode.Location = new System.Drawing.Point(6, 29);
-            this.lblSCdcSHostMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSCdcSHostMode.Name = "lblSCdcSHostMode";
-            this.lblSCdcSHostMode.Size = new System.Drawing.Size(62, 13);
-            this.lblSCdcSHostMode.TabIndex = 0;
-            this.lblSCdcSHostMode.Text = "Host Mode ";
+            this.btnSCdcSwitchDevices.Location = new System.Drawing.Point(266, 62);
+            this.btnSCdcSwitchDevices.Name = "btnSCdcSwitchDevices";
+            this.btnSCdcSwitchDevices.Size = new System.Drawing.Size(120, 23);
+            this.btnSCdcSwitchDevices.TabIndex = 4;
+            this.btnSCdcSwitchDevices.Text = "Switch CDC Devices";
+            this.btnSCdcSwitchDevices.UseVisualStyleBackColor = true;
+            this.btnSCdcSwitchDevices.Click += new System.EventHandler(this.btnSCdcSwitchDevices_Click);
+            // 
+            // chkSCdcSIsPermanent
+            // 
+            this.chkSCdcSIsPermanent.AutoSize = true;
+            this.chkSCdcSIsPermanent.Location = new System.Drawing.Point(340, 29);
+            this.chkSCdcSIsPermanent.Margin = new System.Windows.Forms.Padding(2);
+            this.chkSCdcSIsPermanent.Name = "chkSCdcSIsPermanent";
+            this.chkSCdcSIsPermanent.Size = new System.Drawing.Size(88, 17);
+            this.chkSCdcSIsPermanent.TabIndex = 3;
+            this.chkSCdcSIsPermanent.Text = "Is Permanent";
+            this.chkSCdcSIsPermanent.UseVisualStyleBackColor = true;
+            // 
+            // chkSCdcSIsSilent
+            // 
+            this.chkSCdcSIsSilent.AutoSize = true;
+            this.chkSCdcSIsSilent.Location = new System.Drawing.Point(266, 28);
+            this.chkSCdcSIsSilent.Margin = new System.Windows.Forms.Padding(2);
+            this.chkSCdcSIsSilent.Name = "chkSCdcSIsSilent";
+            this.chkSCdcSIsSilent.Size = new System.Drawing.Size(63, 17);
+            this.chkSCdcSIsSilent.TabIndex = 2;
+            this.chkSCdcSIsSilent.Text = "Is Silent";
+            this.chkSCdcSIsSilent.UseVisualStyleBackColor = true;
             // 
             // comboSCdcSHostMode
             // 
@@ -1125,37 +1070,68 @@ namespace Scanner_SDK_Sample_Application
             this.comboSCdcSHostMode.Size = new System.Drawing.Size(143, 21);
             this.comboSCdcSHostMode.TabIndex = 1;
             // 
-            // chkSCdcSIsSilent
+            // lblSCdcSHostMode
             // 
-            this.chkSCdcSIsSilent.AutoSize = true;
-            this.chkSCdcSIsSilent.Location = new System.Drawing.Point(266, 28);
-            this.chkSCdcSIsSilent.Margin = new System.Windows.Forms.Padding(2);
-            this.chkSCdcSIsSilent.Name = "chkSCdcSIsSilent";
-            this.chkSCdcSIsSilent.Size = new System.Drawing.Size(63, 17);
-            this.chkSCdcSIsSilent.TabIndex = 2;
-            this.chkSCdcSIsSilent.Text = "Is Silent";
-            this.chkSCdcSIsSilent.UseVisualStyleBackColor = true;
+            this.lblSCdcSHostMode.AutoSize = true;
+            this.lblSCdcSHostMode.Location = new System.Drawing.Point(6, 29);
+            this.lblSCdcSHostMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSCdcSHostMode.Name = "lblSCdcSHostMode";
+            this.lblSCdcSHostMode.Size = new System.Drawing.Size(62, 13);
+            this.lblSCdcSHostMode.TabIndex = 0;
+            this.lblSCdcSHostMode.Text = "Host Mode ";
             // 
-            // chkSCdcSIsPermanent
+            // grpMiscCmd
             // 
-            this.chkSCdcSIsPermanent.AutoSize = true;
-            this.chkSCdcSIsPermanent.Location = new System.Drawing.Point(340, 29);
-            this.chkSCdcSIsPermanent.Margin = new System.Windows.Forms.Padding(2);
-            this.chkSCdcSIsPermanent.Name = "chkSCdcSIsPermanent";
-            this.chkSCdcSIsPermanent.Size = new System.Drawing.Size(88, 17);
-            this.chkSCdcSIsPermanent.TabIndex = 3;
-            this.chkSCdcSIsPermanent.Text = "Is Permanent";
-            this.chkSCdcSIsPermanent.UseVisualStyleBackColor = true;
+            this.grpMiscCmd.BackColor = System.Drawing.SystemColors.Window;
+            this.grpMiscCmd.Controls.Add(this.btnGetDevTopology);
+            this.grpMiscCmd.Controls.Add(this.btnSdkVersion);
+            this.grpMiscCmd.Location = new System.Drawing.Point(10, 26);
+            this.grpMiscCmd.Name = "grpMiscCmd";
+            this.grpMiscCmd.Size = new System.Drawing.Size(280, 66);
+            this.grpMiscCmd.TabIndex = 0;
+            this.grpMiscCmd.TabStop = false;
+            this.grpMiscCmd.Text = "Miscellaneous Commands";
             // 
-            // btnSCdcSwitchDevices
+            // btnGetDevTopology
             // 
-            this.btnSCdcSwitchDevices.Location = new System.Drawing.Point(266, 62);
-            this.btnSCdcSwitchDevices.Name = "btnSCdcSwitchDevices";
-            this.btnSCdcSwitchDevices.Size = new System.Drawing.Size(120, 23);
-            this.btnSCdcSwitchDevices.TabIndex = 4;
-            this.btnSCdcSwitchDevices.Text = "Switch CDC Devices";
-            this.btnSCdcSwitchDevices.UseVisualStyleBackColor = true;
-            this.btnSCdcSwitchDevices.Click += new System.EventHandler(this.btnSCdcSwitchDevices_Click);
+            this.btnGetDevTopology.Location = new System.Drawing.Point(143, 26);
+            this.btnGetDevTopology.Name = "btnGetDevTopology";
+            this.btnGetDevTopology.Size = new System.Drawing.Size(119, 23);
+            this.btnGetDevTopology.TabIndex = 1;
+            this.btnGetDevTopology.Text = "Get Device Topology";
+            this.btnGetDevTopology.UseVisualStyleBackColor = true;
+            this.btnGetDevTopology.Click += new System.EventHandler(this.btnGetDevTopology_Click);
+            // 
+            // btnSdkVersion
+            // 
+            this.btnSdkVersion.Location = new System.Drawing.Point(19, 26);
+            this.btnSdkVersion.Name = "btnSdkVersion";
+            this.btnSdkVersion.Size = new System.Drawing.Size(118, 23);
+            this.btnSdkVersion.TabIndex = 0;
+            this.btnSdkVersion.Text = "CoreScanner Version";
+            this.btnSdkVersion.UseVisualStyleBackColor = true;
+            this.btnSdkVersion.Click += new System.EventHandler(this.btnSdkVersion_Click);
+            // 
+            // grpAsync
+            // 
+            this.grpAsync.BackColor = System.Drawing.SystemColors.Window;
+            this.grpAsync.Controls.Add(this.chkAsync);
+            this.grpAsync.Location = new System.Drawing.Point(326, 25);
+            this.grpAsync.Name = "grpAsync";
+            this.grpAsync.Size = new System.Drawing.Size(150, 63);
+            this.grpAsync.TabIndex = 1;
+            this.grpAsync.TabStop = false;
+            this.grpAsync.Text = "Command Mode";
+            // 
+            // chkAsync
+            // 
+            this.chkAsync.AutoSize = true;
+            this.chkAsync.Location = new System.Drawing.Point(19, 19);
+            this.chkAsync.Name = "chkAsync";
+            this.chkAsync.Size = new System.Drawing.Size(93, 17);
+            this.chkAsync.TabIndex = 0;
+            this.chkAsync.Text = "Asynchronous";
+            this.chkAsync.UseVisualStyleBackColor = true;
             // 
             // tabScan2Connect
             // 
@@ -1189,33 +1165,105 @@ namespace Scanner_SDK_Sample_Application
             this.grpScan2Connect.TabStop = false;
             this.grpScan2Connect.Text = "ScanToConnect Barcode";
             // 
-            // cmbProtocol
+            // btnSaveBarcode
             // 
-            this.cmbProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProtocol.FormattingEnabled = true;
-            this.cmbProtocol.Items.AddRange(new object[] {
-            "Simple Serial Interface (SSI)",
-            "Serial Port Profile (SPP)",
-            "Human Interface Device (HID)"});
-            this.cmbProtocol.Location = new System.Drawing.Point(98, 73);
-            this.cmbProtocol.Name = "cmbProtocol";
-            this.cmbProtocol.Size = new System.Drawing.Size(190, 21);
-            this.cmbProtocol.TabIndex = 1;
-            this.cmbProtocol.SelectedIndexChanged += new System.EventHandler(this.cmbProtocol_SelectedIndexChanged);
+            this.btnSaveBarcode.Location = new System.Drawing.Point(384, 274);
+            this.btnSaveBarcode.Name = "btnSaveBarcode";
+            this.btnSaveBarcode.Size = new System.Drawing.Size(104, 23);
+            this.btnSaveBarcode.TabIndex = 21;
+            this.btnSaveBarcode.Text = "Save Barcode";
+            this.btnSaveBarcode.UseVisualStyleBackColor = true;
+            this.btnSaveBarcode.Click += new System.EventHandler(this.btnSaveBarcode_Click);
             // 
-            // cmbDefaultOption
+            // label13
             // 
-            this.cmbDefaultOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDefaultOption.FormattingEnabled = true;
-            this.cmbDefaultOption.Items.AddRange(new object[] {
-            "No Defaults",
-            "Set Factory Defaults",
-            "Restore Factory Defaults"});
-            this.cmbDefaultOption.Location = new System.Drawing.Point(98, 165);
-            this.cmbDefaultOption.Name = "cmbDefaultOption";
-            this.cmbDefaultOption.Size = new System.Drawing.Size(167, 21);
-            this.cmbDefaultOption.TabIndex = 2;
-            this.cmbDefaultOption.SelectedIndexChanged += new System.EventHandler(this.cmbDefaultOption_SelectedIndexChanged);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 122);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Host Name";
+            // 
+            // cmbHostName
+            // 
+            this.cmbHostName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHostName.FormattingEnabled = true;
+            this.cmbHostName.Items.AddRange(new object[] {
+            "SSI BT Classic (Non-Discoverable)"});
+            this.cmbHostName.Location = new System.Drawing.Point(98, 119);
+            this.cmbHostName.Name = "cmbHostName";
+            this.cmbHostName.Size = new System.Drawing.Size(167, 21);
+            this.cmbHostName.TabIndex = 19;
+            this.cmbHostName.SelectedIndexChanged += new System.EventHandler(this.cmbHostName_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 274);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 13);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Received Barcode:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Scanner Type";
+            // 
+            // cmbScannerType
+            // 
+            this.cmbScannerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbScannerType.FormattingEnabled = true;
+            this.cmbScannerType.Items.AddRange(new object[] {
+            "Legacy",
+            "New"});
+            this.cmbScannerType.Location = new System.Drawing.Point(98, 27);
+            this.cmbScannerType.Name = "cmbScannerType";
+            this.cmbScannerType.Size = new System.Drawing.Size(167, 21);
+            this.cmbScannerType.TabIndex = 15;
+            this.cmbScannerType.SelectedIndexChanged += new System.EventHandler(this.cmbScannerType_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 214);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Image Size";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(16, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Default Option";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 76);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Protocol Name";
+            // 
+            // picBBarcode
+            // 
+            this.picBBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBBarcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBBarcode.Location = new System.Drawing.Point(6, 305);
+            this.picBBarcode.Name = "picBBarcode";
+            this.picBBarcode.Size = new System.Drawing.Size(493, 135);
+            this.picBBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picBBarcode.TabIndex = 10;
+            this.picBBarcode.TabStop = false;
             // 
             // cmbImageSize
             // 
@@ -1231,105 +1279,33 @@ namespace Scanner_SDK_Sample_Application
             this.cmbImageSize.TabIndex = 9;
             this.cmbImageSize.SelectedIndexChanged += new System.EventHandler(this.cmbImageSize_SelectedIndexChanged);
             // 
-            // picBBarcode
+            // cmbDefaultOption
             // 
-            this.picBBarcode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBBarcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBBarcode.Location = new System.Drawing.Point(6, 305);
-            this.picBBarcode.Name = "picBBarcode";
-            this.picBBarcode.Size = new System.Drawing.Size(493, 135);
-            this.picBBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picBBarcode.TabIndex = 10;
-            this.picBBarcode.TabStop = false;
+            this.cmbDefaultOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDefaultOption.FormattingEnabled = true;
+            this.cmbDefaultOption.Items.AddRange(new object[] {
+            "No Defaults",
+            "Set Factory Defaults",
+            "Restore Factory Defaults"});
+            this.cmbDefaultOption.Location = new System.Drawing.Point(98, 165);
+            this.cmbDefaultOption.Name = "cmbDefaultOption";
+            this.cmbDefaultOption.Size = new System.Drawing.Size(167, 21);
+            this.cmbDefaultOption.TabIndex = 2;
+            this.cmbDefaultOption.SelectedIndexChanged += new System.EventHandler(this.cmbDefaultOption_SelectedIndexChanged);
             // 
-            // label8
+            // cmbProtocol
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Protocol Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 168);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Default Option";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 214);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Image Size";
-            // 
-            // cmbScannerType
-            // 
-            this.cmbScannerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbScannerType.FormattingEnabled = true;
-            this.cmbScannerType.Items.AddRange(new object[] {
-            "Legacy",
-            "New"});
-            this.cmbScannerType.Location = new System.Drawing.Point(98, 27);
-            this.cmbScannerType.Name = "cmbScannerType";
-            this.cmbScannerType.Size = new System.Drawing.Size(167, 21);
-            this.cmbScannerType.TabIndex = 15;
-            this.cmbScannerType.SelectedIndexChanged += new System.EventHandler(this.cmbScannerType_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Scanner Type";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 274);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 13);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Received Barcode:";
-            // 
-            // cmbHostName
-            // 
-            this.cmbHostName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHostName.FormattingEnabled = true;
-            this.cmbHostName.Items.AddRange(new object[] {
-            "SSI BT Classic (Non-Discoverable)"});
-            this.cmbHostName.Location = new System.Drawing.Point(98, 119);
-            this.cmbHostName.Name = "cmbHostName";
-            this.cmbHostName.Size = new System.Drawing.Size(167, 21);
-            this.cmbHostName.TabIndex = 19;
-            this.cmbHostName.SelectedIndexChanged += new System.EventHandler(this.cmbHostName_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(16, 122);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Host Name";
-            // 
-            // btnSaveBarcode
-            // 
-            this.btnSaveBarcode.Location = new System.Drawing.Point(384, 274);
-            this.btnSaveBarcode.Name = "btnSaveBarcode";
-            this.btnSaveBarcode.Size = new System.Drawing.Size(104, 23);
-            this.btnSaveBarcode.TabIndex = 21;
-            this.btnSaveBarcode.Text = "Save Barcode";
-            this.btnSaveBarcode.UseVisualStyleBackColor = true;
-            this.btnSaveBarcode.Click += new System.EventHandler(this.btnSaveBarcode_Click);
+            this.cmbProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProtocol.FormattingEnabled = true;
+            this.cmbProtocol.Items.AddRange(new object[] {
+            "Simple Serial Interface (SSI)",
+            "Serial Port Profile (SPP)",
+            "Human Interface Device (HID)"});
+            this.cmbProtocol.Location = new System.Drawing.Point(98, 73);
+            this.cmbProtocol.Name = "cmbProtocol";
+            this.cmbProtocol.Size = new System.Drawing.Size(190, 21);
+            this.cmbProtocol.TabIndex = 1;
+            this.cmbProtocol.SelectedIndexChanged += new System.EventHandler(this.cmbProtocol_SelectedIndexChanged);
             // 
             // tabConfig
             // 
@@ -1345,177 +1321,61 @@ namespace Scanner_SDK_Sample_Application
             this.tabConfig.Text = "Advanced";
             this.tabConfig.UseVisualStyleBackColor = true;
             // 
-            // grpElectricFenceCustomTone
+            // grpCustomDecodeTone
             // 
-            this.grpElectricFenceCustomTone.BackColor = System.Drawing.SystemColors.Window;
-            this.grpElectricFenceCustomTone.Controls.Add(this.btnElectricFenceEraseTone);
-            this.grpElectricFenceCustomTone.Controls.Add(this.buttonElectricFenceWavFileUpload);
-            this.grpElectricFenceCustomTone.Controls.Add(this.textBoxElectricFenceWaveFile);
-            this.grpElectricFenceCustomTone.Controls.Add(this.buttonElectricFenceWavFileBrowse);
-            this.grpElectricFenceCustomTone.Location = new System.Drawing.Point(16, 318);
-            this.grpElectricFenceCustomTone.Margin = new System.Windows.Forms.Padding(2);
-            this.grpElectricFenceCustomTone.Name = "grpElectricFenceCustomTone";
-            this.grpElectricFenceCustomTone.Padding = new System.Windows.Forms.Padding(2);
-            this.grpElectricFenceCustomTone.Size = new System.Drawing.Size(468, 89);
-            this.grpElectricFenceCustomTone.TabIndex = 4;
-            this.grpElectricFenceCustomTone.TabStop = false;
-            this.grpElectricFenceCustomTone.Text = "Electric Fence Custom Tone";
+            this.grpCustomDecodeTone.BackColor = System.Drawing.SystemColors.Window;
+            this.grpCustomDecodeTone.Controls.Add(this.btnEraseTone);
+            this.grpCustomDecodeTone.Controls.Add(this.buttonWavFileUpload);
+            this.grpCustomDecodeTone.Controls.Add(this.textBoxWavFile);
+            this.grpCustomDecodeTone.Controls.Add(this.buttonWavFileBrowse);
+            this.grpCustomDecodeTone.Location = new System.Drawing.Point(16, 208);
+            this.grpCustomDecodeTone.Margin = new System.Windows.Forms.Padding(2);
+            this.grpCustomDecodeTone.Name = "grpCustomDecodeTone";
+            this.grpCustomDecodeTone.Padding = new System.Windows.Forms.Padding(2);
+            this.grpCustomDecodeTone.Size = new System.Drawing.Size(468, 89);
+            this.grpCustomDecodeTone.TabIndex = 3;
+            this.grpCustomDecodeTone.TabStop = false;
+            this.grpCustomDecodeTone.Text = "Custom Good Decode Tone";
             // 
-            // buttonElectricFenceWavFileBrowse
+            // btnEraseTone
             // 
-            this.buttonElectricFenceWavFileBrowse.Location = new System.Drawing.Point(375, 20);
-            this.buttonElectricFenceWavFileBrowse.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonElectricFenceWavFileBrowse.Name = "buttonElectricFenceWavFileBrowse";
-            this.buttonElectricFenceWavFileBrowse.Size = new System.Drawing.Size(77, 26);
-            this.buttonElectricFenceWavFileBrowse.TabIndex = 1;
-            this.buttonElectricFenceWavFileBrowse.Text = "Browse";
-            this.buttonElectricFenceWavFileBrowse.UseVisualStyleBackColor = true;
-            this.buttonElectricFenceWavFileBrowse.Click += new System.EventHandler(this.buttonElectricFenceWavFileBrowse_Click);
+            this.btnEraseTone.Location = new System.Drawing.Point(339, 51);
+            this.btnEraseTone.Name = "btnEraseTone";
+            this.btnEraseTone.Size = new System.Drawing.Size(113, 25);
+            this.btnEraseTone.TabIndex = 3;
+            this.btnEraseTone.Text = "Erase Tone";
+            this.btnEraseTone.UseVisualStyleBackColor = true;
+            this.btnEraseTone.Click += new System.EventHandler(this.btnEraseTone_Click);
             // 
-            // textBoxElectricFenceWaveFile
+            // buttonWavFileUpload
             // 
-            this.textBoxElectricFenceWaveFile.Location = new System.Drawing.Point(8, 24);
-            this.textBoxElectricFenceWaveFile.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxElectricFenceWaveFile.Name = "textBoxElectricFenceWaveFile";
-            this.textBoxElectricFenceWaveFile.Size = new System.Drawing.Size(354, 20);
-            this.textBoxElectricFenceWaveFile.TabIndex = 0;
+            this.buttonWavFileUpload.Location = new System.Drawing.Point(209, 51);
+            this.buttonWavFileUpload.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonWavFileUpload.Name = "buttonWavFileUpload";
+            this.buttonWavFileUpload.Size = new System.Drawing.Size(125, 25);
+            this.buttonWavFileUpload.TabIndex = 2;
+            this.buttonWavFileUpload.Text = "Upload To Scanner";
+            this.buttonWavFileUpload.UseVisualStyleBackColor = true;
+            this.buttonWavFileUpload.Click += new System.EventHandler(this.buttonWavFileUpload_Click);
             // 
-            // buttonElectricFenceWavFileUpload
+            // textBoxWavFile
             // 
-            this.buttonElectricFenceWavFileUpload.Location = new System.Drawing.Point(209, 51);
-            this.buttonElectricFenceWavFileUpload.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonElectricFenceWavFileUpload.Name = "buttonElectricFenceWavFileUpload";
-            this.buttonElectricFenceWavFileUpload.Size = new System.Drawing.Size(125, 25);
-            this.buttonElectricFenceWavFileUpload.TabIndex = 2;
-            this.buttonElectricFenceWavFileUpload.Text = "Upload To Scanner";
-            this.buttonElectricFenceWavFileUpload.UseVisualStyleBackColor = true;
-            this.buttonElectricFenceWavFileUpload.Click += new System.EventHandler(this.buttonElectricFenceWavFileUpload_Click);
+            this.textBoxWavFile.Location = new System.Drawing.Point(8, 24);
+            this.textBoxWavFile.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxWavFile.Name = "textBoxWavFile";
+            this.textBoxWavFile.Size = new System.Drawing.Size(354, 20);
+            this.textBoxWavFile.TabIndex = 0;
             // 
-            // btnElectricFenceEraseTone
+            // buttonWavFileBrowse
             // 
-            this.btnElectricFenceEraseTone.Location = new System.Drawing.Point(339, 51);
-            this.btnElectricFenceEraseTone.Name = "btnElectricFenceEraseTone";
-            this.btnElectricFenceEraseTone.Size = new System.Drawing.Size(113, 25);
-            this.btnElectricFenceEraseTone.TabIndex = 3;
-            this.btnElectricFenceEraseTone.Text = "Erase Tone";
-            this.btnElectricFenceEraseTone.UseVisualStyleBackColor = true;
-            this.btnElectricFenceEraseTone.Click += new System.EventHandler(this.btnElectricFenceEraseTone_Click);
-            // 
-            // grpScannerProp
-            // 
-            this.grpScannerProp.Controls.Add(this.chkClaim);
-            this.grpScannerProp.Location = new System.Drawing.Point(16, 152);
-            this.grpScannerProp.Name = "grpScannerProp";
-            this.grpScannerProp.Size = new System.Drawing.Size(218, 44);
-            this.grpScannerProp.TabIndex = 1;
-            this.grpScannerProp.TabStop = false;
-            this.grpScannerProp.Text = "Exclusively Claim Selected Scanner";
-            // 
-            // chkClaim
-            // 
-            this.chkClaim.AutoSize = true;
-            this.chkClaim.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.chkClaim.Location = new System.Drawing.Point(18, 19);
-            this.chkClaim.Name = "chkClaim";
-            this.chkClaim.Size = new System.Drawing.Size(94, 17);
-            this.chkClaim.TabIndex = 0;
-            this.chkClaim.Text = "Claim Scanner";
-            this.chkClaim.UseVisualStyleBackColor = false;
-            this.chkClaim.CheckedChanged += new System.EventHandler(this.OnClaimScanner);
-            // 
-            // grpFrmWrUpdate
-            // 
-            this.grpFrmWrUpdate.BackColor = System.Drawing.SystemColors.Window;
-            this.grpFrmWrUpdate.Controls.Add(this.grpFWoptns);
-            this.grpFrmWrUpdate.Controls.Add(this.progressBarFWUpdate);
-            this.grpFrmWrUpdate.Controls.Add(this.buttonFWBrowse);
-            this.grpFrmWrUpdate.Controls.Add(this.txtFWFile);
-            this.grpFrmWrUpdate.Location = new System.Drawing.Point(16, 14);
-            this.grpFrmWrUpdate.Name = "grpFrmWrUpdate";
-            this.grpFrmWrUpdate.Size = new System.Drawing.Size(468, 130);
-            this.grpFrmWrUpdate.TabIndex = 0;
-            this.grpFrmWrUpdate.TabStop = false;
-            this.grpFrmWrUpdate.Text = "Firmware Operations";
-            // 
-            // txtFWFile
-            // 
-            this.txtFWFile.BackColor = System.Drawing.Color.White;
-            this.txtFWFile.Location = new System.Drawing.Point(23, 27);
-            this.txtFWFile.Name = "txtFWFile";
-            this.txtFWFile.Size = new System.Drawing.Size(339, 20);
-            this.txtFWFile.TabIndex = 0;
-            // 
-            // buttonFWBrowse
-            // 
-            this.buttonFWBrowse.Location = new System.Drawing.Point(375, 24);
-            this.buttonFWBrowse.Name = "buttonFWBrowse";
-            this.buttonFWBrowse.Size = new System.Drawing.Size(77, 23);
-            this.buttonFWBrowse.TabIndex = 1;
-            this.buttonFWBrowse.Text = "Browse";
-            this.buttonFWBrowse.UseVisualStyleBackColor = true;
-            this.buttonFWBrowse.Click += new System.EventHandler(this.buttonFWBrowse_Click);
-            // 
-            // progressBarFWUpdate
-            // 
-            this.progressBarFWUpdate.BackColor = System.Drawing.Color.White;
-            this.progressBarFWUpdate.Location = new System.Drawing.Point(23, 111);
-            this.progressBarFWUpdate.Name = "progressBarFWUpdate";
-            this.progressBarFWUpdate.Size = new System.Drawing.Size(435, 13);
-            this.progressBarFWUpdate.TabIndex = 17;
-            // 
-            // grpFWoptns
-            // 
-            this.grpFWoptns.Controls.Add(this.chkBulk);
-            this.grpFWoptns.Controls.Add(this.btnAbortFWUpdate);
-            this.grpFWoptns.Controls.Add(this.btnFWUpdate);
-            this.grpFWoptns.Controls.Add(this.btnLaunchNewFW);
-            this.grpFWoptns.Location = new System.Drawing.Point(23, 56);
-            this.grpFWoptns.Name = "grpFWoptns";
-            this.grpFWoptns.Size = new System.Drawing.Size(435, 44);
-            this.grpFWoptns.TabIndex = 28;
-            this.grpFWoptns.TabStop = false;
-            // 
-            // btnLaunchNewFW
-            // 
-            this.btnLaunchNewFW.Location = new System.Drawing.Point(244, 13);
-            this.btnLaunchNewFW.Name = "btnLaunchNewFW";
-            this.btnLaunchNewFW.Size = new System.Drawing.Size(90, 23);
-            this.btnLaunchNewFW.TabIndex = 3;
-            this.btnLaunchNewFW.Text = "Launch";
-            this.btnLaunchNewFW.UseVisualStyleBackColor = true;
-            this.btnLaunchNewFW.Click += new System.EventHandler(this.btnStartNewFW_Click);
-            // 
-            // btnFWUpdate
-            // 
-            this.btnFWUpdate.Location = new System.Drawing.Point(157, 13);
-            this.btnFWUpdate.Name = "btnFWUpdate";
-            this.btnFWUpdate.Size = new System.Drawing.Size(81, 23);
-            this.btnFWUpdate.TabIndex = 1;
-            this.btnFWUpdate.Text = "Update";
-            this.btnFWUpdate.UseVisualStyleBackColor = true;
-            this.btnFWUpdate.Click += new System.EventHandler(this.btnFWUpdate_Click);
-            // 
-            // btnAbortFWUpdate
-            // 
-            this.btnAbortFWUpdate.Location = new System.Drawing.Point(340, 13);
-            this.btnAbortFWUpdate.Name = "btnAbortFWUpdate";
-            this.btnAbortFWUpdate.Size = new System.Drawing.Size(89, 23);
-            this.btnAbortFWUpdate.TabIndex = 2;
-            this.btnAbortFWUpdate.Text = "Abort";
-            this.btnAbortFWUpdate.UseVisualStyleBackColor = true;
-            this.btnAbortFWUpdate.Click += new System.EventHandler(this.btnAbortFWUpdate_Click);
-            // 
-            // chkBulk
-            // 
-            this.chkBulk.AutoSize = true;
-            this.chkBulk.Checked = true;
-            this.chkBulk.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBulk.Location = new System.Drawing.Point(37, 19);
-            this.chkBulk.Name = "chkBulk";
-            this.chkBulk.Size = new System.Drawing.Size(85, 17);
-            this.chkBulk.TabIndex = 0;
-            this.chkBulk.Text = "Bulk Update";
-            this.chkBulk.UseVisualStyleBackColor = true;
+            this.buttonWavFileBrowse.Location = new System.Drawing.Point(375, 20);
+            this.buttonWavFileBrowse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonWavFileBrowse.Name = "buttonWavFileBrowse";
+            this.buttonWavFileBrowse.Size = new System.Drawing.Size(77, 26);
+            this.buttonWavFileBrowse.TabIndex = 1;
+            this.buttonWavFileBrowse.Text = "Browse";
+            this.buttonWavFileBrowse.UseVisualStyleBackColor = true;
+            this.buttonWavFileBrowse.Click += new System.EventHandler(this.buttonWavFileBrowse_Click);
             // 
             // filterScnrs
             // 
@@ -1542,61 +1402,177 @@ namespace Scanner_SDK_Sample_Application
             this.comboFilterScnrs.TabIndex = 0;
             this.comboFilterScnrs.SelectedIndexChanged += new System.EventHandler(this.comboFilterScnrs_SelectedIndexChanged);
             // 
-            // grpCustomDecodeTone
+            // grpFrmWrUpdate
             // 
-            this.grpCustomDecodeTone.BackColor = System.Drawing.SystemColors.Window;
-            this.grpCustomDecodeTone.Controls.Add(this.btnEraseTone);
-            this.grpCustomDecodeTone.Controls.Add(this.buttonWavFileUpload);
-            this.grpCustomDecodeTone.Controls.Add(this.textBoxWavFile);
-            this.grpCustomDecodeTone.Controls.Add(this.buttonWavFileBrowse);
-            this.grpCustomDecodeTone.Location = new System.Drawing.Point(16, 208);
-            this.grpCustomDecodeTone.Margin = new System.Windows.Forms.Padding(2);
-            this.grpCustomDecodeTone.Name = "grpCustomDecodeTone";
-            this.grpCustomDecodeTone.Padding = new System.Windows.Forms.Padding(2);
-            this.grpCustomDecodeTone.Size = new System.Drawing.Size(468, 89);
-            this.grpCustomDecodeTone.TabIndex = 3;
-            this.grpCustomDecodeTone.TabStop = false;
-            this.grpCustomDecodeTone.Text = "Custom Good Decode Tone";
+            this.grpFrmWrUpdate.BackColor = System.Drawing.SystemColors.Window;
+            this.grpFrmWrUpdate.Controls.Add(this.grpFWoptns);
+            this.grpFrmWrUpdate.Controls.Add(this.progressBarFWUpdate);
+            this.grpFrmWrUpdate.Controls.Add(this.buttonFWBrowse);
+            this.grpFrmWrUpdate.Controls.Add(this.txtFWFile);
+            this.grpFrmWrUpdate.Location = new System.Drawing.Point(16, 14);
+            this.grpFrmWrUpdate.Name = "grpFrmWrUpdate";
+            this.grpFrmWrUpdate.Size = new System.Drawing.Size(468, 130);
+            this.grpFrmWrUpdate.TabIndex = 0;
+            this.grpFrmWrUpdate.TabStop = false;
+            this.grpFrmWrUpdate.Text = "Firmware Operations";
             // 
-            // buttonWavFileBrowse
+            // grpFWoptns
             // 
-            this.buttonWavFileBrowse.Location = new System.Drawing.Point(375, 20);
-            this.buttonWavFileBrowse.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonWavFileBrowse.Name = "buttonWavFileBrowse";
-            this.buttonWavFileBrowse.Size = new System.Drawing.Size(77, 26);
-            this.buttonWavFileBrowse.TabIndex = 1;
-            this.buttonWavFileBrowse.Text = "Browse";
-            this.buttonWavFileBrowse.UseVisualStyleBackColor = true;
-            this.buttonWavFileBrowse.Click += new System.EventHandler(this.buttonWavFileBrowse_Click);
+            this.grpFWoptns.Controls.Add(this.chkBulk);
+            this.grpFWoptns.Controls.Add(this.btnAbortFWUpdate);
+            this.grpFWoptns.Controls.Add(this.btnFWUpdate);
+            this.grpFWoptns.Controls.Add(this.btnLaunchNewFW);
+            this.grpFWoptns.Location = new System.Drawing.Point(23, 56);
+            this.grpFWoptns.Name = "grpFWoptns";
+            this.grpFWoptns.Size = new System.Drawing.Size(435, 44);
+            this.grpFWoptns.TabIndex = 28;
+            this.grpFWoptns.TabStop = false;
             // 
-            // textBoxWavFile
+            // chkBulk
             // 
-            this.textBoxWavFile.Location = new System.Drawing.Point(8, 24);
-            this.textBoxWavFile.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxWavFile.Name = "textBoxWavFile";
-            this.textBoxWavFile.Size = new System.Drawing.Size(354, 20);
-            this.textBoxWavFile.TabIndex = 0;
+            this.chkBulk.AutoSize = true;
+            this.chkBulk.Checked = true;
+            this.chkBulk.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBulk.Location = new System.Drawing.Point(37, 19);
+            this.chkBulk.Name = "chkBulk";
+            this.chkBulk.Size = new System.Drawing.Size(85, 17);
+            this.chkBulk.TabIndex = 0;
+            this.chkBulk.Text = "Bulk Update";
+            this.chkBulk.UseVisualStyleBackColor = true;
             // 
-            // buttonWavFileUpload
+            // btnAbortFWUpdate
             // 
-            this.buttonWavFileUpload.Location = new System.Drawing.Point(209, 51);
-            this.buttonWavFileUpload.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonWavFileUpload.Name = "buttonWavFileUpload";
-            this.buttonWavFileUpload.Size = new System.Drawing.Size(125, 25);
-            this.buttonWavFileUpload.TabIndex = 2;
-            this.buttonWavFileUpload.Text = "Upload To Scanner";
-            this.buttonWavFileUpload.UseVisualStyleBackColor = true;
-            this.buttonWavFileUpload.Click += new System.EventHandler(this.buttonWavFileUpload_Click);
+            this.btnAbortFWUpdate.Location = new System.Drawing.Point(340, 13);
+            this.btnAbortFWUpdate.Name = "btnAbortFWUpdate";
+            this.btnAbortFWUpdate.Size = new System.Drawing.Size(89, 23);
+            this.btnAbortFWUpdate.TabIndex = 2;
+            this.btnAbortFWUpdate.Text = "Abort";
+            this.btnAbortFWUpdate.UseVisualStyleBackColor = true;
+            this.btnAbortFWUpdate.Click += new System.EventHandler(this.btnAbortFWUpdate_Click);
             // 
-            // btnEraseTone
+            // btnFWUpdate
             // 
-            this.btnEraseTone.Location = new System.Drawing.Point(339, 51);
-            this.btnEraseTone.Name = "btnEraseTone";
-            this.btnEraseTone.Size = new System.Drawing.Size(113, 25);
-            this.btnEraseTone.TabIndex = 3;
-            this.btnEraseTone.Text = "Erase Tone";
-            this.btnEraseTone.UseVisualStyleBackColor = true;
-            this.btnEraseTone.Click += new System.EventHandler(this.btnEraseTone_Click);
+            this.btnFWUpdate.Location = new System.Drawing.Point(157, 13);
+            this.btnFWUpdate.Name = "btnFWUpdate";
+            this.btnFWUpdate.Size = new System.Drawing.Size(81, 23);
+            this.btnFWUpdate.TabIndex = 1;
+            this.btnFWUpdate.Text = "Update";
+            this.btnFWUpdate.UseVisualStyleBackColor = true;
+            this.btnFWUpdate.Click += new System.EventHandler(this.btnFWUpdate_Click);
+            // 
+            // btnLaunchNewFW
+            // 
+            this.btnLaunchNewFW.Location = new System.Drawing.Point(244, 13);
+            this.btnLaunchNewFW.Name = "btnLaunchNewFW";
+            this.btnLaunchNewFW.Size = new System.Drawing.Size(90, 23);
+            this.btnLaunchNewFW.TabIndex = 3;
+            this.btnLaunchNewFW.Text = "Launch";
+            this.btnLaunchNewFW.UseVisualStyleBackColor = true;
+            this.btnLaunchNewFW.Click += new System.EventHandler(this.btnStartNewFW_Click);
+            // 
+            // progressBarFWUpdate
+            // 
+            this.progressBarFWUpdate.BackColor = System.Drawing.Color.White;
+            this.progressBarFWUpdate.Location = new System.Drawing.Point(23, 111);
+            this.progressBarFWUpdate.Name = "progressBarFWUpdate";
+            this.progressBarFWUpdate.Size = new System.Drawing.Size(435, 13);
+            this.progressBarFWUpdate.TabIndex = 17;
+            // 
+            // buttonFWBrowse
+            // 
+            this.buttonFWBrowse.Location = new System.Drawing.Point(375, 24);
+            this.buttonFWBrowse.Name = "buttonFWBrowse";
+            this.buttonFWBrowse.Size = new System.Drawing.Size(77, 23);
+            this.buttonFWBrowse.TabIndex = 1;
+            this.buttonFWBrowse.Text = "Browse";
+            this.buttonFWBrowse.UseVisualStyleBackColor = true;
+            this.buttonFWBrowse.Click += new System.EventHandler(this.buttonFWBrowse_Click);
+            // 
+            // txtFWFile
+            // 
+            this.txtFWFile.BackColor = System.Drawing.Color.White;
+            this.txtFWFile.Location = new System.Drawing.Point(23, 27);
+            this.txtFWFile.Name = "txtFWFile";
+            this.txtFWFile.Size = new System.Drawing.Size(339, 20);
+            this.txtFWFile.TabIndex = 0;
+            // 
+            // grpScannerProp
+            // 
+            this.grpScannerProp.Controls.Add(this.chkClaim);
+            this.grpScannerProp.Location = new System.Drawing.Point(16, 152);
+            this.grpScannerProp.Name = "grpScannerProp";
+            this.grpScannerProp.Size = new System.Drawing.Size(218, 44);
+            this.grpScannerProp.TabIndex = 1;
+            this.grpScannerProp.TabStop = false;
+            this.grpScannerProp.Text = "Exclusively Claim Selected Scanner";
+            // 
+            // chkClaim
+            // 
+            this.chkClaim.AutoSize = true;
+            this.chkClaim.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chkClaim.Location = new System.Drawing.Point(18, 19);
+            this.chkClaim.Name = "chkClaim";
+            this.chkClaim.Size = new System.Drawing.Size(94, 17);
+            this.chkClaim.TabIndex = 0;
+            this.chkClaim.Text = "Claim Scanner";
+            this.chkClaim.UseVisualStyleBackColor = false;
+            this.chkClaim.CheckedChanged += new System.EventHandler(this.OnClaimScanner);
+            // 
+            // grpElectricFenceCustomTone
+            // 
+            this.grpElectricFenceCustomTone.BackColor = System.Drawing.SystemColors.Window;
+            this.grpElectricFenceCustomTone.Controls.Add(this.btnElectricFenceEraseTone);
+            this.grpElectricFenceCustomTone.Controls.Add(this.buttonElectricFenceWavFileUpload);
+            this.grpElectricFenceCustomTone.Controls.Add(this.textBoxElectricFenceWaveFile);
+            this.grpElectricFenceCustomTone.Controls.Add(this.buttonElectricFenceWavFileBrowse);
+            this.grpElectricFenceCustomTone.Location = new System.Drawing.Point(16, 318);
+            this.grpElectricFenceCustomTone.Margin = new System.Windows.Forms.Padding(2);
+            this.grpElectricFenceCustomTone.Name = "grpElectricFenceCustomTone";
+            this.grpElectricFenceCustomTone.Padding = new System.Windows.Forms.Padding(2);
+            this.grpElectricFenceCustomTone.Size = new System.Drawing.Size(468, 89);
+            this.grpElectricFenceCustomTone.TabIndex = 4;
+            this.grpElectricFenceCustomTone.TabStop = false;
+            this.grpElectricFenceCustomTone.Text = "Electric Fence Custom Tone";
+            // 
+            // btnElectricFenceEraseTone
+            // 
+            this.btnElectricFenceEraseTone.Location = new System.Drawing.Point(339, 51);
+            this.btnElectricFenceEraseTone.Name = "btnElectricFenceEraseTone";
+            this.btnElectricFenceEraseTone.Size = new System.Drawing.Size(113, 25);
+            this.btnElectricFenceEraseTone.TabIndex = 3;
+            this.btnElectricFenceEraseTone.Text = "Erase Tone";
+            this.btnElectricFenceEraseTone.UseVisualStyleBackColor = true;
+            this.btnElectricFenceEraseTone.Click += new System.EventHandler(this.btnElectricFenceEraseTone_Click);
+            // 
+            // buttonElectricFenceWavFileUpload
+            // 
+            this.buttonElectricFenceWavFileUpload.Location = new System.Drawing.Point(209, 51);
+            this.buttonElectricFenceWavFileUpload.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonElectricFenceWavFileUpload.Name = "buttonElectricFenceWavFileUpload";
+            this.buttonElectricFenceWavFileUpload.Size = new System.Drawing.Size(125, 25);
+            this.buttonElectricFenceWavFileUpload.TabIndex = 2;
+            this.buttonElectricFenceWavFileUpload.Text = "Upload To Scanner";
+            this.buttonElectricFenceWavFileUpload.UseVisualStyleBackColor = true;
+            this.buttonElectricFenceWavFileUpload.Click += new System.EventHandler(this.buttonElectricFenceWavFileUpload_Click);
+            // 
+            // textBoxElectricFenceWaveFile
+            // 
+            this.textBoxElectricFenceWaveFile.Location = new System.Drawing.Point(8, 24);
+            this.textBoxElectricFenceWaveFile.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxElectricFenceWaveFile.Name = "textBoxElectricFenceWaveFile";
+            this.textBoxElectricFenceWaveFile.Size = new System.Drawing.Size(354, 20);
+            this.textBoxElectricFenceWaveFile.TabIndex = 0;
+            // 
+            // buttonElectricFenceWavFileBrowse
+            // 
+            this.buttonElectricFenceWavFileBrowse.Location = new System.Drawing.Point(375, 20);
+            this.buttonElectricFenceWavFileBrowse.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonElectricFenceWavFileBrowse.Name = "buttonElectricFenceWavFileBrowse";
+            this.buttonElectricFenceWavFileBrowse.Size = new System.Drawing.Size(77, 26);
+            this.buttonElectricFenceWavFileBrowse.TabIndex = 1;
+            this.buttonElectricFenceWavFileBrowse.Text = "Browse";
+            this.buttonElectricFenceWavFileBrowse.UseVisualStyleBackColor = true;
+            this.buttonElectricFenceWavFileBrowse.Click += new System.EventHandler(this.buttonElectricFenceWavFileBrowse_Click);
             // 
             // tabRsm
             // 
@@ -1621,6 +1597,101 @@ namespace Scanner_SDK_Sample_Application
             this.grpRSM.TabIndex = 0;
             this.grpRSM.TabStop = false;
             this.grpRSM.Text = "RSM";
+            // 
+            // grpBoxClrSlect
+            // 
+            this.grpBoxClrSlect.Controls.Add(this.btnClearAll);
+            this.grpBoxClrSlect.Controls.Add(this.btnSelectAll);
+            this.grpBoxClrSlect.Location = new System.Drawing.Point(358, 365);
+            this.grpBoxClrSlect.Name = "grpBoxClrSlect";
+            this.grpBoxClrSlect.Size = new System.Drawing.Size(122, 87);
+            this.grpBoxClrSlect.TabIndex = 1;
+            this.grpBoxClrSlect.TabStop = false;
+            this.grpBoxClrSlect.Text = "Select/Clear";
+            // 
+            // btnClearAll
+            // 
+            this.btnClearAll.Location = new System.Drawing.Point(24, 50);
+            this.btnClearAll.Name = "btnClearAll";
+            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
+            this.btnClearAll.TabIndex = 1;
+            this.btnClearAll.Text = "Clear All";
+            this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            // 
+            // btnSelectAll
+            // 
+            this.btnSelectAll.Location = new System.Drawing.Point(24, 19);
+            this.btnSelectAll.Name = "btnSelectAll";
+            this.btnSelectAll.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectAll.TabIndex = 0;
+            this.btnSelectAll.Text = "Select All";
+            this.btnSelectAll.UseVisualStyleBackColor = true;
+            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
+            // 
+            // grpBoxSetRset
+            // 
+            this.grpBoxSetRset.Controls.Add(this.btnGetAll);
+            this.grpBoxSetRset.Controls.Add(this.btnGet);
+            this.grpBoxSetRset.Controls.Add(this.btnGetNext);
+            this.grpBoxSetRset.Controls.Add(this.btnSet);
+            this.grpBoxSetRset.Controls.Add(this.btnStore);
+            this.grpBoxSetRset.Location = new System.Drawing.Point(6, 365);
+            this.grpBoxSetRset.Name = "grpBoxSetRset";
+            this.grpBoxSetRset.Size = new System.Drawing.Size(272, 86);
+            this.grpBoxSetRset.TabIndex = 0;
+            this.grpBoxSetRset.TabStop = false;
+            this.grpBoxSetRset.Text = "Attribute Get/Set";
+            // 
+            // btnGetAll
+            // 
+            this.btnGetAll.Location = new System.Drawing.Point(4, 19);
+            this.btnGetAll.Name = "btnGetAll";
+            this.btnGetAll.Size = new System.Drawing.Size(77, 23);
+            this.btnGetAll.TabIndex = 0;
+            this.btnGetAll.Text = "Get All IDs";
+            this.btnGetAll.UseVisualStyleBackColor = true;
+            this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_Click);
+            // 
+            // btnGet
+            // 
+            this.btnGet.Location = new System.Drawing.Point(4, 50);
+            this.btnGet.Name = "btnGet";
+            this.btnGet.Size = new System.Drawing.Size(77, 23);
+            this.btnGet.TabIndex = 1;
+            this.btnGet.Text = "Get Value";
+            this.btnGet.UseVisualStyleBackColor = true;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
+            // 
+            // btnGetNext
+            // 
+            this.btnGetNext.Location = new System.Drawing.Point(91, 19);
+            this.btnGetNext.Name = "btnGetNext";
+            this.btnGetNext.Size = new System.Drawing.Size(77, 23);
+            this.btnGetNext.TabIndex = 2;
+            this.btnGetNext.Text = "Next Value";
+            this.btnGetNext.UseVisualStyleBackColor = true;
+            this.btnGetNext.Click += new System.EventHandler(this.btnGetNext_Click);
+            // 
+            // btnSet
+            // 
+            this.btnSet.Location = new System.Drawing.Point(91, 50);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(77, 23);
+            this.btnSet.TabIndex = 3;
+            this.btnSet.Text = "Set Value";
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnStore
+            // 
+            this.btnStore.Location = new System.Drawing.Point(181, 19);
+            this.btnStore.Name = "btnStore";
+            this.btnStore.Size = new System.Drawing.Size(77, 23);
+            this.btnStore.TabIndex = 4;
+            this.btnStore.Text = "Store Value";
+            this.btnStore.UseVisualStyleBackColor = true;
+            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
             // 
             // dgvAttributes
             // 
@@ -1668,25 +1739,15 @@ namespace Scanner_SDK_Sample_Application
             this.dgvAttributes.Size = new System.Drawing.Size(474, 340);
             this.dgvAttributes.TabIndex = 2;
             // 
-            // value
+            // attrNum
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            this.value.DefaultCellStyle = dataGridViewCellStyle5;
-            this.value.HeaderText = "Value";
-            this.value.MinimumWidth = 6;
-            this.value.Name = "value";
-            this.value.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.value.Width = 320;
-            // 
-            // property
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            this.property.DefaultCellStyle = dataGridViewCellStyle4;
-            this.property.HeaderText = "Property";
-            this.property.MinimumWidth = 6;
-            this.property.Name = "property";
-            this.property.ReadOnly = true;
-            this.property.Width = 125;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            this.attrNum.DefaultCellStyle = dataGridViewCellStyle2;
+            this.attrNum.HeaderText = "ID";
+            this.attrNum.MinimumWidth = 6;
+            this.attrNum.Name = "attrNum";
+            this.attrNum.ReadOnly = true;
+            this.attrNum.Width = 50;
             // 
             // attrType
             // 
@@ -1698,110 +1759,25 @@ namespace Scanner_SDK_Sample_Application
             this.attrType.ReadOnly = true;
             this.attrType.Width = 80;
             // 
-            // attrNum
+            // property
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            this.attrNum.DefaultCellStyle = dataGridViewCellStyle2;
-            this.attrNum.HeaderText = "ID";
-            this.attrNum.MinimumWidth = 6;
-            this.attrNum.Name = "attrNum";
-            this.attrNum.ReadOnly = true;
-            this.attrNum.Width = 50;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            this.property.DefaultCellStyle = dataGridViewCellStyle4;
+            this.property.HeaderText = "Property";
+            this.property.MinimumWidth = 6;
+            this.property.Name = "property";
+            this.property.ReadOnly = true;
+            this.property.Width = 125;
             // 
-            // grpBoxSetRset
+            // value
             // 
-            this.grpBoxSetRset.Controls.Add(this.btnGetAll);
-            this.grpBoxSetRset.Controls.Add(this.btnGet);
-            this.grpBoxSetRset.Controls.Add(this.btnGetNext);
-            this.grpBoxSetRset.Controls.Add(this.btnSet);
-            this.grpBoxSetRset.Controls.Add(this.btnStore);
-            this.grpBoxSetRset.Location = new System.Drawing.Point(6, 365);
-            this.grpBoxSetRset.Name = "grpBoxSetRset";
-            this.grpBoxSetRset.Size = new System.Drawing.Size(272, 86);
-            this.grpBoxSetRset.TabIndex = 0;
-            this.grpBoxSetRset.TabStop = false;
-            this.grpBoxSetRset.Text = "Attribute Get/Set";
-            // 
-            // btnStore
-            // 
-            this.btnStore.Location = new System.Drawing.Point(181, 19);
-            this.btnStore.Name = "btnStore";
-            this.btnStore.Size = new System.Drawing.Size(77, 23);
-            this.btnStore.TabIndex = 4;
-            this.btnStore.Text = "Store Value";
-            this.btnStore.UseVisualStyleBackColor = true;
-            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
-            // 
-            // btnSet
-            // 
-            this.btnSet.Location = new System.Drawing.Point(91, 50);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(77, 23);
-            this.btnSet.TabIndex = 3;
-            this.btnSet.Text = "Set Value";
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnGetNext
-            // 
-            this.btnGetNext.Location = new System.Drawing.Point(91, 19);
-            this.btnGetNext.Name = "btnGetNext";
-            this.btnGetNext.Size = new System.Drawing.Size(77, 23);
-            this.btnGetNext.TabIndex = 2;
-            this.btnGetNext.Text = "Next Value";
-            this.btnGetNext.UseVisualStyleBackColor = true;
-            this.btnGetNext.Click += new System.EventHandler(this.btnGetNext_Click);
-            // 
-            // btnGet
-            // 
-            this.btnGet.Location = new System.Drawing.Point(4, 50);
-            this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(77, 23);
-            this.btnGet.TabIndex = 1;
-            this.btnGet.Text = "Get Value";
-            this.btnGet.UseVisualStyleBackColor = true;
-            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
-            // 
-            // btnGetAll
-            // 
-            this.btnGetAll.Location = new System.Drawing.Point(4, 19);
-            this.btnGetAll.Name = "btnGetAll";
-            this.btnGetAll.Size = new System.Drawing.Size(77, 23);
-            this.btnGetAll.TabIndex = 0;
-            this.btnGetAll.Text = "Get All IDs";
-            this.btnGetAll.UseVisualStyleBackColor = true;
-            this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_Click);
-            // 
-            // grpBoxClrSlect
-            // 
-            this.grpBoxClrSlect.Controls.Add(this.btnClearAll);
-            this.grpBoxClrSlect.Controls.Add(this.btnSelectAll);
-            this.grpBoxClrSlect.Location = new System.Drawing.Point(358, 365);
-            this.grpBoxClrSlect.Name = "grpBoxClrSlect";
-            this.grpBoxClrSlect.Size = new System.Drawing.Size(122, 87);
-            this.grpBoxClrSlect.TabIndex = 1;
-            this.grpBoxClrSlect.TabStop = false;
-            this.grpBoxClrSlect.Text = "Select/Clear";
-            // 
-            // btnSelectAll
-            // 
-            this.btnSelectAll.Location = new System.Drawing.Point(24, 19);
-            this.btnSelectAll.Name = "btnSelectAll";
-            this.btnSelectAll.Size = new System.Drawing.Size(75, 23);
-            this.btnSelectAll.TabIndex = 0;
-            this.btnSelectAll.Text = "Select All";
-            this.btnSelectAll.UseVisualStyleBackColor = true;
-            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
-            // 
-            // btnClearAll
-            // 
-            this.btnClearAll.Location = new System.Drawing.Point(24, 50);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
-            this.btnClearAll.TabIndex = 1;
-            this.btnClearAll.Text = "Clear All";
-            this.btnClearAll.UseVisualStyleBackColor = true;
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            this.value.DefaultCellStyle = dataGridViewCellStyle5;
+            this.value.HeaderText = "Value";
+            this.value.MinimumWidth = 6;
+            this.value.Name = "value";
+            this.value.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.value.Width = 320;
             // 
             // tabScnAction
             // 
@@ -1829,83 +1805,170 @@ namespace Scanner_SDK_Sample_Application
             this.grpScnActions.TabIndex = 41;
             this.grpScnActions.TabStop = false;
             // 
-            // grpAim
+            // grpPagerMotor
             // 
-            this.grpAim.BackColor = System.Drawing.SystemColors.Window;
-            this.grpAim.Controls.Add(this.btnAimOn);
-            this.grpAim.Controls.Add(this.btnAimOff);
-            this.grpAim.Location = new System.Drawing.Point(31, 85);
-            this.grpAim.Name = "grpAim";
-            this.grpAim.Size = new System.Drawing.Size(261, 58);
-            this.grpAim.TabIndex = 1;
-            this.grpAim.TabStop = false;
-            this.grpAim.Text = "Aim";
+            this.grpPagerMotor.Controls.Add(this.lblPagerMotorTimeout);
+            this.grpPagerMotor.Controls.Add(this.txtPagerMotorDuration);
+            this.grpPagerMotor.Controls.Add(this.btnEnablePagerMotor);
+            this.grpPagerMotor.Location = new System.Drawing.Point(306, 267);
+            this.grpPagerMotor.Name = "grpPagerMotor";
+            this.grpPagerMotor.Size = new System.Drawing.Size(177, 175);
+            this.grpPagerMotor.TabIndex = 7;
+            this.grpPagerMotor.TabStop = false;
+            this.grpPagerMotor.Text = "Pager Motor";
             // 
-            // btnAimOff
+            // lblPagerMotorTimeout
             // 
-            this.btnAimOff.Location = new System.Drawing.Point(138, 22);
-            this.btnAimOff.Name = "btnAimOff";
-            this.btnAimOff.Size = new System.Drawing.Size(75, 23);
-            this.btnAimOff.TabIndex = 1;
-            this.btnAimOff.Text = "Aim Off";
-            this.btnAimOff.UseVisualStyleBackColor = true;
-            this.btnAimOff.Click += new System.EventHandler(this.btnAimOff_Click);
+            this.lblPagerMotorTimeout.AutoSize = true;
+            this.lblPagerMotorTimeout.Location = new System.Drawing.Point(20, 76);
+            this.lblPagerMotorTimeout.Name = "lblPagerMotorTimeout";
+            this.lblPagerMotorTimeout.Size = new System.Drawing.Size(84, 13);
+            this.lblPagerMotorTimeout.TabIndex = 2;
+            this.lblPagerMotorTimeout.Text = "Duration (10 ms)";
             // 
-            // btnAimOn
+            // txtPagerMotorDuration
             // 
-            this.btnAimOn.Location = new System.Drawing.Point(51, 22);
-            this.btnAimOn.Name = "btnAimOn";
-            this.btnAimOn.Size = new System.Drawing.Size(75, 23);
-            this.btnAimOn.TabIndex = 0;
-            this.btnAimOn.Text = "Aim On";
-            this.btnAimOn.UseVisualStyleBackColor = true;
-            this.btnAimOn.Click += new System.EventHandler(this.btnAimOn_Click);
+            this.txtPagerMotorDuration.Location = new System.Drawing.Point(20, 95);
+            this.txtPagerMotorDuration.Name = "txtPagerMotorDuration";
+            this.txtPagerMotorDuration.Size = new System.Drawing.Size(127, 20);
+            this.txtPagerMotorDuration.TabIndex = 1;
+            this.txtPagerMotorDuration.Text = "10";
             // 
-            // grpLed
+            // btnEnablePagerMotor
             // 
-            this.grpLed.BackColor = System.Drawing.SystemColors.Window;
-            this.grpLed.Controls.Add(this.cmbLed);
-            this.grpLed.Controls.Add(this.btnLedOff);
-            this.grpLed.Controls.Add(this.btnLedOn);
-            this.grpLed.Location = new System.Drawing.Point(306, 149);
-            this.grpLed.Name = "grpLed";
-            this.grpLed.Size = new System.Drawing.Size(177, 111);
-            this.grpLed.TabIndex = 4;
-            this.grpLed.TabStop = false;
-            this.grpLed.Text = "LED";
+            this.btnEnablePagerMotor.Location = new System.Drawing.Point(20, 33);
+            this.btnEnablePagerMotor.Name = "btnEnablePagerMotor";
+            this.btnEnablePagerMotor.Size = new System.Drawing.Size(127, 23);
+            this.btnEnablePagerMotor.TabIndex = 0;
+            this.btnEnablePagerMotor.Text = "Start";
+            this.btnEnablePagerMotor.UseVisualStyleBackColor = true;
+            this.btnEnablePagerMotor.Click += new System.EventHandler(this.btnEnablePageMotor_Click);
             // 
-            // btnLedOn
+            // groupBox4
             // 
-            this.btnLedOn.Location = new System.Drawing.Point(20, 70);
-            this.btnLedOn.Name = "btnLedOn";
-            this.btnLedOn.Size = new System.Drawing.Size(54, 23);
-            this.btnLedOn.TabIndex = 1;
-            this.btnLedOn.Text = "On";
-            this.btnLedOn.UseVisualStyleBackColor = true;
-            this.btnLedOn.Click += new System.EventHandler(this.btnLedOn_Click);
+            this.groupBox4.Controls.Add(this.btnDisconnect);
+            this.groupBox4.Location = new System.Drawing.Point(306, 85);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(177, 58);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Disconnect BT Scanner";
             // 
-            // btnLedOff
+            // btnDisconnect
             // 
-            this.btnLedOff.Location = new System.Drawing.Point(93, 70);
-            this.btnLedOff.Name = "btnLedOff";
-            this.btnLedOff.Size = new System.Drawing.Size(54, 23);
-            this.btnLedOff.TabIndex = 2;
-            this.btnLedOff.Text = "Off";
-            this.btnLedOff.UseVisualStyleBackColor = true;
-            this.btnLedOff.Click += new System.EventHandler(this.btnLedOff_Click);
+            this.btnDisconnect.Location = new System.Drawing.Point(41, 22);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.btnDisconnect.TabIndex = 0;
+            this.btnDisconnect.Text = "Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
-            // cmbLed
+            // grpHVS
             // 
-            this.cmbLed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLed.FormattingEnabled = true;
-            this.cmbLed.Items.AddRange(new object[] {
-            "GREEN",
-            "YELLOW",
-            "RED"});
-            this.cmbLed.Location = new System.Drawing.Point(20, 30);
-            this.cmbLed.Name = "cmbLed";
-            this.cmbLed.Size = new System.Drawing.Size(127, 21);
-            this.cmbLed.TabIndex = 0;
+            this.grpHVS.BackColor = System.Drawing.SystemColors.Window;
+            this.grpHVS.Controls.Add(this.cmbMode);
+            this.grpHVS.Controls.Add(this.chkShmPermChange);
+            this.grpHVS.Controls.Add(this.chkShmSilentSwitch);
+            this.grpHVS.Controls.Add(this.btnSwitchHostMode);
+            this.grpHVS.Location = new System.Drawing.Point(31, 267);
+            this.grpHVS.Name = "grpHVS";
+            this.grpHVS.Size = new System.Drawing.Size(261, 175);
+            this.grpHVS.TabIndex = 5;
+            this.grpHVS.TabStop = false;
+            this.grpHVS.Text = "Switch Host Variant";
+            // 
+            // cmbMode
+            // 
+            this.cmbMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMode.FormattingEnabled = true;
+            this.cmbMode.Location = new System.Drawing.Point(33, 35);
+            this.cmbMode.Name = "cmbMode";
+            this.cmbMode.Size = new System.Drawing.Size(204, 21);
+            this.cmbMode.TabIndex = 0;
+            // 
+            // chkShmPermChange
+            // 
+            this.chkShmPermChange.AutoSize = true;
+            this.chkShmPermChange.Location = new System.Drawing.Point(36, 95);
+            this.chkShmPermChange.Name = "chkShmPermChange";
+            this.chkShmPermChange.Size = new System.Drawing.Size(117, 17);
+            this.chkShmPermChange.TabIndex = 2;
+            this.chkShmPermChange.Text = "Permanent Change";
+            this.chkShmPermChange.UseVisualStyleBackColor = true;
+            // 
+            // chkShmSilentSwitch
+            // 
+            this.chkShmSilentSwitch.AutoSize = true;
+            this.chkShmSilentSwitch.Location = new System.Drawing.Point(35, 72);
+            this.chkShmSilentSwitch.Name = "chkShmSilentSwitch";
+            this.chkShmSilentSwitch.Size = new System.Drawing.Size(112, 17);
+            this.chkShmSilentSwitch.TabIndex = 1;
+            this.chkShmSilentSwitch.Text = "Silent Switch Host";
+            this.chkShmSilentSwitch.UseVisualStyleBackColor = true;
+            // 
+            // btnSwitchHostMode
+            // 
+            this.btnSwitchHostMode.Location = new System.Drawing.Point(33, 133);
+            this.btnSwitchHostMode.Name = "btnSwitchHostMode";
+            this.btnSwitchHostMode.Size = new System.Drawing.Size(117, 23);
+            this.btnSwitchHostMode.TabIndex = 3;
+            this.btnSwitchHostMode.Text = "Switch Host Mode";
+            this.btnSwitchHostMode.UseVisualStyleBackColor = true;
+            this.btnSwitchHostMode.Click += new System.EventHandler(this.btnSetReport_Click);
+            // 
+            // grpReboot
+            // 
+            this.grpReboot.BackColor = System.Drawing.SystemColors.Window;
+            this.grpReboot.Controls.Add(this.btnRebootScanner);
+            this.grpReboot.Location = new System.Drawing.Point(305, 19);
+            this.grpReboot.Name = "grpReboot";
+            this.grpReboot.Size = new System.Drawing.Size(178, 58);
+            this.grpReboot.TabIndex = 2;
+            this.grpReboot.TabStop = false;
+            this.grpReboot.Text = "Reboot Scanner";
+            // 
+            // btnRebootScanner
+            // 
+            this.btnRebootScanner.Location = new System.Drawing.Point(41, 21);
+            this.btnRebootScanner.Name = "btnRebootScanner";
+            this.btnRebootScanner.Size = new System.Drawing.Size(75, 23);
+            this.btnRebootScanner.TabIndex = 0;
+            this.btnRebootScanner.Text = "Reboot Scanner";
+            this.btnRebootScanner.UseVisualStyleBackColor = true;
+            this.btnRebootScanner.Click += new System.EventHandler(this.btnRebootScanner_Click);
+            // 
+            // grpEnbDisScanner
+            // 
+            this.grpEnbDisScanner.BackColor = System.Drawing.SystemColors.Window;
+            this.grpEnbDisScanner.Controls.Add(this.btnScannerDisable);
+            this.grpEnbDisScanner.Controls.Add(this.btnScannerEnable);
+            this.grpEnbDisScanner.Location = new System.Drawing.Point(31, 19);
+            this.grpEnbDisScanner.Name = "grpEnbDisScanner";
+            this.grpEnbDisScanner.Size = new System.Drawing.Size(261, 58);
+            this.grpEnbDisScanner.TabIndex = 0;
+            this.grpEnbDisScanner.TabStop = false;
+            this.grpEnbDisScanner.Text = "Enable/Disable Scanner";
+            // 
+            // btnScannerDisable
+            // 
+            this.btnScannerDisable.Location = new System.Drawing.Point(138, 21);
+            this.btnScannerDisable.Name = "btnScannerDisable";
+            this.btnScannerDisable.Size = new System.Drawing.Size(75, 23);
+            this.btnScannerDisable.TabIndex = 2;
+            this.btnScannerDisable.Text = "Disable";
+            this.btnScannerDisable.UseVisualStyleBackColor = true;
+            this.btnScannerDisable.Click += new System.EventHandler(this.btnScannerDisable_Click);
+            // 
+            // btnScannerEnable
+            // 
+            this.btnScannerEnable.Location = new System.Drawing.Point(51, 21);
+            this.btnScannerEnable.Name = "btnScannerEnable";
+            this.btnScannerEnable.Size = new System.Drawing.Size(75, 23);
+            this.btnScannerEnable.TabIndex = 1;
+            this.btnScannerEnable.Text = "Enable";
+            this.btnScannerEnable.UseVisualStyleBackColor = true;
+            this.btnScannerEnable.Click += new System.EventHandler(this.btnScannerEnable_Click);
             // 
             // grpBeeper
             // 
@@ -1918,16 +1981,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpBeeper.TabIndex = 3;
             this.grpBeeper.TabStop = false;
             this.grpBeeper.Text = "Beeper";
-            // 
-            // btnSoundBeeper
-            // 
-            this.btnSoundBeeper.Location = new System.Drawing.Point(6, 41);
-            this.btnSoundBeeper.Name = "btnSoundBeeper";
-            this.btnSoundBeeper.Size = new System.Drawing.Size(70, 23);
-            this.btnSoundBeeper.TabIndex = 1;
-            this.btnSoundBeeper.Text = "Beep";
-            this.btnSoundBeeper.UseVisualStyleBackColor = true;
-            this.btnSoundBeeper.Click += new System.EventHandler(this.btnSoundBeeper_Click);
             // 
             // comboBeep
             // 
@@ -1966,368 +2019,93 @@ namespace Scanner_SDK_Sample_Application
             this.comboBeep.Size = new System.Drawing.Size(168, 21);
             this.comboBeep.TabIndex = 0;
             // 
-            // grpEnbDisScanner
-            // 
-            this.grpEnbDisScanner.BackColor = System.Drawing.SystemColors.Window;
-            this.grpEnbDisScanner.Controls.Add(this.btnScannerDisable);
-            this.grpEnbDisScanner.Controls.Add(this.btnScannerEnable);
-            this.grpEnbDisScanner.Location = new System.Drawing.Point(31, 19);
-            this.grpEnbDisScanner.Name = "grpEnbDisScanner";
-            this.grpEnbDisScanner.Size = new System.Drawing.Size(261, 58);
-            this.grpEnbDisScanner.TabIndex = 0;
-            this.grpEnbDisScanner.TabStop = false;
-            this.grpEnbDisScanner.Text = "Enable/Disable Scanner";
-            // 
-            // btnScannerEnable
-            // 
-            this.btnScannerEnable.Location = new System.Drawing.Point(51, 21);
-            this.btnScannerEnable.Name = "btnScannerEnable";
-            this.btnScannerEnable.Size = new System.Drawing.Size(75, 23);
-            this.btnScannerEnable.TabIndex = 1;
-            this.btnScannerEnable.Text = "Enable";
-            this.btnScannerEnable.UseVisualStyleBackColor = true;
-            this.btnScannerEnable.Click += new System.EventHandler(this.btnScannerEnable_Click);
-            // 
-            // btnScannerDisable
-            // 
-            this.btnScannerDisable.Location = new System.Drawing.Point(138, 21);
-            this.btnScannerDisable.Name = "btnScannerDisable";
-            this.btnScannerDisable.Size = new System.Drawing.Size(75, 23);
-            this.btnScannerDisable.TabIndex = 2;
-            this.btnScannerDisable.Text = "Disable";
-            this.btnScannerDisable.UseVisualStyleBackColor = true;
-            this.btnScannerDisable.Click += new System.EventHandler(this.btnScannerDisable_Click);
-            // 
-            // grpReboot
-            // 
-            this.grpReboot.BackColor = System.Drawing.SystemColors.Window;
-            this.grpReboot.Controls.Add(this.btnRebootScanner);
-            this.grpReboot.Location = new System.Drawing.Point(305, 19);
-            this.grpReboot.Name = "grpReboot";
-            this.grpReboot.Size = new System.Drawing.Size(178, 58);
-            this.grpReboot.TabIndex = 2;
-            this.grpReboot.TabStop = false;
-            this.grpReboot.Text = "Reboot Scanner";
-            // 
-            // btnRebootScanner
-            // 
-            this.btnRebootScanner.Location = new System.Drawing.Point(41, 21);
-            this.btnRebootScanner.Name = "btnRebootScanner";
-            this.btnRebootScanner.Size = new System.Drawing.Size(75, 23);
-            this.btnRebootScanner.TabIndex = 0;
-            this.btnRebootScanner.Text = "Reboot Scanner";
-            this.btnRebootScanner.UseVisualStyleBackColor = true;
-            this.btnRebootScanner.Click += new System.EventHandler(this.btnRebootScanner_Click);
-            // 
-            // grpHVS
-            // 
-            this.grpHVS.BackColor = System.Drawing.SystemColors.Window;
-            this.grpHVS.Controls.Add(this.cmbMode);
-            this.grpHVS.Controls.Add(this.chkShmPermChange);
-            this.grpHVS.Controls.Add(this.chkShmSilentSwitch);
-            this.grpHVS.Controls.Add(this.btnSwitchHostMode);
-            this.grpHVS.Location = new System.Drawing.Point(31, 267);
-            this.grpHVS.Name = "grpHVS";
-            this.grpHVS.Size = new System.Drawing.Size(261, 175);
-            this.grpHVS.TabIndex = 5;
-            this.grpHVS.TabStop = false;
-            this.grpHVS.Text = "Switch Host Variant";
-            // 
-            // btnSwitchHostMode
-            // 
-            this.btnSwitchHostMode.Location = new System.Drawing.Point(33, 133);
-            this.btnSwitchHostMode.Name = "btnSwitchHostMode";
-            this.btnSwitchHostMode.Size = new System.Drawing.Size(117, 23);
-            this.btnSwitchHostMode.TabIndex = 3;
-            this.btnSwitchHostMode.Text = "Switch Host Mode";
-            this.btnSwitchHostMode.UseVisualStyleBackColor = true;
-            this.btnSwitchHostMode.Click += new System.EventHandler(this.btnSetReport_Click);
-            // 
-            // chkShmSilentSwitch
-            // 
-            this.chkShmSilentSwitch.AutoSize = true;
-            this.chkShmSilentSwitch.Location = new System.Drawing.Point(35, 72);
-            this.chkShmSilentSwitch.Name = "chkShmSilentSwitch";
-            this.chkShmSilentSwitch.Size = new System.Drawing.Size(112, 17);
-            this.chkShmSilentSwitch.TabIndex = 1;
-            this.chkShmSilentSwitch.Text = "Silent Switch Host";
-            this.chkShmSilentSwitch.UseVisualStyleBackColor = true;
-            // 
-            // chkShmPermChange
-            // 
-            this.chkShmPermChange.AutoSize = true;
-            this.chkShmPermChange.Location = new System.Drawing.Point(36, 95);
-            this.chkShmPermChange.Name = "chkShmPermChange";
-            this.chkShmPermChange.Size = new System.Drawing.Size(117, 17);
-            this.chkShmPermChange.TabIndex = 2;
-            this.chkShmPermChange.Text = "Permanent Change";
-            this.chkShmPermChange.UseVisualStyleBackColor = true;
-            // 
-            // cmbMode
-            // 
-            this.cmbMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMode.FormattingEnabled = true;
-            this.cmbMode.Location = new System.Drawing.Point(33, 35);
-            this.cmbMode.Name = "cmbMode";
-            this.cmbMode.Size = new System.Drawing.Size(204, 21);
-            this.cmbMode.TabIndex = 0;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnDisconnect);
-            this.groupBox4.Location = new System.Drawing.Point(306, 85);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(177, 58);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Disconnect BT Scanner";
-            // 
-            // btnDisconnect
-            // 
-            this.btnDisconnect.Location = new System.Drawing.Point(41, 22);
-            this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
-            this.btnDisconnect.TabIndex = 0;
-            this.btnDisconnect.Text = "Disconnect";
-            this.btnDisconnect.UseVisualStyleBackColor = true;
-            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
-            // 
-            // grpPagerMotor
-            // 
-            this.grpPagerMotor.Controls.Add(this.lblPagerMotorTimeout);
-            this.grpPagerMotor.Controls.Add(this.txtPagerMotorDuration);
-            this.grpPagerMotor.Controls.Add(this.btnEnablePagerMotor);
-            this.grpPagerMotor.Location = new System.Drawing.Point(306, 267);
-            this.grpPagerMotor.Name = "grpPagerMotor";
-            this.grpPagerMotor.Size = new System.Drawing.Size(177, 175);
-            this.grpPagerMotor.TabIndex = 7;
-            this.grpPagerMotor.TabStop = false;
-            this.grpPagerMotor.Text = "Pager Motor";
-            // 
-            // btnEnablePagerMotor
-            // 
-            this.btnEnablePagerMotor.Location = new System.Drawing.Point(20, 33);
-            this.btnEnablePagerMotor.Name = "btnEnablePagerMotor";
-            this.btnEnablePagerMotor.Size = new System.Drawing.Size(127, 23);
-            this.btnEnablePagerMotor.TabIndex = 0;
-            this.btnEnablePagerMotor.Text = "Start";
-            this.btnEnablePagerMotor.UseVisualStyleBackColor = true;
-            this.btnEnablePagerMotor.Click += new System.EventHandler(this.btnEnablePageMotor_Click);
-            // 
-            // txtPagerMotorDuration
-            // 
-            this.txtPagerMotorDuration.Location = new System.Drawing.Point(20, 95);
-            this.txtPagerMotorDuration.Name = "txtPagerMotorDuration";
-            this.txtPagerMotorDuration.Size = new System.Drawing.Size(127, 20);
-            this.txtPagerMotorDuration.TabIndex = 1;
-            this.txtPagerMotorDuration.Text = "10";
-            // 
-            // lblPagerMotorTimeout
-            // 
-            this.lblPagerMotorTimeout.AutoSize = true;
-            this.lblPagerMotorTimeout.Location = new System.Drawing.Point(20, 76);
-            this.lblPagerMotorTimeout.Name = "lblPagerMotorTimeout";
-            this.lblPagerMotorTimeout.Size = new System.Drawing.Size(84, 13);
-            this.lblPagerMotorTimeout.TabIndex = 2;
-            this.lblPagerMotorTimeout.Text = "Duration (10 ms)";
-            // 
-            // tabISO15434
-            // 
-            this.tabISO15434.Controls.Add(this.grpIDC);
-            this.tabISO15434.Location = new System.Drawing.Point(4, 22);
-            this.tabISO15434.Name = "tabISO15434";
-            this.tabISO15434.Padding = new System.Windows.Forms.Padding(3);
-            this.tabISO15434.Size = new System.Drawing.Size(511, 468);
-            this.tabISO15434.TabIndex = 9;
-            this.tabISO15434.Text = "IDC";
-            this.toolTip1.SetToolTip(this.tabISO15434, "Intelligent Document Capture");
-            this.tabISO15434.ToolTipText = "Intelligent Document Capture";
-            this.tabISO15434.UseVisualStyleBackColor = true;
-            // 
-            // grpIDC
-            // 
-            this.grpIDC.Controls.Add(this.btnSaveIdc);
-            this.grpIDC.Controls.Add(this.pbxISO15434Image);
-            this.grpIDC.Controls.Add(this.btnClearpbx);
-            this.grpIDC.Controls.Add(this.checkUseHID);
-            this.grpIDC.Controls.Add(this.groupBox3);
-            this.grpIDC.Controls.Add(this.groupBox2);
-            this.grpIDC.Enabled = false;
-            this.grpIDC.Location = new System.Drawing.Point(6, 6);
-            this.grpIDC.Name = "grpIDC";
-            this.grpIDC.Size = new System.Drawing.Size(493, 456);
-            this.grpIDC.TabIndex = 0;
-            this.grpIDC.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtDocCapDecodeDataSymbol);
-            this.groupBox2.Controls.Add(this.txtDocCapDecodeData);
-            this.groupBox2.Location = new System.Drawing.Point(205, 330);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 83);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Barcode Data";
-            // 
-            // txtDocCapDecodeData
-            // 
-            this.txtDocCapDecodeData.Location = new System.Drawing.Point(89, 19);
-            this.txtDocCapDecodeData.Name = "txtDocCapDecodeData";
-            this.txtDocCapDecodeData.ReadOnly = true;
-            this.txtDocCapDecodeData.Size = new System.Drawing.Size(187, 20);
-            this.txtDocCapDecodeData.TabIndex = 0;
-            // 
-            // txtDocCapDecodeDataSymbol
-            // 
-            this.txtDocCapDecodeDataSymbol.Location = new System.Drawing.Point(89, 45);
-            this.txtDocCapDecodeDataSymbol.Name = "txtDocCapDecodeDataSymbol";
-            this.txtDocCapDecodeDataSymbol.ReadOnly = true;
-            this.txtDocCapDecodeDataSymbol.Size = new System.Drawing.Size(187, 20);
-            this.txtDocCapDecodeDataSymbol.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Decode Data";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Symbology";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnSnapiStore);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.cmbSnapiParamValue);
-            this.groupBox3.Controls.Add(this.btnSnapiSet);
-            this.groupBox3.Controls.Add(this.btnSnapiGet);
-            this.groupBox3.Controls.Add(this.cmbSnapiParams);
-            this.groupBox3.Location = new System.Drawing.Point(6, 330);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(193, 119);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Parameters";
-            // 
-            // cmbSnapiParams
-            // 
-            this.cmbSnapiParams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSnapiParams.FormattingEnabled = true;
-            this.cmbSnapiParams.Location = new System.Drawing.Point(46, 26);
-            this.cmbSnapiParams.Name = "cmbSnapiParams";
-            this.cmbSnapiParams.Size = new System.Drawing.Size(141, 21);
-            this.cmbSnapiParams.TabIndex = 0;
-            // 
-            // btnSnapiGet
-            // 
-            this.btnSnapiGet.Location = new System.Drawing.Point(16, 55);
-            this.btnSnapiGet.Name = "btnSnapiGet";
-            this.btnSnapiGet.Size = new System.Drawing.Size(52, 21);
-            this.btnSnapiGet.TabIndex = 1;
-            this.btnSnapiGet.Text = "Get";
-            this.btnSnapiGet.UseVisualStyleBackColor = true;
-            this.btnSnapiGet.Click += new System.EventHandler(this.btnSnapiGet_Click);
-            // 
-            // btnSnapiSet
-            // 
-            this.btnSnapiSet.Location = new System.Drawing.Point(77, 55);
-            this.btnSnapiSet.Name = "btnSnapiSet";
-            this.btnSnapiSet.Size = new System.Drawing.Size(52, 21);
-            this.btnSnapiSet.TabIndex = 3;
-            this.btnSnapiSet.Text = "Set";
-            this.btnSnapiSet.UseVisualStyleBackColor = true;
-            this.btnSnapiSet.Click += new System.EventHandler(this.btnSnapiSet_Click);
-            // 
-            // cmbSnapiParamValue
-            // 
-            this.cmbSnapiParamValue.FormattingEnabled = true;
-            this.cmbSnapiParamValue.Location = new System.Drawing.Point(46, 87);
-            this.cmbSnapiParamValue.Name = "cmbSnapiParamValue";
-            this.cmbSnapiParamValue.Size = new System.Drawing.Size(141, 21);
-            this.cmbSnapiParamValue.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "ID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Value";
-            // 
-            // btnSnapiStore
-            // 
-            this.btnSnapiStore.Location = new System.Drawing.Point(135, 55);
-            this.btnSnapiStore.Name = "btnSnapiStore";
-            this.btnSnapiStore.Size = new System.Drawing.Size(52, 21);
-            this.btnSnapiStore.TabIndex = 4;
-            this.btnSnapiStore.Text = "Store";
-            this.btnSnapiStore.UseVisualStyleBackColor = true;
-            this.btnSnapiStore.Click += new System.EventHandler(this.btnSnapiStore_Click);
-            // 
-            // checkUseHID
-            // 
-            this.checkUseHID.AutoSize = true;
-            this.checkUseHID.Location = new System.Drawing.Point(205, 426);
-            this.checkUseHID.Name = "checkUseHID";
-            this.checkUseHID.Size = new System.Drawing.Size(67, 17);
-            this.checkUseHID.TabIndex = 2;
-            this.checkUseHID.Text = "Use HID";
-            this.checkUseHID.UseVisualStyleBackColor = true;
-            // 
-            // btnClearpbx
-            // 
-            this.btnClearpbx.Location = new System.Drawing.Point(424, 423);
-            this.btnClearpbx.Name = "btnClearpbx";
-            this.btnClearpbx.Size = new System.Drawing.Size(63, 23);
-            this.btnClearpbx.TabIndex = 3;
-            this.btnClearpbx.Text = "Clear";
-            this.btnClearpbx.UseVisualStyleBackColor = true;
-            this.btnClearpbx.Click += new System.EventHandler(this.btnClearpbx_Click);
-            // 
-            // pbxISO15434Image
-            // 
-            this.pbxISO15434Image.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pbxISO15434Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbxISO15434Image.Location = new System.Drawing.Point(6, 19);
-            this.pbxISO15434Image.MaximumSize = new System.Drawing.Size(481, 299);
-            this.pbxISO15434Image.Name = "pbxISO15434Image";
-            this.pbxISO15434Image.Size = new System.Drawing.Size(481, 299);
-            this.pbxISO15434Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxISO15434Image.TabIndex = 0;
-            this.pbxISO15434Image.TabStop = false;
-            // 
-            // btnSaveIdc
-            // 
-            this.btnSaveIdc.Location = new System.Drawing.Point(336, 423);
-            this.btnSaveIdc.Name = "btnSaveIdc";
-            this.btnSaveIdc.Size = new System.Drawing.Size(67, 23);
-            this.btnSaveIdc.TabIndex = 4;
-            this.btnSaveIdc.Text = "Save";
-            this.btnSaveIdc.UseVisualStyleBackColor = true;
-            this.btnSaveIdc.Click += new System.EventHandler(this.btnSaveIdc_Click);
+            // btnSoundBeeper
+            // 
+            this.btnSoundBeeper.Location = new System.Drawing.Point(6, 41);
+            this.btnSoundBeeper.Name = "btnSoundBeeper";
+            this.btnSoundBeeper.Size = new System.Drawing.Size(70, 23);
+            this.btnSoundBeeper.TabIndex = 1;
+            this.btnSoundBeeper.Text = "Beep";
+            this.btnSoundBeeper.UseVisualStyleBackColor = true;
+            this.btnSoundBeeper.Click += new System.EventHandler(this.btnSoundBeeper_Click);
+            // 
+            // grpLed
+            // 
+            this.grpLed.BackColor = System.Drawing.SystemColors.Window;
+            this.grpLed.Controls.Add(this.cmbLed);
+            this.grpLed.Controls.Add(this.btnLedOff);
+            this.grpLed.Controls.Add(this.btnLedOn);
+            this.grpLed.Location = new System.Drawing.Point(306, 149);
+            this.grpLed.Name = "grpLed";
+            this.grpLed.Size = new System.Drawing.Size(177, 111);
+            this.grpLed.TabIndex = 4;
+            this.grpLed.TabStop = false;
+            this.grpLed.Text = "LED";
+            // 
+            // cmbLed
+            // 
+            this.cmbLed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLed.FormattingEnabled = true;
+            this.cmbLed.Items.AddRange(new object[] {
+            "GREEN",
+            "YELLOW",
+            "RED"});
+            this.cmbLed.Location = new System.Drawing.Point(20, 30);
+            this.cmbLed.Name = "cmbLed";
+            this.cmbLed.Size = new System.Drawing.Size(127, 21);
+            this.cmbLed.TabIndex = 0;
+            // 
+            // btnLedOff
+            // 
+            this.btnLedOff.Location = new System.Drawing.Point(93, 70);
+            this.btnLedOff.Name = "btnLedOff";
+            this.btnLedOff.Size = new System.Drawing.Size(54, 23);
+            this.btnLedOff.TabIndex = 2;
+            this.btnLedOff.Text = "Off";
+            this.btnLedOff.UseVisualStyleBackColor = true;
+            this.btnLedOff.Click += new System.EventHandler(this.btnLedOff_Click);
+            // 
+            // btnLedOn
+            // 
+            this.btnLedOn.Location = new System.Drawing.Point(20, 70);
+            this.btnLedOn.Name = "btnLedOn";
+            this.btnLedOn.Size = new System.Drawing.Size(54, 23);
+            this.btnLedOn.TabIndex = 1;
+            this.btnLedOn.Text = "On";
+            this.btnLedOn.UseVisualStyleBackColor = true;
+            this.btnLedOn.Click += new System.EventHandler(this.btnLedOn_Click);
+            // 
+            // grpAim
+            // 
+            this.grpAim.BackColor = System.Drawing.SystemColors.Window;
+            this.grpAim.Controls.Add(this.btnAimOn);
+            this.grpAim.Controls.Add(this.btnAimOff);
+            this.grpAim.Location = new System.Drawing.Point(31, 85);
+            this.grpAim.Name = "grpAim";
+            this.grpAim.Size = new System.Drawing.Size(261, 58);
+            this.grpAim.TabIndex = 1;
+            this.grpAim.TabStop = false;
+            this.grpAim.Text = "Aim";
+            // 
+            // btnAimOn
+            // 
+            this.btnAimOn.Location = new System.Drawing.Point(51, 22);
+            this.btnAimOn.Name = "btnAimOn";
+            this.btnAimOn.Size = new System.Drawing.Size(75, 23);
+            this.btnAimOn.TabIndex = 0;
+            this.btnAimOn.Text = "Aim On";
+            this.btnAimOn.UseVisualStyleBackColor = true;
+            this.btnAimOn.Click += new System.EventHandler(this.btnAimOn_Click);
+            // 
+            // btnAimOff
+            // 
+            this.btnAimOff.Location = new System.Drawing.Point(138, 22);
+            this.btnAimOff.Name = "btnAimOff";
+            this.btnAimOff.Size = new System.Drawing.Size(75, 23);
+            this.btnAimOff.TabIndex = 1;
+            this.btnAimOff.Text = "Aim Off";
+            this.btnAimOff.UseVisualStyleBackColor = true;
+            this.btnAimOff.Click += new System.EventHandler(this.btnAimOff_Click);
             // 
             // tabBarcode
             // 
@@ -2344,6 +2122,111 @@ namespace Scanner_SDK_Sample_Application
             this.tabBarcode.TabIndex = 0;
             this.tabBarcode.Text = "Barcode";
             this.tabBarcode.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnScriptEditor);
+            this.groupBox1.Controls.Add(this.btnBrowseScript);
+            this.groupBox1.Controls.Add(this.chkBoxAppADF);
+            this.groupBox1.Location = new System.Drawing.Point(19, 416);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(468, 46);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Application ADF";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "File Path...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnScriptEditor
+            // 
+            this.btnScriptEditor.Location = new System.Drawing.Point(205, 16);
+            this.btnScriptEditor.Name = "btnScriptEditor";
+            this.btnScriptEditor.Size = new System.Drawing.Size(103, 23);
+            this.btnScriptEditor.TabIndex = 2;
+            this.btnScriptEditor.Text = "Script Editor ...";
+            this.btnScriptEditor.UseVisualStyleBackColor = true;
+            this.btnScriptEditor.Click += new System.EventHandler(this.btnScriptEditor_Click);
+            // 
+            // btnBrowseScript
+            // 
+            this.btnBrowseScript.Location = new System.Drawing.Point(96, 16);
+            this.btnBrowseScript.Name = "btnBrowseScript";
+            this.btnBrowseScript.Size = new System.Drawing.Size(103, 23);
+            this.btnBrowseScript.TabIndex = 1;
+            this.btnBrowseScript.Text = "Browse Script ...";
+            this.btnBrowseScript.UseVisualStyleBackColor = true;
+            this.btnBrowseScript.Click += new System.EventHandler(this.btnBrowseScript_Click);
+            // 
+            // chkBoxAppADF
+            // 
+            this.chkBoxAppADF.AutoSize = true;
+            this.chkBoxAppADF.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chkBoxAppADF.Enabled = false;
+            this.chkBoxAppADF.Location = new System.Drawing.Point(18, 22);
+            this.chkBoxAppADF.Name = "chkBoxAppADF";
+            this.chkBoxAppADF.Size = new System.Drawing.Size(62, 17);
+            this.chkBoxAppADF.TabIndex = 0;
+            this.chkBoxAppADF.Text = "Not Set";
+            this.chkBoxAppADF.UseVisualStyleBackColor = false;
+            this.chkBoxAppADF.CheckedChanged += new System.EventHandler(this.OnChkChangedDADF);
+            // 
+            // grpBoxLanguage
+            // 
+            this.grpBoxLanguage.BackColor = System.Drawing.SystemColors.Window;
+            this.grpBoxLanguage.Controls.Add(this.chkBoxEmulation);
+            this.grpBoxLanguage.Controls.Add(this.cmbEmulation);
+            this.grpBoxLanguage.Location = new System.Drawing.Point(19, 365);
+            this.grpBoxLanguage.Name = "grpBoxLanguage";
+            this.grpBoxLanguage.Size = new System.Drawing.Size(468, 50);
+            this.grpBoxLanguage.TabIndex = 2;
+            this.grpBoxLanguage.TabStop = false;
+            this.grpBoxLanguage.Text = "Keyboard Emulation and Language/Locale Details";
+            // 
+            // chkBoxEmulation
+            // 
+            this.chkBoxEmulation.AutoSize = true;
+            this.chkBoxEmulation.Location = new System.Drawing.Point(18, 22);
+            this.chkBoxEmulation.Name = "chkBoxEmulation";
+            this.chkBoxEmulation.Size = new System.Drawing.Size(108, 17);
+            this.chkBoxEmulation.TabIndex = 0;
+            this.chkBoxEmulation.Text = "Enable Emulation";
+            this.chkBoxEmulation.UseVisualStyleBackColor = true;
+            this.chkBoxEmulation.CheckedChanged += new System.EventHandler(this.chkBoxEmulation_CheckedChanged);
+            // 
+            // cmbEmulation
+            // 
+            this.cmbEmulation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmulation.FormattingEnabled = true;
+            this.cmbEmulation.Items.AddRange(new object[] {
+            "DEFAULT",
+            "FRENCH",
+            "ENGLISH"});
+            this.cmbEmulation.Location = new System.Drawing.Point(163, 20);
+            this.cmbEmulation.Name = "cmbEmulation";
+            this.cmbEmulation.Size = new System.Drawing.Size(151, 21);
+            this.cmbEmulation.TabIndex = 1;
+            this.cmbEmulation.SelectedIndexChanged += new System.EventHandler(this.cmbEmulation_SelectedIndexChanged);
+            // 
+            // txtBarcode
+            // 
+            this.txtBarcode.BackColor = System.Drawing.Color.White;
+            this.txtBarcode.Location = new System.Drawing.Point(19, 10);
+            this.txtBarcode.Multiline = true;
+            this.txtBarcode.Name = "txtBarcode";
+            this.txtBarcode.ReadOnly = true;
+            this.txtBarcode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtBarcode.Size = new System.Drawing.Size(468, 248);
+            this.txtBarcode.TabIndex = 0;
             // 
             // grpboxBarcodeLbl
             // 
@@ -2362,25 +2245,41 @@ namespace Scanner_SDK_Sample_Application
             this.grpboxBarcodeLbl.TabStop = false;
             this.grpboxBarcodeLbl.Text = "Barcode Scanning";
             // 
-            // btnFlushMacroPdf
+            // lblSyblogy
             // 
-            this.btnFlushMacroPdf.Location = new System.Drawing.Point(95, 71);
-            this.btnFlushMacroPdf.Name = "btnFlushMacroPdf";
-            this.btnFlushMacroPdf.Size = new System.Drawing.Size(104, 23);
-            this.btnFlushMacroPdf.TabIndex = 2;
-            this.btnFlushMacroPdf.Text = "Flush Macro PDF";
-            this.btnFlushMacroPdf.UseVisualStyleBackColor = true;
-            this.btnFlushMacroPdf.Click += new System.EventHandler(this.btnFlushMacroPdf_Click);
+            this.lblSyblogy.AutoSize = true;
+            this.lblSyblogy.Location = new System.Drawing.Point(49, 46);
+            this.lblSyblogy.Name = "lblSyblogy";
+            this.lblSyblogy.Size = new System.Drawing.Size(58, 13);
+            this.lblSyblogy.TabIndex = 39;
+            this.lblSyblogy.Text = "Symbology";
             // 
-            // btnBarcodeClear
+            // txtSyblogy
             // 
-            this.btnBarcodeClear.Location = new System.Drawing.Point(349, 71);
-            this.btnBarcodeClear.Name = "btnBarcodeClear";
-            this.btnBarcodeClear.Size = new System.Drawing.Size(103, 23);
-            this.btnBarcodeClear.TabIndex = 4;
-            this.btnBarcodeClear.Text = "Clear";
-            this.btnBarcodeClear.UseVisualStyleBackColor = true;
-            this.btnBarcodeClear.Click += new System.EventHandler(this.btnBarcodeClear_Click);
+            this.txtSyblogy.BackColor = System.Drawing.Color.White;
+            this.txtSyblogy.Location = new System.Drawing.Point(121, 44);
+            this.txtSyblogy.Name = "txtSyblogy";
+            this.txtSyblogy.ReadOnly = true;
+            this.txtSyblogy.Size = new System.Drawing.Size(332, 20);
+            this.txtSyblogy.TabIndex = 1;
+            // 
+            // lblDecdBarCde
+            // 
+            this.lblDecdBarCde.AutoSize = true;
+            this.lblDecdBarCde.Location = new System.Drawing.Point(11, 21);
+            this.lblDecdBarCde.Name = "lblDecdBarCde";
+            this.lblDecdBarCde.Size = new System.Drawing.Size(94, 13);
+            this.lblDecdBarCde.TabIndex = 0;
+            this.lblDecdBarCde.Text = "Decoded Barcode";
+            // 
+            // txtBarcodeLbl
+            // 
+            this.txtBarcodeLbl.BackColor = System.Drawing.Color.White;
+            this.txtBarcodeLbl.Location = new System.Drawing.Point(121, 19);
+            this.txtBarcodeLbl.Multiline = true;
+            this.txtBarcodeLbl.Name = "txtBarcodeLbl";
+            this.txtBarcodeLbl.Size = new System.Drawing.Size(331, 20);
+            this.txtBarcodeLbl.TabIndex = 0;
             // 
             // btnAbortMacroPdf
             // 
@@ -2392,146 +2291,25 @@ namespace Scanner_SDK_Sample_Application
             this.btnAbortMacroPdf.UseVisualStyleBackColor = true;
             this.btnAbortMacroPdf.Click += new System.EventHandler(this.btnAbortMacroPdf_Click);
             // 
-            // txtBarcodeLbl
+            // btnBarcodeClear
             // 
-            this.txtBarcodeLbl.BackColor = System.Drawing.Color.White;
-            this.txtBarcodeLbl.Location = new System.Drawing.Point(121, 19);
-            this.txtBarcodeLbl.Multiline = true;
-            this.txtBarcodeLbl.Name = "txtBarcodeLbl";
-            this.txtBarcodeLbl.Size = new System.Drawing.Size(331, 20);
-            this.txtBarcodeLbl.TabIndex = 0;
+            this.btnBarcodeClear.Location = new System.Drawing.Point(349, 71);
+            this.btnBarcodeClear.Name = "btnBarcodeClear";
+            this.btnBarcodeClear.Size = new System.Drawing.Size(103, 23);
+            this.btnBarcodeClear.TabIndex = 4;
+            this.btnBarcodeClear.Text = "Clear";
+            this.btnBarcodeClear.UseVisualStyleBackColor = true;
+            this.btnBarcodeClear.Click += new System.EventHandler(this.btnBarcodeClear_Click);
             // 
-            // lblDecdBarCde
+            // btnFlushMacroPdf
             // 
-            this.lblDecdBarCde.AutoSize = true;
-            this.lblDecdBarCde.Location = new System.Drawing.Point(11, 21);
-            this.lblDecdBarCde.Name = "lblDecdBarCde";
-            this.lblDecdBarCde.Size = new System.Drawing.Size(94, 13);
-            this.lblDecdBarCde.TabIndex = 0;
-            this.lblDecdBarCde.Text = "Decoded Barcode";
-            // 
-            // txtSyblogy
-            // 
-            this.txtSyblogy.BackColor = System.Drawing.Color.White;
-            this.txtSyblogy.Location = new System.Drawing.Point(121, 44);
-            this.txtSyblogy.Name = "txtSyblogy";
-            this.txtSyblogy.ReadOnly = true;
-            this.txtSyblogy.Size = new System.Drawing.Size(332, 20);
-            this.txtSyblogy.TabIndex = 1;
-            // 
-            // lblSyblogy
-            // 
-            this.lblSyblogy.AutoSize = true;
-            this.lblSyblogy.Location = new System.Drawing.Point(49, 46);
-            this.lblSyblogy.Name = "lblSyblogy";
-            this.lblSyblogy.Size = new System.Drawing.Size(58, 13);
-            this.lblSyblogy.TabIndex = 39;
-            this.lblSyblogy.Text = "Symbology";
-            // 
-            // txtBarcode
-            // 
-            this.txtBarcode.BackColor = System.Drawing.Color.White;
-            this.txtBarcode.Location = new System.Drawing.Point(19, 10);
-            this.txtBarcode.Multiline = true;
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.ReadOnly = true;
-            this.txtBarcode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBarcode.Size = new System.Drawing.Size(468, 248);
-            this.txtBarcode.TabIndex = 0;
-            // 
-            // grpBoxLanguage
-            // 
-            this.grpBoxLanguage.BackColor = System.Drawing.SystemColors.Window;
-            this.grpBoxLanguage.Controls.Add(this.chkBoxEmulation);
-            this.grpBoxLanguage.Controls.Add(this.cmbEmulation);
-            this.grpBoxLanguage.Location = new System.Drawing.Point(19, 365);
-            this.grpBoxLanguage.Name = "grpBoxLanguage";
-            this.grpBoxLanguage.Size = new System.Drawing.Size(468, 50);
-            this.grpBoxLanguage.TabIndex = 2;
-            this.grpBoxLanguage.TabStop = false;
-            this.grpBoxLanguage.Text = "Keyboard Emulation and Language/Locale Details";
-            // 
-            // cmbEmulation
-            // 
-            this.cmbEmulation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmulation.FormattingEnabled = true;
-            this.cmbEmulation.Items.AddRange(new object[] {
-            "DEFAULT",
-            "FRENCH",
-            "ENGLISH"});
-            this.cmbEmulation.Location = new System.Drawing.Point(163, 20);
-            this.cmbEmulation.Name = "cmbEmulation";
-            this.cmbEmulation.Size = new System.Drawing.Size(151, 21);
-            this.cmbEmulation.TabIndex = 1;
-            this.cmbEmulation.SelectedIndexChanged += new System.EventHandler(this.cmbEmulation_SelectedIndexChanged);
-            // 
-            // chkBoxEmulation
-            // 
-            this.chkBoxEmulation.AutoSize = true;
-            this.chkBoxEmulation.Location = new System.Drawing.Point(18, 22);
-            this.chkBoxEmulation.Name = "chkBoxEmulation";
-            this.chkBoxEmulation.Size = new System.Drawing.Size(108, 17);
-            this.chkBoxEmulation.TabIndex = 0;
-            this.chkBoxEmulation.Text = "Enable Emulation";
-            this.chkBoxEmulation.UseVisualStyleBackColor = true;
-            this.chkBoxEmulation.CheckedChanged += new System.EventHandler(this.chkBoxEmulation_CheckedChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnScriptEditor);
-            this.groupBox1.Controls.Add(this.btnBrowseScript);
-            this.groupBox1.Controls.Add(this.chkBoxAppADF);
-            this.groupBox1.Location = new System.Drawing.Point(19, 416);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(468, 46);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Application ADF";
-            // 
-            // chkBoxAppADF
-            // 
-            this.chkBoxAppADF.AutoSize = true;
-            this.chkBoxAppADF.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.chkBoxAppADF.Enabled = false;
-            this.chkBoxAppADF.Location = new System.Drawing.Point(18, 22);
-            this.chkBoxAppADF.Name = "chkBoxAppADF";
-            this.chkBoxAppADF.Size = new System.Drawing.Size(62, 17);
-            this.chkBoxAppADF.TabIndex = 0;
-            this.chkBoxAppADF.Text = "Not Set";
-            this.chkBoxAppADF.UseVisualStyleBackColor = false;
-            this.chkBoxAppADF.CheckedChanged += new System.EventHandler(this.OnChkChangedDADF);
-            // 
-            // btnBrowseScript
-            // 
-            this.btnBrowseScript.Location = new System.Drawing.Point(96, 16);
-            this.btnBrowseScript.Name = "btnBrowseScript";
-            this.btnBrowseScript.Size = new System.Drawing.Size(103, 23);
-            this.btnBrowseScript.TabIndex = 1;
-            this.btnBrowseScript.Text = "Browse Script ...";
-            this.btnBrowseScript.UseVisualStyleBackColor = true;
-            this.btnBrowseScript.Click += new System.EventHandler(this.btnBrowseScript_Click);
-            // 
-            // btnScriptEditor
-            // 
-            this.btnScriptEditor.Location = new System.Drawing.Point(205, 16);
-            this.btnScriptEditor.Name = "btnScriptEditor";
-            this.btnScriptEditor.Size = new System.Drawing.Size(103, 23);
-            this.btnScriptEditor.TabIndex = 2;
-            this.btnScriptEditor.Text = "Script Editor ...";
-            this.btnScriptEditor.UseVisualStyleBackColor = true;
-            this.btnScriptEditor.Click += new System.EventHandler(this.btnScriptEditor_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(314, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "File Path...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFlushMacroPdf.Location = new System.Drawing.Point(95, 71);
+            this.btnFlushMacroPdf.Name = "btnFlushMacroPdf";
+            this.btnFlushMacroPdf.Size = new System.Drawing.Size(104, 23);
+            this.btnFlushMacroPdf.TabIndex = 2;
+            this.btnFlushMacroPdf.Text = "Flush Macro PDF";
+            this.btnFlushMacroPdf.UseVisualStyleBackColor = true;
+            this.btnFlushMacroPdf.Click += new System.EventHandler(this.btnFlushMacroPdf_Click);
             // 
             // tabCtrl
             // 
@@ -2539,7 +2317,6 @@ namespace Scanner_SDK_Sample_Application
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCtrl.Controls.Add(this.tabBarcode);
-            this.tabCtrl.Controls.Add(this.tabISO15434);
             this.tabCtrl.Controls.Add(this.tabScnAction);
             this.tabCtrl.Controls.Add(this.tabRsm);
             this.tabCtrl.Controls.Add(this.tabConfig);
@@ -2578,10 +2355,10 @@ namespace Scanner_SDK_Sample_Application
             this.stStripResult.ResumeLayout(false);
             this.stStripResult.PerformLayout();
             this.tabXml.ResumeLayout(false);
-            this.grpOutXml.ResumeLayout(false);
-            this.grpOutXml.PerformLayout();
             this.grpResult.ResumeLayout(false);
             this.grpResult.PerformLayout();
+            this.grpOutXml.ResumeLayout(false);
+            this.grpOutXml.PerformLayout();
             this.tabSSW.ResumeLayout(false);
             this.tabSSW.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusIcon)).EndInit();
@@ -2590,60 +2367,52 @@ namespace Scanner_SDK_Sample_Application
             this.grpScale.PerformLayout();
             this.tabMisc.ResumeLayout(false);
             this.grpMiscOther.ResumeLayout(false);
-            this.grpAsync.ResumeLayout(false);
-            this.grpAsync.PerformLayout();
-            this.grpMiscCmd.ResumeLayout(false);
             this.grpSCdcSwitch.ResumeLayout(false);
             this.grpSCdcSwitch.PerformLayout();
+            this.grpMiscCmd.ResumeLayout(false);
+            this.grpAsync.ResumeLayout(false);
+            this.grpAsync.PerformLayout();
             this.tabScan2Connect.ResumeLayout(false);
             this.grpScan2Connect.ResumeLayout(false);
             this.grpScan2Connect.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBBarcode)).EndInit();
             this.tabConfig.ResumeLayout(false);
-            this.grpElectricFenceCustomTone.ResumeLayout(false);
-            this.grpElectricFenceCustomTone.PerformLayout();
-            this.grpScannerProp.ResumeLayout(false);
-            this.grpScannerProp.PerformLayout();
+            this.grpCustomDecodeTone.ResumeLayout(false);
+            this.grpCustomDecodeTone.PerformLayout();
+            this.filterScnrs.ResumeLayout(false);
             this.grpFrmWrUpdate.ResumeLayout(false);
             this.grpFrmWrUpdate.PerformLayout();
             this.grpFWoptns.ResumeLayout(false);
             this.grpFWoptns.PerformLayout();
-            this.filterScnrs.ResumeLayout(false);
-            this.grpCustomDecodeTone.ResumeLayout(false);
-            this.grpCustomDecodeTone.PerformLayout();
+            this.grpScannerProp.ResumeLayout(false);
+            this.grpScannerProp.PerformLayout();
+            this.grpElectricFenceCustomTone.ResumeLayout(false);
+            this.grpElectricFenceCustomTone.PerformLayout();
             this.tabRsm.ResumeLayout(false);
             this.grpRSM.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).EndInit();
-            this.grpBoxSetRset.ResumeLayout(false);
             this.grpBoxClrSlect.ResumeLayout(false);
+            this.grpBoxSetRset.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).EndInit();
             this.tabScnAction.ResumeLayout(false);
             this.grpScnActions.ResumeLayout(false);
-            this.grpAim.ResumeLayout(false);
-            this.grpLed.ResumeLayout(false);
-            this.grpBeeper.ResumeLayout(false);
-            this.grpEnbDisScanner.ResumeLayout(false);
-            this.grpReboot.ResumeLayout(false);
-            this.grpHVS.ResumeLayout(false);
-            this.grpHVS.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.grpPagerMotor.ResumeLayout(false);
             this.grpPagerMotor.PerformLayout();
-            this.tabISO15434.ResumeLayout(false);
-            this.grpIDC.ResumeLayout(false);
-            this.grpIDC.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxISO15434Image)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.grpHVS.ResumeLayout(false);
+            this.grpHVS.PerformLayout();
+            this.grpReboot.ResumeLayout(false);
+            this.grpEnbDisScanner.ResumeLayout(false);
+            this.grpBeeper.ResumeLayout(false);
+            this.grpLed.ResumeLayout(false);
+            this.grpAim.ResumeLayout(false);
             this.tabBarcode.ResumeLayout(false);
             this.tabBarcode.PerformLayout();
-            this.grpboxBarcodeLbl.ResumeLayout(false);
-            this.grpboxBarcodeLbl.PerformLayout();
-            this.grpBoxLanguage.ResumeLayout(false);
-            this.grpBoxLanguage.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.grpBoxLanguage.ResumeLayout(false);
+            this.grpBoxLanguage.PerformLayout();
+            this.grpboxBarcodeLbl.ResumeLayout(false);
+            this.grpboxBarcodeLbl.PerformLayout();
             this.tabCtrl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2831,25 +2600,6 @@ namespace Scanner_SDK_Sample_Application
         private System.Windows.Forms.GroupBox grpAim;
         private System.Windows.Forms.Button btnAimOn;
         private System.Windows.Forms.Button btnAimOff;
-        private System.Windows.Forms.TabPage tabISO15434;
-        public System.Windows.Forms.GroupBox grpIDC;
-        private System.Windows.Forms.Button btnSaveIdc;
-        private System.Windows.Forms.PictureBox pbxISO15434Image;
-        private System.Windows.Forms.Button btnClearpbx;
-        private System.Windows.Forms.CheckBox checkUseHID;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSnapiStore;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbSnapiParamValue;
-        private System.Windows.Forms.Button btnSnapiSet;
-        private System.Windows.Forms.Button btnSnapiGet;
-        private System.Windows.Forms.ComboBox cmbSnapiParams;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDocCapDecodeDataSymbol;
-        private System.Windows.Forms.TextBox txtDocCapDecodeData;
         private System.Windows.Forms.TabPage tabBarcode;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
