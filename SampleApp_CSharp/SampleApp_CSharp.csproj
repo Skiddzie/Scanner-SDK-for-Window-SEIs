@@ -149,9 +149,6 @@
     <Compile Include="ViewMiscellaneous.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRSM.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ViewScannerAcction.cs">
       <SubType>Form</SubType>
     </Compile>

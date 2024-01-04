@@ -357,17 +357,17 @@ namespace Scanner_SDK_Sample_Application
                 switch (nOpCode)
                 {
                     case RSM_ATTR_GETALL:
-                        FillRsmList_Numbers(nAttrCount, scanr);
+                        //FillRsmList_Numbers(nAttrCount, scanr);
                         UpdateResults("RSM_ATTR_GETALL Event");
                         break;
 
                     case RSM_ATTR_GET:
-                        FillRsmList_Attributes(scanr);
+                        //FillRsmList_Attributes(scanr);
                         UpdateResults("RSM_ATTR_GET Event");
                         break;
 
                     case RSM_ATTR_GETNEXT:
-                        FillRsmList_Attribute(scanr, nIndex);
+                        //FillRsmList_Attribute(scanr, nIndex);
                         UpdateResults("RSM_ATTR_GETNEXT Event");
                         break;
                 }
@@ -635,7 +635,6 @@ namespace Scanner_SDK_Sample_Application
 
             txtBarcode.Enabled = bEnable;
 
-            grpRSM.Enabled = bEnable; //get line disable, select line enable
             gbAdvanced.Enabled = bEnable;
             grpFrmWrUpdate.Enabled = bEnable;
             grpCustomDecodeTone.Enabled = bEnable;
@@ -926,57 +925,6 @@ namespace Scanner_SDK_Sample_Application
             txtResults.Clear();
         }
 
-        ///  RSM Commands   ////
-
-        /// <summary>
-        /// Sends RSM_ATTR_GETALL
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnGetAll_Click(object sender, EventArgs e)
-        {
-            GetAllAttributes();
-        }
-
-        /// <summary>
-        /// Sends RSM_ATTR_GET
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnGet_Click(object sender, EventArgs e)
-        {
-            GetAttributes();
-        }
-
-        /// <summary>
-        /// Sends RSM_ATTR_GETNEXT
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnGetNext_Click(object sender, EventArgs e)
-        {
-            GetNextAttribute();
-        }
-
-        private void btnSelectAll_Click(object sender, EventArgs e)
-        {
-            SelectAllAttributes();
-        }
-
-        private void btnClearAll_Click(object sender, EventArgs e)
-        {
-            ClearAllRsmData();
-        }
-
-        private void btnClearAllValues_Click(object sender, EventArgs e)
-        {
-            PerformBtnClearAllValuesClick(sender, e);
-        }
-
-        private void btnClearValue_Click(object sender, EventArgs e)
-        {
-            PerformBtnClearValueClick(sender, e);
-        }
 
         private string GetRegUnregIDs(out int nEvents)
         {
@@ -1206,10 +1154,6 @@ namespace Scanner_SDK_Sample_Application
             PerformClearBarcodeDataClick(sender, e);
         }
 
-        private void lstvScanners_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            btnClearAll_Click(sender, null);
-        }
 
         private void btnClearLogsArea_Click(object sender, EventArgs e)
         {
@@ -1246,17 +1190,6 @@ namespace Scanner_SDK_Sample_Application
         private void frmScannerApp_Load(object sender, EventArgs e)
         {
             GetLanguageConfigInfo();
-        }
-
-
-        private void btnSet_Click(object sender, EventArgs e)
-        {
-            SetStoreAttributeValue(RSM_ATTR_SET);
-        }
-
-        private void btnStore_Click(object sender, EventArgs e)
-        {
-            SetStoreAttributeValue(RSM_ATTR_STORE);
         }
 
         private void FilterScannerList()
@@ -1304,7 +1237,6 @@ namespace Scanner_SDK_Sample_Application
                 {
                     SetControls();
                     btnGetScanners.Text = STR_FIND;
-                    ClearAllRsmData();
                 }
                 Connect();
                 if (m_bSuccessOpen)
@@ -1391,7 +1323,6 @@ namespace Scanner_SDK_Sample_Application
             grpTrigger.Enabled = bEnable;
             grpboxBarcodeLbl.Enabled = bEnable;
             txtBarcode.Enabled = bEnable;
-            grpRSM.Enabled = bEnable;
             gbAdvanced.Enabled = bEnable;
             grpFrmWrUpdate.Enabled = bEnable;
             grpElectricFenceCustomTone.Enabled = bEnable;
@@ -1901,10 +1832,8 @@ namespace Scanner_SDK_Sample_Application
             }
 
             Scanner.RSMAttribute rsmAttr;
-            PerformRSMGetAttribute(PARAM_USE_HID, out rsmAttr);
-            if (null == rsmAttr)
-                return;
-            performRSMSetStoreAttribute(rsmAttr, false);
+            //PerformRSMGetAttribute(PARAM_USE_HID, out rsmAttr);
+            //performRSMSetStoreAttribute(rsmAttr, false);
         }
 
         /// <summary>

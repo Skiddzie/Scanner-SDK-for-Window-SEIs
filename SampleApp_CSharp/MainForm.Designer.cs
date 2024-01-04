@@ -29,13 +29,6 @@ namespace Scanner_SDK_Sample_Application
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScannerApp));
             this.grpTrigger = new System.Windows.Forms.GroupBox();
             this.btnReleaseTrigger = new System.Windows.Forms.Button();
@@ -161,22 +154,6 @@ namespace Scanner_SDK_Sample_Application
             this.buttonElectricFenceWavFileUpload = new System.Windows.Forms.Button();
             this.textBoxElectricFenceWaveFile = new System.Windows.Forms.TextBox();
             this.buttonElectricFenceWavFileBrowse = new System.Windows.Forms.Button();
-            this.tabRsm = new System.Windows.Forms.TabPage();
-            this.grpRSM = new System.Windows.Forms.GroupBox();
-            this.grpBoxClrSlect = new System.Windows.Forms.GroupBox();
-            this.btnClearAll = new System.Windows.Forms.Button();
-            this.btnSelectAll = new System.Windows.Forms.Button();
-            this.grpBoxSetRset = new System.Windows.Forms.GroupBox();
-            this.btnGetAll = new System.Windows.Forms.Button();
-            this.btnGet = new System.Windows.Forms.Button();
-            this.btnGetNext = new System.Windows.Forms.Button();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnStore = new System.Windows.Forms.Button();
-            this.dgvAttributes = new System.Windows.Forms.DataGridView();
-            this.attrNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attrType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.property = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBarcode = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -222,11 +199,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpFWoptns.SuspendLayout();
             this.grpScannerProp.SuspendLayout();
             this.grpElectricFenceCustomTone.SuspendLayout();
-            this.tabRsm.SuspendLayout();
-            this.grpRSM.SuspendLayout();
-            this.grpBoxClrSlect.SuspendLayout();
-            this.grpBoxSetRset.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).BeginInit();
             this.tabBarcode.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpBoxLanguage.SuspendLayout();
@@ -340,7 +312,6 @@ namespace Scanner_SDK_Sample_Application
             this.lstvScanners.TabIndex = 0;
             this.lstvScanners.UseCompatibleStateImageBehavior = false;
             this.lstvScanners.View = System.Windows.Forms.View.Details;
-            this.lstvScanners.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstvScanners_ItemSelectionChanged);
             // 
             // clmId
             // 
@@ -1534,211 +1505,6 @@ namespace Scanner_SDK_Sample_Application
             this.buttonElectricFenceWavFileBrowse.UseVisualStyleBackColor = true;
             this.buttonElectricFenceWavFileBrowse.Click += new System.EventHandler(this.buttonElectricFenceWavFileBrowse_Click);
             // 
-            // tabRsm
-            // 
-            this.tabRsm.Controls.Add(this.grpRSM);
-            this.tabRsm.Location = new System.Drawing.Point(4, 22);
-            this.tabRsm.Name = "tabRsm";
-            this.tabRsm.Size = new System.Drawing.Size(511, 468);
-            this.tabRsm.TabIndex = 2;
-            this.tabRsm.Text = "RSM";
-            this.tabRsm.ToolTipText = "Remote Scanner Management";
-            this.tabRsm.UseVisualStyleBackColor = true;
-            // 
-            // grpRSM
-            // 
-            this.grpRSM.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.grpRSM.Controls.Add(this.grpBoxClrSlect);
-            this.grpRSM.Controls.Add(this.grpBoxSetRset);
-            this.grpRSM.Controls.Add(this.dgvAttributes);
-            this.grpRSM.Location = new System.Drawing.Point(10, 3);
-            this.grpRSM.Name = "grpRSM";
-            this.grpRSM.Size = new System.Drawing.Size(486, 457);
-            this.grpRSM.TabIndex = 0;
-            this.grpRSM.TabStop = false;
-            this.grpRSM.Text = "RSM";
-            // 
-            // grpBoxClrSlect
-            // 
-            this.grpBoxClrSlect.Controls.Add(this.btnClearAll);
-            this.grpBoxClrSlect.Controls.Add(this.btnSelectAll);
-            this.grpBoxClrSlect.Location = new System.Drawing.Point(358, 365);
-            this.grpBoxClrSlect.Name = "grpBoxClrSlect";
-            this.grpBoxClrSlect.Size = new System.Drawing.Size(122, 87);
-            this.grpBoxClrSlect.TabIndex = 1;
-            this.grpBoxClrSlect.TabStop = false;
-            this.grpBoxClrSlect.Text = "Select/Clear";
-            // 
-            // btnClearAll
-            // 
-            this.btnClearAll.Location = new System.Drawing.Point(24, 50);
-            this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(75, 23);
-            this.btnClearAll.TabIndex = 1;
-            this.btnClearAll.Text = "Clear All";
-            this.btnClearAll.UseVisualStyleBackColor = true;
-            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
-            // 
-            // btnSelectAll
-            // 
-            this.btnSelectAll.Location = new System.Drawing.Point(24, 19);
-            this.btnSelectAll.Name = "btnSelectAll";
-            this.btnSelectAll.Size = new System.Drawing.Size(75, 23);
-            this.btnSelectAll.TabIndex = 0;
-            this.btnSelectAll.Text = "Select All";
-            this.btnSelectAll.UseVisualStyleBackColor = true;
-            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
-            // 
-            // grpBoxSetRset
-            // 
-            this.grpBoxSetRset.Controls.Add(this.btnGetAll);
-            this.grpBoxSetRset.Controls.Add(this.btnGet);
-            this.grpBoxSetRset.Controls.Add(this.btnGetNext);
-            this.grpBoxSetRset.Controls.Add(this.btnSet);
-            this.grpBoxSetRset.Controls.Add(this.btnStore);
-            this.grpBoxSetRset.Location = new System.Drawing.Point(6, 365);
-            this.grpBoxSetRset.Name = "grpBoxSetRset";
-            this.grpBoxSetRset.Size = new System.Drawing.Size(272, 86);
-            this.grpBoxSetRset.TabIndex = 0;
-            this.grpBoxSetRset.TabStop = false;
-            this.grpBoxSetRset.Text = "Attribute Get/Set";
-            // 
-            // btnGetAll
-            // 
-            this.btnGetAll.Location = new System.Drawing.Point(4, 19);
-            this.btnGetAll.Name = "btnGetAll";
-            this.btnGetAll.Size = new System.Drawing.Size(77, 23);
-            this.btnGetAll.TabIndex = 0;
-            this.btnGetAll.Text = "Get All IDs";
-            this.btnGetAll.UseVisualStyleBackColor = true;
-            this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_Click);
-            // 
-            // btnGet
-            // 
-            this.btnGet.Location = new System.Drawing.Point(4, 50);
-            this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(77, 23);
-            this.btnGet.TabIndex = 1;
-            this.btnGet.Text = "Get Value";
-            this.btnGet.UseVisualStyleBackColor = true;
-            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
-            // 
-            // btnGetNext
-            // 
-            this.btnGetNext.Location = new System.Drawing.Point(91, 19);
-            this.btnGetNext.Name = "btnGetNext";
-            this.btnGetNext.Size = new System.Drawing.Size(77, 23);
-            this.btnGetNext.TabIndex = 2;
-            this.btnGetNext.Text = "Next Value";
-            this.btnGetNext.UseVisualStyleBackColor = true;
-            this.btnGetNext.Click += new System.EventHandler(this.btnGetNext_Click);
-            // 
-            // btnSet
-            // 
-            this.btnSet.Location = new System.Drawing.Point(91, 50);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(77, 23);
-            this.btnSet.TabIndex = 3;
-            this.btnSet.Text = "Set Value";
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnStore
-            // 
-            this.btnStore.Location = new System.Drawing.Point(181, 19);
-            this.btnStore.Name = "btnStore";
-            this.btnStore.Size = new System.Drawing.Size(77, 23);
-            this.btnStore.TabIndex = 4;
-            this.btnStore.Text = "Store Value";
-            this.btnStore.UseVisualStyleBackColor = true;
-            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
-            // 
-            // dgvAttributes
-            // 
-            this.dgvAttributes.AllowUserToAddRows = false;
-            this.dgvAttributes.AllowUserToDeleteRows = false;
-            this.dgvAttributes.AllowUserToResizeColumns = false;
-            this.dgvAttributes.AllowUserToResizeRows = false;
-            this.dgvAttributes.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttributes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAttributes.ColumnHeadersHeight = 29;
-            this.dgvAttributes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvAttributes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.attrNum,
-            this.attrType,
-            this.property,
-            this.value});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAttributes.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvAttributes.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvAttributes.Location = new System.Drawing.Point(6, 19);
-            this.dgvAttributes.Name = "dgvAttributes";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAttributes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvAttributes.RowHeadersWidth = 51;
-            this.dgvAttributes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttributes.Size = new System.Drawing.Size(474, 340);
-            this.dgvAttributes.TabIndex = 2;
-            // 
-            // attrNum
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            this.attrNum.DefaultCellStyle = dataGridViewCellStyle2;
-            this.attrNum.HeaderText = "ID";
-            this.attrNum.MinimumWidth = 6;
-            this.attrNum.Name = "attrNum";
-            this.attrNum.ReadOnly = true;
-            this.attrNum.Width = 50;
-            // 
-            // attrType
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            this.attrType.DefaultCellStyle = dataGridViewCellStyle3;
-            this.attrType.HeaderText = "Type";
-            this.attrType.MinimumWidth = 6;
-            this.attrType.Name = "attrType";
-            this.attrType.ReadOnly = true;
-            this.attrType.Width = 80;
-            // 
-            // property
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            this.property.DefaultCellStyle = dataGridViewCellStyle4;
-            this.property.HeaderText = "Property";
-            this.property.MinimumWidth = 6;
-            this.property.Name = "property";
-            this.property.ReadOnly = true;
-            this.property.Width = 125;
-            // 
-            // value
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            this.value.DefaultCellStyle = dataGridViewCellStyle5;
-            this.value.HeaderText = "Value";
-            this.value.MinimumWidth = 6;
-            this.value.Name = "value";
-            this.value.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.value.Width = 320;
-            // 
             // tabBarcode
             // 
             this.tabBarcode.AutoScroll = true;
@@ -1949,7 +1715,6 @@ namespace Scanner_SDK_Sample_Application
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCtrl.Controls.Add(this.tabBarcode);
-            this.tabCtrl.Controls.Add(this.tabRsm);
             this.tabCtrl.Controls.Add(this.tabConfig);
             this.tabCtrl.Controls.Add(this.tabScan2Connect);
             this.tabCtrl.Controls.Add(this.tabMisc);
@@ -2019,11 +1784,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpScannerProp.PerformLayout();
             this.grpElectricFenceCustomTone.ResumeLayout(false);
             this.grpElectricFenceCustomTone.PerformLayout();
-            this.tabRsm.ResumeLayout(false);
-            this.grpRSM.ResumeLayout(false);
-            this.grpBoxClrSlect.ResumeLayout(false);
-            this.grpBoxSetRset.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).EndInit();
             this.tabBarcode.ResumeLayout(false);
             this.tabBarcode.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2175,22 +1935,6 @@ namespace Scanner_SDK_Sample_Application
         private System.Windows.Forms.Button buttonElectricFenceWavFileUpload;
         private System.Windows.Forms.TextBox textBoxElectricFenceWaveFile;
         private System.Windows.Forms.Button buttonElectricFenceWavFileBrowse;
-        private System.Windows.Forms.TabPage tabRsm;
-        private System.Windows.Forms.GroupBox grpRSM;
-        private System.Windows.Forms.GroupBox grpBoxClrSlect;
-        private System.Windows.Forms.Button btnClearAll;
-        private System.Windows.Forms.Button btnSelectAll;
-        private System.Windows.Forms.GroupBox grpBoxSetRset;
-        private System.Windows.Forms.Button btnGetAll;
-        private System.Windows.Forms.Button btnGet;
-        private System.Windows.Forms.Button btnGetNext;
-        private System.Windows.Forms.Button btnSet;
-        private System.Windows.Forms.Button btnStore;
-        private System.Windows.Forms.DataGridView dgvAttributes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attrNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attrType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn property;
-        private System.Windows.Forms.DataGridViewTextBoxColumn value;
         private System.Windows.Forms.TabPage tabBarcode;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
