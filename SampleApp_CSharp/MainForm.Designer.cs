@@ -92,16 +92,6 @@ namespace Scanner_SDK_Sample_Application
             this.lblUserBank = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.tabScale = new System.Windows.Forms.TabPage();
-            this.grpScale = new System.Windows.Forms.GroupBox();
-            this.lblScalStatusDesc = new System.Windows.Forms.Label();
-            this.txtWeightUnit = new System.Windows.Forms.TextBox();
-            this.txtWeight = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSystemRest = new System.Windows.Forms.Button();
-            this.btnZeroScale = new System.Windows.Forms.Button();
-            this.btnReadWeight = new System.Windows.Forms.Button();
             this.tabMisc = new System.Windows.Forms.TabPage();
             this.grpMiscOther = new System.Windows.Forms.GroupBox();
             this.grpSCdcSwitch = new System.Windows.Forms.GroupBox();
@@ -182,8 +172,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpOutXml.SuspendLayout();
             this.tabSSW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusIcon)).BeginInit();
-            this.tabScale.SuspendLayout();
-            this.grpScale.SuspendLayout();
             this.tabMisc.SuspendLayout();
             this.grpMiscOther.SuspendLayout();
             this.grpSCdcSwitch.SuspendLayout();
@@ -811,105 +799,6 @@ namespace Scanner_SDK_Sample_Application
             this.label23.Size = new System.Drawing.Size(74, 13);
             this.label23.TabIndex = 10;
             this.label23.Text = "Scan barcode";
-            // 
-            // tabScale
-            // 
-            this.tabScale.Controls.Add(this.grpScale);
-            this.tabScale.Location = new System.Drawing.Point(4, 22);
-            this.tabScale.Name = "tabScale";
-            this.tabScale.Padding = new System.Windows.Forms.Padding(3);
-            this.tabScale.Size = new System.Drawing.Size(511, 468);
-            this.tabScale.TabIndex = 8;
-            this.tabScale.Text = "Scale";
-            this.tabScale.UseVisualStyleBackColor = true;
-            // 
-            // grpScale
-            // 
-            this.grpScale.Controls.Add(this.lblScalStatusDesc);
-            this.grpScale.Controls.Add(this.txtWeightUnit);
-            this.grpScale.Controls.Add(this.txtWeight);
-            this.grpScale.Controls.Add(this.label2);
-            this.grpScale.Controls.Add(this.label1);
-            this.grpScale.Controls.Add(this.btnSystemRest);
-            this.grpScale.Controls.Add(this.btnZeroScale);
-            this.grpScale.Controls.Add(this.btnReadWeight);
-            this.grpScale.Location = new System.Drawing.Point(6, 6);
-            this.grpScale.Name = "grpScale";
-            this.grpScale.Size = new System.Drawing.Size(493, 456);
-            this.grpScale.TabIndex = 20;
-            this.grpScale.TabStop = false;
-            // 
-            // lblScalStatusDesc
-            // 
-            this.lblScalStatusDesc.AutoSize = true;
-            this.lblScalStatusDesc.Location = new System.Drawing.Point(91, 216);
-            this.lblScalStatusDesc.Name = "lblScalStatusDesc";
-            this.lblScalStatusDesc.Size = new System.Drawing.Size(0, 13);
-            this.lblScalStatusDesc.TabIndex = 21;
-            // 
-            // txtWeightUnit
-            // 
-            this.txtWeightUnit.Location = new System.Drawing.Point(293, 144);
-            this.txtWeightUnit.Name = "txtWeightUnit";
-            this.txtWeightUnit.ReadOnly = true;
-            this.txtWeightUnit.Size = new System.Drawing.Size(100, 20);
-            this.txtWeightUnit.TabIndex = 4;
-            // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(94, 144);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.ReadOnly = true;
-            this.txtWeight.Size = new System.Drawing.Size(100, 20);
-            this.txtWeight.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(307, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Weight Unit";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Weight Measured";
-            // 
-            // btnSystemRest
-            // 
-            this.btnSystemRest.Location = new System.Drawing.Point(321, 24);
-            this.btnSystemRest.Name = "btnSystemRest";
-            this.btnSystemRest.Size = new System.Drawing.Size(128, 23);
-            this.btnSystemRest.TabIndex = 2;
-            this.btnSystemRest.Text = "Reset Scale";
-            this.btnSystemRest.UseVisualStyleBackColor = true;
-            this.btnSystemRest.Click += new System.EventHandler(this.btnSystemRest_Click);
-            // 
-            // btnZeroScale
-            // 
-            this.btnZeroScale.Location = new System.Drawing.Point(167, 24);
-            this.btnZeroScale.Name = "btnZeroScale";
-            this.btnZeroScale.Size = new System.Drawing.Size(128, 23);
-            this.btnZeroScale.TabIndex = 1;
-            this.btnZeroScale.Text = "Zero scale";
-            this.btnZeroScale.UseVisualStyleBackColor = true;
-            this.btnZeroScale.Click += new System.EventHandler(this.btnZeroScale_Click);
-            // 
-            // btnReadWeight
-            // 
-            this.btnReadWeight.Location = new System.Drawing.Point(17, 24);
-            this.btnReadWeight.Name = "btnReadWeight";
-            this.btnReadWeight.Size = new System.Drawing.Size(128, 23);
-            this.btnReadWeight.TabIndex = 0;
-            this.btnReadWeight.Text = "Read weight";
-            this.btnReadWeight.UseVisualStyleBackColor = true;
-            this.btnReadWeight.Click += new System.EventHandler(this.btnReadWeight_Click);
             // 
             // tabMisc
             // 
@@ -1718,7 +1607,6 @@ namespace Scanner_SDK_Sample_Application
             this.tabCtrl.Controls.Add(this.tabConfig);
             this.tabCtrl.Controls.Add(this.tabScan2Connect);
             this.tabCtrl.Controls.Add(this.tabMisc);
-            this.tabCtrl.Controls.Add(this.tabScale);
             this.tabCtrl.Controls.Add(this.tabSSW);
             this.tabCtrl.Controls.Add(this.tabXml);
             this.tabCtrl.Location = new System.Drawing.Point(473, 12);
@@ -1758,9 +1646,6 @@ namespace Scanner_SDK_Sample_Application
             this.tabSSW.ResumeLayout(false);
             this.tabSSW.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusIcon)).EndInit();
-            this.tabScale.ResumeLayout(false);
-            this.grpScale.ResumeLayout(false);
-            this.grpScale.PerformLayout();
             this.tabMisc.ResumeLayout(false);
             this.grpMiscOther.ResumeLayout(false);
             this.grpSCdcSwitch.ResumeLayout(false);
@@ -1873,16 +1758,6 @@ namespace Scanner_SDK_Sample_Application
         private System.Windows.Forms.Label lblUserBank;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TabPage tabScale;
-        private System.Windows.Forms.GroupBox grpScale;
-        private System.Windows.Forms.Label lblScalStatusDesc;
-        private System.Windows.Forms.TextBox txtWeightUnit;
-        private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSystemRest;
-        private System.Windows.Forms.Button btnZeroScale;
-        private System.Windows.Forms.Button btnReadWeight;
         private System.Windows.Forms.TabPage tabMisc;
         private System.Windows.Forms.GroupBox grpMiscOther;
         private System.Windows.Forms.GroupBox grpSCdcSwitch;

@@ -1328,7 +1328,6 @@ namespace Scanner_SDK_Sample_Application
             grpElectricFenceCustomTone.Enabled = bEnable;
             grpCustomDecodeTone.Enabled = bEnable;
             grpMiscOther.Enabled = bEnable;
-            grpScale.Enabled = bEnable;
 
             grpScan2Connect.Enabled = bEnable;
         }
@@ -1751,54 +1750,7 @@ namespace Scanner_SDK_Sample_Application
         byte[] ScaleConfig = new byte[5];
 
 
-        private void btnReadWeight_Click(object sender, EventArgs e)
-        {
-            int status = STATUS_FALSE;
-            string inXml = "";
-            string outXml = "";
-            int opCode = SCALE_READ_WEIGHT;
-
-            inXml = GetScannerIDXml();
-            ExecCmd(opCode, ref inXml, out outXml, out status);
-            UpdateOutXml(outXml);
-
-            string weight = "";
-            string weightMode = "";
-            int scalStat = -1;
-            m_xml.ReadXmlString_Scale(outXml, out weight, out weightMode, out scalStat);
-            txtWeight.Text = weight;
-            txtWeightUnit.Text = weightMode;
-
-            switch (scalStat)
-            {
-                case 0:
-                    lblScalStatusDesc.Text = "Scale Not Enabled";
-                    break;
-                case 1:
-                    lblScalStatusDesc.Text = "Scale Not Ready";
-                    break;
-                case 2:
-                    lblScalStatusDesc.Text = "Stable Weight OverLimit";
-                    break;
-                case 3:
-                    lblScalStatusDesc.Text = "Stable Weight Under Zero";
-                    break;
-                case 4:
-                    lblScalStatusDesc.Text = "Non Stable Weight";
-                    break;
-                case 5:
-                    lblScalStatusDesc.Text = "Stable Zero Weight";
-                    break;
-                case 6:
-                    lblScalStatusDesc.Text = "Stable NonZero Weight";
-                    break;
-                default:
-                    lblScalStatusDesc.Text = "Scale Unknown Status";
-                    break;
-            }
-
-            DisplayResult(status, "SCALE_READ_WEIGHT");
-        }
+        
 
         private void btnZeroScale_Click(object sender, EventArgs e)
         {
