@@ -75,8 +75,6 @@ namespace Scanner_SDK_Sample_Application
             }
 
             // Register events for COM services
-            m_pCoreScanner.ImageEvent += new CoreScanner._ICoreScannerEvents_ImageEventEventHandler(OnImageEvent);
-            m_pCoreScanner.VideoEvent += new CoreScanner._ICoreScannerEvents_VideoEventEventHandler(OnVideoEvent);
             m_pCoreScanner.BarcodeEvent += new CoreScanner._ICoreScannerEvents_BarcodeEventEventHandler(OnBarcodeEvent);
             m_pCoreScanner.PNPEvent += new CoreScanner._ICoreScannerEvents_PNPEventEventHandler(OnPNPEvent);
             m_pCoreScanner.ScanRMDEvent += new CoreScanner._ICoreScannerEvents_ScanRMDEventEventHandler(OnScanRMDEvent);
@@ -693,7 +691,6 @@ namespace Scanner_SDK_Sample_Application
             grpTrigger.Enabled = bEnable;
 
             txtBarcode.Enabled = bEnable;
-            grpImageVideo.Enabled = bEnable;
             grpScnActions.Enabled = bEnable;
 
             grpRSM.Enabled = bEnable; //get line disable, select line enable
@@ -769,8 +766,6 @@ namespace Scanner_SDK_Sample_Application
         {
             if (IsScannerConnected())
             {
-                pbxImageVideo.Image = null;
-                pbxImageVideo.Refresh();
                 txtOutXml.Clear();
 
                 string inXml = GetScannerIDXml();
@@ -818,67 +813,6 @@ namespace Scanner_SDK_Sample_Application
         private void btnScannerDisable_Click(object sender, EventArgs e)
         {
             OnDisableScanner();
-        }
-
-        /// <summary>
-        /// Sends DEVICE_CAPTURE_IMAGE
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnImage_Click(object sender, EventArgs e)
-        {
-            // PerformOnJpg(sender, e);//set default image type
-            PerformBtnImageClick(sender, e);
-        }
-
-        /// <summary>
-        /// Sends DEVICE_CAPTURE_VIDEO
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnVideo_Click(object sender, EventArgs e)
-        {
-            PerformBtnVideoClick(sender, e);
-        }
-
-        /// <summary>
-        /// Sends DEVICE_SET_PARAMETERS with VIDEOVIEWFINDER_ON/OFF
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnVideoViewFinderEnable(object sender, EventArgs e)
-        {
-            PerformOnVideoViewFinderEnable(sender, e);
-        }
-
-        /// <summary>
-        /// Sends DEVICE_SET_PARAMETERS with JPEG
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnJpg(object sender, EventArgs e)
-        {
-            PerformOnJpg(sender, e);
-        }
-
-        /// <summary>
-        /// Sends DEVICE_SET_PARAMETERS with TIFF
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnTiff(object sender, EventArgs e)
-        {
-            PerformOnTiff(sender, e);
-        }
-
-        /// <summary>
-        /// Sends DEVICE_SET_PARAMETERS with BMP
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnBmp(object sender, EventArgs e)
-        {
-            PerformOnBmp(sender, e);
         }
 
         /// <summary>
@@ -1163,9 +1097,6 @@ namespace Scanner_SDK_Sample_Application
         private void lstvScanners_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool bEnable = false;
-            rdoJPG.Checked = false;
-            rdoTIFF.Checked = false;
-            rdoBMP.Checked = false;
             string scnrMode = null;
 
             if (1 == lstvScanners.SelectedItems.Count)
@@ -1222,14 +1153,6 @@ namespace Scanner_SDK_Sample_Application
                     cmbMode.Items.Add("USB-IBMTT");
                 }
                 cmbMode.SelectedIndex = 0;
-                if (scnrMode.CompareTo("SNAPI") == 0 || scnrMode.CompareTo("SSI") == 0 || scnrMode.CompareTo("SSI_BT") == 0 )
-                {                    
-                    btnAbortImageXfer.Enabled = true;
-                }
-                else
-                {
-                    btnAbortImageXfer.Enabled = false;
-                }
             }
         }
 
@@ -1302,10 +1225,6 @@ namespace Scanner_SDK_Sample_Application
             Disconnect();
         }
 
-        private void btnAbortImageXfer_Click(object sender, EventArgs e)
-        {
-            PerformBtnAbortImageXferClick(sender, e);
-        }
 
         private string GetSelectedScannerID()
         {
@@ -1408,10 +1327,6 @@ namespace Scanner_SDK_Sample_Application
             GetLanguageConfigInfo();
         }
 
-        private void btnSveImge_Click(object sender, EventArgs e)
-        {
-            PerformBtnSveImgeClick(sender, e);
-        }
 
         private void btnSet_Click(object sender, EventArgs e)
         {
@@ -1555,7 +1470,6 @@ namespace Scanner_SDK_Sample_Application
             grpTrigger.Enabled = bEnable;
             grpboxBarcodeLbl.Enabled = bEnable;
             txtBarcode.Enabled = bEnable;
-            grpImageVideo.Enabled = bEnable;
             grpScnActions.Enabled = bEnable;
             grpRSM.Enabled = bEnable;
             gbAdvanced.Enabled = bEnable;
@@ -1566,7 +1480,6 @@ namespace Scanner_SDK_Sample_Application
             grpScale.Enabled = bEnable;
             grpIDC.Enabled = bEnable;
             grpScan2Connect.Enabled = bEnable;
-            pbxImageVideo.Image = null;
         }
 
         private void GetSelectedScannerTypes()
@@ -1982,10 +1895,6 @@ namespace Scanner_SDK_Sample_Application
             DisplayResult(iStatus, "KEYBOARD_EMULATOR_SET_LOCALE");
         }
 
-        private void btnBarcode_Click(object sender, EventArgs e)
-        {
-            PerformBtnBarcodeClick(sender, e);
-        }
 
         //------------- Scale related code-------------------------------------
         byte[] ScaleConfig = new byte[5];
@@ -2399,6 +2308,5 @@ namespace Scanner_SDK_Sample_Application
             ExecCmd(opcode, ref inXML, out outXml, out status);
             DisplayResult(status, "ERASE_ELECTRIC_FENCE_CUSTOM_TONE");
         }
-
     } 
 }

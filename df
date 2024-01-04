@@ -1,0 +1,81 @@
+[33mcommit ac054ce58ce1bc063fdcbab4487242fcde2e599a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: skiddzie <aidanthe1@gmailcom>
+Date:   Thu Jan 4 13:35:31 2024 -0500
+
+    init
+
+[33mcommit a53b92563d7ef7998c17bb7cdb027748a8b604b1[m
+Author: Eranga Tennakoon <41563916+erangazebra@users.noreply.github.com>
+Date:   Wed May 5 15:11:17 2021 +0530
+
+    _CoreScanner_i.c added into the source in C++ sample application.
+
+[33mcommit 4715cb432f50be77b8b88eeaadb07764d3f02d2f[m
+Author: Eranga Tennakoon <41563916+erangazebra@users.noreply.github.com>
+Date:   Wed May 5 14:43:57 2021 +0530
+
+    Barcode Scanner SDK for Windows v3.6.6.0 Release
+
+[33mcommit d050ab32490ef386b1d542801229da5ed138bbc9[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Thu Oct 15 20:02:04 2020 +0530
+
+    Repostory details updated.
+
+[33mcommit 271da754e23d2ec741dadfde34dfc90c7cd3ba8e[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Mon Sep 28 19:32:05 2020 +0530
+
+    Barcode Scanner SDK for Windows v3.6.1.0 Release
+
+[33mcommit 104db5d912798ba4716bf335d434ee0910d6e4a3[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Mon Sep 28 18:15:03 2020 +0530
+
+    Meta content of the repository updated
+
+[33mcommit 339f612ed32dd4f9be14e5cf635539b2bb9db4fa[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Tue Jul 7 14:10:06 2020 +0530
+
+    v3.5.4.0 release.
+
+[33mcommit fdebf23c4c8314ab63490ba31dacc41748887172[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Tue Jan 21 20:07:49 2020 +0530
+
+    SDK v3.5.1.0 release.
+
+[33mcommit dc2e97f6933d7336e7f055abd137f06d19c67de3[m
+Author: Eranga Tennakoon <gqcd86@zebra.com>
+Date:   Thu Jul 18 18:53:36 2019 +0530
+
+    End User License Agreement updated
+    
+    End User License Agreement updated
+
+[33mcommit 05c230cf7c3f20bea951292b985fb9b7fd789ca8[m
+Author: Eranga Tennakoon <eranga.tennakoon@zebra.com>
+Date:   Mon Jun 10 13:31:34 2019 +0530
+
+    Update readme file
+    
+    Co-Authored-By: Eranga Tennakoon <zebradcs@users.noreply.github.com>
+
+[33mcommit 04692f13146f5dbca98bd9e7f5121d99d683fc8f[m
+Author: Eranga Tennakoon <GQCD86@zebra.com>
+Date:   Mon Jun 10 12:19:18 2019 +0530
+
+    Initial source to repository
+
+[33mcommit 7f9d3e47b0d8781b98c4f513668ebb6eb46fd2d9[m
+Author: Eranga Tennakoon <51589158+zebradcs@users.noreply.github.com>
+Date:   Mon Jun 10 12:04:38 2019 +0530
+
+    Update README.md
+
+[33mcommit 3e3b6bc3c671c0a178c4a85b59b6fa36dfcd15a4[m
+Author: Eranga Tennakoon <51589158+zebradcs@users.noreply.github.com>
+Date:   Mon Jun 10 12:00:31 2019 +0530
+
+    Initial commit

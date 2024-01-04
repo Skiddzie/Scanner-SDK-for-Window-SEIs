@@ -146,9 +146,6 @@
     <Compile Include="ViewBarcode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewImageVideo.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ViewMiscellaneous.cs">
       <SubType>Form</SubType>
     </Compile>
