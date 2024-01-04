@@ -177,34 +177,6 @@ namespace Scanner_SDK_Sample_Application
             this.attrType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.property = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabScnAction = new System.Windows.Forms.TabPage();
-            this.grpScnActions = new System.Windows.Forms.GroupBox();
-            this.grpPagerMotor = new System.Windows.Forms.GroupBox();
-            this.lblPagerMotorTimeout = new System.Windows.Forms.Label();
-            this.txtPagerMotorDuration = new System.Windows.Forms.TextBox();
-            this.btnEnablePagerMotor = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnDisconnect = new System.Windows.Forms.Button();
-            this.grpHVS = new System.Windows.Forms.GroupBox();
-            this.cmbMode = new System.Windows.Forms.ComboBox();
-            this.chkShmPermChange = new System.Windows.Forms.CheckBox();
-            this.chkShmSilentSwitch = new System.Windows.Forms.CheckBox();
-            this.btnSwitchHostMode = new System.Windows.Forms.Button();
-            this.grpReboot = new System.Windows.Forms.GroupBox();
-            this.btnRebootScanner = new System.Windows.Forms.Button();
-            this.grpEnbDisScanner = new System.Windows.Forms.GroupBox();
-            this.btnScannerDisable = new System.Windows.Forms.Button();
-            this.btnScannerEnable = new System.Windows.Forms.Button();
-            this.grpBeeper = new System.Windows.Forms.GroupBox();
-            this.comboBeep = new System.Windows.Forms.ComboBox();
-            this.btnSoundBeeper = new System.Windows.Forms.Button();
-            this.grpLed = new System.Windows.Forms.GroupBox();
-            this.cmbLed = new System.Windows.Forms.ComboBox();
-            this.btnLedOff = new System.Windows.Forms.Button();
-            this.btnLedOn = new System.Windows.Forms.Button();
-            this.grpAim = new System.Windows.Forms.GroupBox();
-            this.btnAimOn = new System.Windows.Forms.Button();
-            this.btnAimOff = new System.Windows.Forms.Button();
             this.tabBarcode = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -255,16 +227,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpBoxClrSlect.SuspendLayout();
             this.grpBoxSetRset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).BeginInit();
-            this.tabScnAction.SuspendLayout();
-            this.grpScnActions.SuspendLayout();
-            this.grpPagerMotor.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.grpHVS.SuspendLayout();
-            this.grpReboot.SuspendLayout();
-            this.grpEnbDisScanner.SuspendLayout();
-            this.grpBeeper.SuspendLayout();
-            this.grpLed.SuspendLayout();
-            this.grpAim.SuspendLayout();
             this.tabBarcode.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpBoxLanguage.SuspendLayout();
@@ -344,7 +306,6 @@ namespace Scanner_SDK_Sample_Application
             this.combSlcrScnr.Name = "combSlcrScnr";
             this.combSlcrScnr.Size = new System.Drawing.Size(183, 21);
             this.combSlcrScnr.TabIndex = 1;
-            this.combSlcrScnr.SelectedIndexChanged += new System.EventHandler(this.combSlcrScnr_SelectedIndexChanged);
             // 
             // grpScanners
             // 
@@ -380,7 +341,6 @@ namespace Scanner_SDK_Sample_Application
             this.lstvScanners.UseCompatibleStateImageBehavior = false;
             this.lstvScanners.View = System.Windows.Forms.View.Details;
             this.lstvScanners.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstvScanners_ItemSelectionChanged);
-            this.lstvScanners.SelectedIndexChanged += new System.EventHandler(this.lstvScanners_SelectedIndexChanged);
             // 
             // clmId
             // 
@@ -1779,334 +1739,6 @@ namespace Scanner_SDK_Sample_Application
             this.value.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.value.Width = 320;
             // 
-            // tabScnAction
-            // 
-            this.tabScnAction.Controls.Add(this.grpScnActions);
-            this.tabScnAction.Location = new System.Drawing.Point(4, 22);
-            this.tabScnAction.Name = "tabScnAction";
-            this.tabScnAction.Size = new System.Drawing.Size(511, 468);
-            this.tabScnAction.TabIndex = 5;
-            this.tabScnAction.Text = "Actions";
-            this.tabScnAction.UseVisualStyleBackColor = true;
-            // 
-            // grpScnActions
-            // 
-            this.grpScnActions.Controls.Add(this.grpPagerMotor);
-            this.grpScnActions.Controls.Add(this.groupBox4);
-            this.grpScnActions.Controls.Add(this.grpHVS);
-            this.grpScnActions.Controls.Add(this.grpReboot);
-            this.grpScnActions.Controls.Add(this.grpEnbDisScanner);
-            this.grpScnActions.Controls.Add(this.grpBeeper);
-            this.grpScnActions.Controls.Add(this.grpLed);
-            this.grpScnActions.Controls.Add(this.grpAim);
-            this.grpScnActions.Location = new System.Drawing.Point(3, 3);
-            this.grpScnActions.Name = "grpScnActions";
-            this.grpScnActions.Size = new System.Drawing.Size(500, 455);
-            this.grpScnActions.TabIndex = 41;
-            this.grpScnActions.TabStop = false;
-            // 
-            // grpPagerMotor
-            // 
-            this.grpPagerMotor.Controls.Add(this.lblPagerMotorTimeout);
-            this.grpPagerMotor.Controls.Add(this.txtPagerMotorDuration);
-            this.grpPagerMotor.Controls.Add(this.btnEnablePagerMotor);
-            this.grpPagerMotor.Location = new System.Drawing.Point(306, 267);
-            this.grpPagerMotor.Name = "grpPagerMotor";
-            this.grpPagerMotor.Size = new System.Drawing.Size(177, 175);
-            this.grpPagerMotor.TabIndex = 7;
-            this.grpPagerMotor.TabStop = false;
-            this.grpPagerMotor.Text = "Pager Motor";
-            // 
-            // lblPagerMotorTimeout
-            // 
-            this.lblPagerMotorTimeout.AutoSize = true;
-            this.lblPagerMotorTimeout.Location = new System.Drawing.Point(20, 76);
-            this.lblPagerMotorTimeout.Name = "lblPagerMotorTimeout";
-            this.lblPagerMotorTimeout.Size = new System.Drawing.Size(84, 13);
-            this.lblPagerMotorTimeout.TabIndex = 2;
-            this.lblPagerMotorTimeout.Text = "Duration (10 ms)";
-            // 
-            // txtPagerMotorDuration
-            // 
-            this.txtPagerMotorDuration.Location = new System.Drawing.Point(20, 95);
-            this.txtPagerMotorDuration.Name = "txtPagerMotorDuration";
-            this.txtPagerMotorDuration.Size = new System.Drawing.Size(127, 20);
-            this.txtPagerMotorDuration.TabIndex = 1;
-            this.txtPagerMotorDuration.Text = "10";
-            // 
-            // btnEnablePagerMotor
-            // 
-            this.btnEnablePagerMotor.Location = new System.Drawing.Point(20, 33);
-            this.btnEnablePagerMotor.Name = "btnEnablePagerMotor";
-            this.btnEnablePagerMotor.Size = new System.Drawing.Size(127, 23);
-            this.btnEnablePagerMotor.TabIndex = 0;
-            this.btnEnablePagerMotor.Text = "Start";
-            this.btnEnablePagerMotor.UseVisualStyleBackColor = true;
-            this.btnEnablePagerMotor.Click += new System.EventHandler(this.btnEnablePageMotor_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnDisconnect);
-            this.groupBox4.Location = new System.Drawing.Point(306, 85);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(177, 58);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Disconnect BT Scanner";
-            // 
-            // btnDisconnect
-            // 
-            this.btnDisconnect.Location = new System.Drawing.Point(41, 22);
-            this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
-            this.btnDisconnect.TabIndex = 0;
-            this.btnDisconnect.Text = "Disconnect";
-            this.btnDisconnect.UseVisualStyleBackColor = true;
-            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
-            // 
-            // grpHVS
-            // 
-            this.grpHVS.BackColor = System.Drawing.SystemColors.Window;
-            this.grpHVS.Controls.Add(this.cmbMode);
-            this.grpHVS.Controls.Add(this.chkShmPermChange);
-            this.grpHVS.Controls.Add(this.chkShmSilentSwitch);
-            this.grpHVS.Controls.Add(this.btnSwitchHostMode);
-            this.grpHVS.Location = new System.Drawing.Point(31, 267);
-            this.grpHVS.Name = "grpHVS";
-            this.grpHVS.Size = new System.Drawing.Size(261, 175);
-            this.grpHVS.TabIndex = 5;
-            this.grpHVS.TabStop = false;
-            this.grpHVS.Text = "Switch Host Variant";
-            // 
-            // cmbMode
-            // 
-            this.cmbMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMode.FormattingEnabled = true;
-            this.cmbMode.Location = new System.Drawing.Point(33, 35);
-            this.cmbMode.Name = "cmbMode";
-            this.cmbMode.Size = new System.Drawing.Size(204, 21);
-            this.cmbMode.TabIndex = 0;
-            // 
-            // chkShmPermChange
-            // 
-            this.chkShmPermChange.AutoSize = true;
-            this.chkShmPermChange.Location = new System.Drawing.Point(36, 95);
-            this.chkShmPermChange.Name = "chkShmPermChange";
-            this.chkShmPermChange.Size = new System.Drawing.Size(117, 17);
-            this.chkShmPermChange.TabIndex = 2;
-            this.chkShmPermChange.Text = "Permanent Change";
-            this.chkShmPermChange.UseVisualStyleBackColor = true;
-            // 
-            // chkShmSilentSwitch
-            // 
-            this.chkShmSilentSwitch.AutoSize = true;
-            this.chkShmSilentSwitch.Location = new System.Drawing.Point(35, 72);
-            this.chkShmSilentSwitch.Name = "chkShmSilentSwitch";
-            this.chkShmSilentSwitch.Size = new System.Drawing.Size(112, 17);
-            this.chkShmSilentSwitch.TabIndex = 1;
-            this.chkShmSilentSwitch.Text = "Silent Switch Host";
-            this.chkShmSilentSwitch.UseVisualStyleBackColor = true;
-            // 
-            // btnSwitchHostMode
-            // 
-            this.btnSwitchHostMode.Location = new System.Drawing.Point(33, 133);
-            this.btnSwitchHostMode.Name = "btnSwitchHostMode";
-            this.btnSwitchHostMode.Size = new System.Drawing.Size(117, 23);
-            this.btnSwitchHostMode.TabIndex = 3;
-            this.btnSwitchHostMode.Text = "Switch Host Mode";
-            this.btnSwitchHostMode.UseVisualStyleBackColor = true;
-            this.btnSwitchHostMode.Click += new System.EventHandler(this.btnSetReport_Click);
-            // 
-            // grpReboot
-            // 
-            this.grpReboot.BackColor = System.Drawing.SystemColors.Window;
-            this.grpReboot.Controls.Add(this.btnRebootScanner);
-            this.grpReboot.Location = new System.Drawing.Point(305, 19);
-            this.grpReboot.Name = "grpReboot";
-            this.grpReboot.Size = new System.Drawing.Size(178, 58);
-            this.grpReboot.TabIndex = 2;
-            this.grpReboot.TabStop = false;
-            this.grpReboot.Text = "Reboot Scanner";
-            // 
-            // btnRebootScanner
-            // 
-            this.btnRebootScanner.Location = new System.Drawing.Point(41, 21);
-            this.btnRebootScanner.Name = "btnRebootScanner";
-            this.btnRebootScanner.Size = new System.Drawing.Size(75, 23);
-            this.btnRebootScanner.TabIndex = 0;
-            this.btnRebootScanner.Text = "Reboot Scanner";
-            this.btnRebootScanner.UseVisualStyleBackColor = true;
-            this.btnRebootScanner.Click += new System.EventHandler(this.btnRebootScanner_Click);
-            // 
-            // grpEnbDisScanner
-            // 
-            this.grpEnbDisScanner.BackColor = System.Drawing.SystemColors.Window;
-            this.grpEnbDisScanner.Controls.Add(this.btnScannerDisable);
-            this.grpEnbDisScanner.Controls.Add(this.btnScannerEnable);
-            this.grpEnbDisScanner.Location = new System.Drawing.Point(31, 19);
-            this.grpEnbDisScanner.Name = "grpEnbDisScanner";
-            this.grpEnbDisScanner.Size = new System.Drawing.Size(261, 58);
-            this.grpEnbDisScanner.TabIndex = 0;
-            this.grpEnbDisScanner.TabStop = false;
-            this.grpEnbDisScanner.Text = "Enable/Disable Scanner";
-            // 
-            // btnScannerDisable
-            // 
-            this.btnScannerDisable.Location = new System.Drawing.Point(138, 21);
-            this.btnScannerDisable.Name = "btnScannerDisable";
-            this.btnScannerDisable.Size = new System.Drawing.Size(75, 23);
-            this.btnScannerDisable.TabIndex = 2;
-            this.btnScannerDisable.Text = "Disable";
-            this.btnScannerDisable.UseVisualStyleBackColor = true;
-            this.btnScannerDisable.Click += new System.EventHandler(this.btnScannerDisable_Click);
-            // 
-            // btnScannerEnable
-            // 
-            this.btnScannerEnable.Location = new System.Drawing.Point(51, 21);
-            this.btnScannerEnable.Name = "btnScannerEnable";
-            this.btnScannerEnable.Size = new System.Drawing.Size(75, 23);
-            this.btnScannerEnable.TabIndex = 1;
-            this.btnScannerEnable.Text = "Enable";
-            this.btnScannerEnable.UseVisualStyleBackColor = true;
-            this.btnScannerEnable.Click += new System.EventHandler(this.btnScannerEnable_Click);
-            // 
-            // grpBeeper
-            // 
-            this.grpBeeper.BackColor = System.Drawing.SystemColors.Window;
-            this.grpBeeper.Controls.Add(this.comboBeep);
-            this.grpBeeper.Controls.Add(this.btnSoundBeeper);
-            this.grpBeeper.Location = new System.Drawing.Point(31, 149);
-            this.grpBeeper.Name = "grpBeeper";
-            this.grpBeeper.Size = new System.Drawing.Size(261, 111);
-            this.grpBeeper.TabIndex = 3;
-            this.grpBeeper.TabStop = false;
-            this.grpBeeper.Text = "Beeper";
-            // 
-            // comboBeep
-            // 
-            this.comboBeep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBeep.FormattingEnabled = true;
-            this.comboBeep.Items.AddRange(new object[] {
-            "ONE SHORT HIGH",
-            "TWO SHORT HIGH",
-            "THREE SHORT HIGH",
-            "FOUR SHORT HIGH",
-            "FIVE SHORT HIGH",
-            "ONE SHORT LOW",
-            "TWO SHORT LOW",
-            "THREE SHORT LOW",
-            "FOUR SHORT LOW",
-            "FIVE SHORT LOW",
-            "ONE LONG HIGH",
-            "TWO LONG HIGH",
-            "THREE LONG HIGH",
-            "FOUR LONG HIGH",
-            "FIVE LONG HIGH",
-            "ONE LONG LOW",
-            "TWO LONG LOW",
-            "THREE LONG LOW",
-            "FOUR LONG LOW",
-            "FIVE LONG LOW",
-            "FAST HIGH LOW HIGH LOW",
-            "SLOW HIGH LOW HIGH LOW",
-            "HIGH LOW",
-            "LOW HIGH",
-            "HIGH LOW HIGH",
-            "LOW HIGH LOW",
-            "HIGH HIGH LOW LOW"});
-            this.comboBeep.Location = new System.Drawing.Point(87, 43);
-            this.comboBeep.Name = "comboBeep";
-            this.comboBeep.Size = new System.Drawing.Size(168, 21);
-            this.comboBeep.TabIndex = 0;
-            // 
-            // btnSoundBeeper
-            // 
-            this.btnSoundBeeper.Location = new System.Drawing.Point(6, 41);
-            this.btnSoundBeeper.Name = "btnSoundBeeper";
-            this.btnSoundBeeper.Size = new System.Drawing.Size(70, 23);
-            this.btnSoundBeeper.TabIndex = 1;
-            this.btnSoundBeeper.Text = "Beep";
-            this.btnSoundBeeper.UseVisualStyleBackColor = true;
-            this.btnSoundBeeper.Click += new System.EventHandler(this.btnSoundBeeper_Click);
-            // 
-            // grpLed
-            // 
-            this.grpLed.BackColor = System.Drawing.SystemColors.Window;
-            this.grpLed.Controls.Add(this.cmbLed);
-            this.grpLed.Controls.Add(this.btnLedOff);
-            this.grpLed.Controls.Add(this.btnLedOn);
-            this.grpLed.Location = new System.Drawing.Point(306, 149);
-            this.grpLed.Name = "grpLed";
-            this.grpLed.Size = new System.Drawing.Size(177, 111);
-            this.grpLed.TabIndex = 4;
-            this.grpLed.TabStop = false;
-            this.grpLed.Text = "LED";
-            // 
-            // cmbLed
-            // 
-            this.cmbLed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLed.FormattingEnabled = true;
-            this.cmbLed.Items.AddRange(new object[] {
-            "GREEN",
-            "YELLOW",
-            "RED"});
-            this.cmbLed.Location = new System.Drawing.Point(20, 30);
-            this.cmbLed.Name = "cmbLed";
-            this.cmbLed.Size = new System.Drawing.Size(127, 21);
-            this.cmbLed.TabIndex = 0;
-            // 
-            // btnLedOff
-            // 
-            this.btnLedOff.Location = new System.Drawing.Point(93, 70);
-            this.btnLedOff.Name = "btnLedOff";
-            this.btnLedOff.Size = new System.Drawing.Size(54, 23);
-            this.btnLedOff.TabIndex = 2;
-            this.btnLedOff.Text = "Off";
-            this.btnLedOff.UseVisualStyleBackColor = true;
-            this.btnLedOff.Click += new System.EventHandler(this.btnLedOff_Click);
-            // 
-            // btnLedOn
-            // 
-            this.btnLedOn.Location = new System.Drawing.Point(20, 70);
-            this.btnLedOn.Name = "btnLedOn";
-            this.btnLedOn.Size = new System.Drawing.Size(54, 23);
-            this.btnLedOn.TabIndex = 1;
-            this.btnLedOn.Text = "On";
-            this.btnLedOn.UseVisualStyleBackColor = true;
-            this.btnLedOn.Click += new System.EventHandler(this.btnLedOn_Click);
-            // 
-            // grpAim
-            // 
-            this.grpAim.BackColor = System.Drawing.SystemColors.Window;
-            this.grpAim.Controls.Add(this.btnAimOn);
-            this.grpAim.Controls.Add(this.btnAimOff);
-            this.grpAim.Location = new System.Drawing.Point(31, 85);
-            this.grpAim.Name = "grpAim";
-            this.grpAim.Size = new System.Drawing.Size(261, 58);
-            this.grpAim.TabIndex = 1;
-            this.grpAim.TabStop = false;
-            this.grpAim.Text = "Aim";
-            // 
-            // btnAimOn
-            // 
-            this.btnAimOn.Location = new System.Drawing.Point(51, 22);
-            this.btnAimOn.Name = "btnAimOn";
-            this.btnAimOn.Size = new System.Drawing.Size(75, 23);
-            this.btnAimOn.TabIndex = 0;
-            this.btnAimOn.Text = "Aim On";
-            this.btnAimOn.UseVisualStyleBackColor = true;
-            this.btnAimOn.Click += new System.EventHandler(this.btnAimOn_Click);
-            // 
-            // btnAimOff
-            // 
-            this.btnAimOff.Location = new System.Drawing.Point(138, 22);
-            this.btnAimOff.Name = "btnAimOff";
-            this.btnAimOff.Size = new System.Drawing.Size(75, 23);
-            this.btnAimOff.TabIndex = 1;
-            this.btnAimOff.Text = "Aim Off";
-            this.btnAimOff.UseVisualStyleBackColor = true;
-            this.btnAimOff.Click += new System.EventHandler(this.btnAimOff_Click);
-            // 
             // tabBarcode
             // 
             this.tabBarcode.AutoScroll = true;
@@ -2317,7 +1949,6 @@ namespace Scanner_SDK_Sample_Application
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCtrl.Controls.Add(this.tabBarcode);
-            this.tabCtrl.Controls.Add(this.tabScnAction);
             this.tabCtrl.Controls.Add(this.tabRsm);
             this.tabCtrl.Controls.Add(this.tabConfig);
             this.tabCtrl.Controls.Add(this.tabScan2Connect);
@@ -2393,18 +2024,6 @@ namespace Scanner_SDK_Sample_Application
             this.grpBoxClrSlect.ResumeLayout(false);
             this.grpBoxSetRset.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttributes)).EndInit();
-            this.tabScnAction.ResumeLayout(false);
-            this.grpScnActions.ResumeLayout(false);
-            this.grpPagerMotor.ResumeLayout(false);
-            this.grpPagerMotor.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.grpHVS.ResumeLayout(false);
-            this.grpHVS.PerformLayout();
-            this.grpReboot.ResumeLayout(false);
-            this.grpEnbDisScanner.ResumeLayout(false);
-            this.grpBeeper.ResumeLayout(false);
-            this.grpLed.ResumeLayout(false);
-            this.grpAim.ResumeLayout(false);
             this.tabBarcode.ResumeLayout(false);
             this.tabBarcode.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2572,34 +2191,6 @@ namespace Scanner_SDK_Sample_Application
         private System.Windows.Forms.DataGridViewTextBoxColumn attrType;
         private System.Windows.Forms.DataGridViewTextBoxColumn property;
         private System.Windows.Forms.DataGridViewTextBoxColumn value;
-        private System.Windows.Forms.TabPage tabScnAction;
-        private System.Windows.Forms.GroupBox grpScnActions;
-        private System.Windows.Forms.GroupBox grpPagerMotor;
-        private System.Windows.Forms.Label lblPagerMotorTimeout;
-        private System.Windows.Forms.TextBox txtPagerMotorDuration;
-        private System.Windows.Forms.Button btnEnablePagerMotor;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnDisconnect;
-        private System.Windows.Forms.GroupBox grpHVS;
-        private System.Windows.Forms.ComboBox cmbMode;
-        private System.Windows.Forms.CheckBox chkShmPermChange;
-        private System.Windows.Forms.CheckBox chkShmSilentSwitch;
-        private System.Windows.Forms.Button btnSwitchHostMode;
-        private System.Windows.Forms.GroupBox grpReboot;
-        private System.Windows.Forms.Button btnRebootScanner;
-        private System.Windows.Forms.GroupBox grpEnbDisScanner;
-        private System.Windows.Forms.Button btnScannerDisable;
-        private System.Windows.Forms.Button btnScannerEnable;
-        private System.Windows.Forms.GroupBox grpBeeper;
-        private System.Windows.Forms.ComboBox comboBeep;
-        private System.Windows.Forms.Button btnSoundBeeper;
-        private System.Windows.Forms.GroupBox grpLed;
-        private System.Windows.Forms.ComboBox cmbLed;
-        private System.Windows.Forms.Button btnLedOff;
-        private System.Windows.Forms.Button btnLedOn;
-        private System.Windows.Forms.GroupBox grpAim;
-        private System.Windows.Forms.Button btnAimOn;
-        private System.Windows.Forms.Button btnAimOff;
         private System.Windows.Forms.TabPage tabBarcode;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;

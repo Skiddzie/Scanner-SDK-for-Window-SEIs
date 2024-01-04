@@ -16,7 +16,6 @@ namespace Scanner_SDK_Sample_Application
 {
     public partial class frmScannerApp : Form
     {
-        Image imgCapturedImage;
         Bitmap idcImage;
         CCoreScannerClass m_pCoreScanner;
         bool m_bSuccessOpen;//Is open success
@@ -91,9 +90,7 @@ namespace Scanner_SDK_Sample_Application
             m_pCoreScanner.ParameterBarcode += new _ICoreScannerEvents_ParameterBarcodeEventHandler(OnParameterBarcodeEvent);
 
             comboFilterScnrs.SelectedIndex = 0;
-            comboBeep.SelectedIndex = 0;
             comboSCdcSHostMode.SelectedIndex = 0; //USB-IBMHID
-            cmbLed.SelectedIndex = 0;
             cmbImageSize.SelectedIndex = 1;
             cmbDefaultOption.SelectedIndex = 0;
             cmbProtocol.SelectedIndex = 0;
@@ -637,14 +634,12 @@ namespace Scanner_SDK_Sample_Application
             grpTrigger.Enabled = bEnable;
 
             txtBarcode.Enabled = bEnable;
-            grpScnActions.Enabled = bEnable;
 
             grpRSM.Enabled = bEnable; //get line disable, select line enable
             gbAdvanced.Enabled = bEnable;
             grpFrmWrUpdate.Enabled = bEnable;
             grpCustomDecodeTone.Enabled = bEnable;
             grpElectricFenceCustomTone.Enabled = bEnable;
-            grpHVS.Enabled = bEnable;
         }
 
         private string GetScannerIDXml()
@@ -786,30 +781,19 @@ namespace Scanner_SDK_Sample_Application
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSoundBeeper_Click(object sender, EventArgs e)
-        {
-            PerformBtnSoundBeeperClick(sender, e);
-        }
 
         /// <summary>
         /// Sends DEVICE_LED_ON
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLedOn_Click(object sender, EventArgs e)
-        {
-            PerformBtnLedOnClick(sender, e);
-        }
 
         /// <summary>
         /// Sends DEVICE_LED_OFF
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLedOff_Click(object sender, EventArgs e)
-        {
-            PerformBtnLedOffClick(sender, e);
-        }
+
 
         private void buttonFWBrowse_Click(object sender, EventArgs e)
         {
@@ -1040,7 +1024,7 @@ namespace Scanner_SDK_Sample_Application
             return m_bSuccessOpen;
         }
 
-        private void lstvScanners_SelectedIndexChanged(object sender, EventArgs e)
+/*        private void lstvScanners_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool bEnable = false;
             string scnrMode = null;
@@ -1100,7 +1084,7 @@ namespace Scanner_SDK_Sample_Application
                 }
                 cmbMode.SelectedIndex = 0;
             }
-        }
+        }*/
 
         /// <summary>
         /// Claims or releases a device
@@ -1191,11 +1175,6 @@ namespace Scanner_SDK_Sample_Application
             return strScannerID;
         }
 
-        private void btnSetReport_Click(object sender, EventArgs e)
-        {
-            PerformBtnSetReportClick(sender, e);
-        }
-
         private void btnGetDevTopology_Click(object sender, EventArgs e)
         {
             PerformBtnGetDevTopologyClick(sender, e);
@@ -1238,11 +1217,7 @@ namespace Scanner_SDK_Sample_Application
             txtResults.Clear();
         }
 
-        private void combSlcrScnr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstvScanners.Items[combSlcrScnr.SelectedIndex].Selected = true;
-            lstvScanners_SelectedIndexChanged(sender, e);
-        }
+
 
         private void SetOpenEnable()
         {
@@ -1416,7 +1391,6 @@ namespace Scanner_SDK_Sample_Application
             grpTrigger.Enabled = bEnable;
             grpboxBarcodeLbl.Enabled = bEnable;
             txtBarcode.Enabled = bEnable;
-            grpScnActions.Enabled = bEnable;
             grpRSM.Enabled = bEnable;
             gbAdvanced.Enabled = bEnable;
             grpFrmWrUpdate.Enabled = bEnable;
@@ -2108,11 +2082,6 @@ namespace Scanner_SDK_Sample_Application
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnEnablePageMotor_Click(object sender, EventArgs e)
-        {
-            PerformPagerMotorEableClick(sender, e);
-        }
-
         private void buttonElectricFenceWavFileBrowse_Click(object sender, EventArgs e)
         {
             openFileDialogWavFile.Title = "Electric Fence Custom Tone";

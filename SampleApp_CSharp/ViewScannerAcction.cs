@@ -43,33 +43,6 @@ namespace Scanner_SDK_Sample_Application
             }
         }
 
-        private void PerformBtnSoundBeeperClick(object sender, EventArgs e)
-        {
-            if (!IsScannerConnected())
-            {
-                return;
-            }
-            try
-            {
-                string inXml = "<inArgs>" +
-                                    GetOnlyScannerIDXml() +
-                                    "<cmdArgs>" +
-                                    "<arg-int>" + comboBeep.SelectedIndex 
-                                    + "</arg-int>" +
-                                    "</cmdArgs>" +
-                                    "</inArgs>";
-
-                int opCode = DEVICE_BEEP_CONTROL;
-                string outXml = "";
-                int status = STATUS_FALSE;
-                ExecCmd(opCode, ref inXml, out outXml, out status);
-                DisplayResult(status, "SET_ACTION");
-            }
-            catch
-            {
-                UpdateResults("Please select a beep from the list, default ONESHORTHI");
-            }
-        }
 
 
         /// <summary>
@@ -81,60 +54,6 @@ namespace Scanner_SDK_Sample_Application
         private void PerformPagerMotorTxtKeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void PerformPagerMotorEableClick(object sender, EventArgs e)
-        {
-            if (!IsScannerConnected())
-            {
-                return;
-            }
-            try
-            {              
-                double i = 0;
-                string pagerMotorDuration= txtPagerMotorDuration.Text;
-
-                if (pagerMotorDuration == "")
-                {
-                    pagerMotorDuration = "0";
-                    txtPagerMotorDuration.Text = "0";
-                }
-
-                bool isNumeric = double.TryParse(pagerMotorDuration, out i);
-                if (isNumeric)
-                {
-                    string inXml = "<inArgs>" +
-                         GetOnlyScannerIDXml() +
-                        "<cmdArgs>" +
-                            "<arg-xml>" +
-                                "<attrib_list>" +
-                                    "<attribute>" +
-                                        "<id>" + PAGER_MOTOR_ACTION + "</id>" +
-                                        "<datatype>" + "X" + "</datatype>" +
-                                        "<value>" + pagerMotorDuration + "</value>" +
-                                    "</attribute>" +
-                                "</attrib_list>" +
-                            "</arg-xml>" +
-                         "</cmdArgs>" +
-                         "</inArgs>";
-
-                    int opCode = RSM_ATTR_SET;
-                    string outXml = "";
-                    int status = STATUS_FALSE;
-                    ExecCmd(opCode, ref inXml, out outXml, out status);
-
-                    DisplayResult(status, "START_PAGER_MOTOR");
-                }
-                else
-                {
-                    UpdateResults("Please enter a numeric value for pager motor duration");
-                }               
-                
-            }
-            catch
-            {
-                UpdateResults("Please enter a numeric value for pager motor duration");
-            }
         }
 
         private void PerformBtnRebootScannerClick(object sender, EventArgs e)
@@ -168,116 +87,11 @@ namespace Scanner_SDK_Sample_Application
         }
 
 
-        private void PerformBtnLedOnClick(object sender, EventArgs e)
-        {
-            /*LEDs can be controlled with SET action command (RSM Action attribute) as well however currently some scanners like CS4070 does not support RSM action attributes.
-            Following commented code segment can be used to control LEDs of other scanners*/
-            bool isCS4070 = false;
-            if (IsScannerConnected())
-            {
-                foreach (var item in m_arScanners)
-                {
-                    if (item.SCANNERID == GetSelectedScannerID())
-                    {
-                        if (item.MODELNO.Contains("PL3300"))
-                        {
-                            isCS4070 = true;
-                        }
-                    }
-                }
+        
 
-                if (!isCS4070)
-                {
-                    int onLed = GetOnLedID();
-                    string inXml = "<inArgs>" +
-                                        GetOnlyScannerIDXml() +
-                                        "<cmdArgs>" +
-                                        "<arg-int>" + onLed.ToString() + "</arg-int>" +
-                                        "</cmdArgs>" +
-                                        "</inArgs>";
+        
 
-                    int opCode = SET_ACTION;
-                    string outXml = "";
-                    int status = STATUS_FALSE;
-                    ExecCmd(opCode, ref inXml, out outXml, out status);
-                    DisplayResult(status, "SET_ACTION");
-                }
-                else
-                {
-                    int onLed = GetOnLedID();
-                    string inXml = "<inArgs>" +
-                                        GetOnlyScannerIDXml() +
-                                        "<cmdArgs>" +
-                                        "<arg-int>" + onLed.ToString()
-                                        + "</arg-int>" +
-                                        "</cmdArgs>" +
-                                        "</inArgs>";
-
-                    int opCode = DEVICE_LED_ON;
-                    string outXml = "";
-                    int status = STATUS_FALSE;
-                    ExecCmd(opCode, ref inXml, out outXml, out status);
-                    DisplayResult(status, "DEVICE_LED_ON");
-                }
-            }
-
-        }
-
-        private void PerformBtnLedOffClick(object sender, EventArgs e)
-        {
-            /*LEDs can be controlled with SET action command (RSM Action attribute) as well however currently some scanners like CS4070 does not support RSM action attributes.
-             Following commented code segment can be used to control LEDs of other scanners*/
-            bool isCS4070 = false;
-            if (IsScannerConnected())
-            {
-                foreach (var item in m_arScanners)
-                {
-                    if (item.SCANNERID == GetSelectedScannerID())
-                    {
-                        if (item.MODELNO.Contains("PL3300"))
-                        {
-                            isCS4070 = true;
-                        }
-                    }
-                }
-
-                if (!isCS4070)
-                {
-                    int onLed = GetOffLedID();
-                    string inXml = "<inArgs>" +
-                                        GetOnlyScannerIDXml() +
-                                        "<cmdArgs>" +
-                                        "<arg-int>" + onLed.ToString() + "</arg-int>" +
-                                        "</cmdArgs>" +
-                                        "</inArgs>";
-
-                    int opCode = SET_ACTION;
-                    string outXml = "";
-                    int status = STATUS_FALSE;
-                    ExecCmd(opCode, ref inXml, out outXml, out status);
-                    DisplayResult(status, "SET_ACTION");
-                }
-                else
-                {
-                    int onLed = GetOffLedID();
-                    string inXml = "<inArgs>" +
-                                        GetOnlyScannerIDXml() +
-                                        "<cmdArgs>" +
-                                        "<arg-int>" + onLed.ToString()
-                                        + "</arg-int>" +
-                                        "</cmdArgs>" +
-                                        "</inArgs>";
-
-                    int opCode = DEVICE_LED_OFF;
-                    string outXml = "";
-                    int status = STATUS_FALSE;
-                    ExecCmd(opCode, ref inXml, out outXml, out status);
-                    DisplayResult(status, "DEVICE_LED_ON");
-                }
-            }
-        }
-
-        private void PerformBtnSetReportClick(object sender, EventArgs e)
+        /*private void PerformBtnSetReportClick(object sender, EventArgs e)
         {
             if (!IsScannerConnected())
             {
@@ -343,7 +157,7 @@ namespace Scanner_SDK_Sample_Application
             {
                 UpdateResults("");
             }
-        }
+        }*/
 
         private void PerformCDCSwitchModeClick(object sender, EventArgs e)
         {
@@ -439,42 +253,8 @@ namespace Scanner_SDK_Sample_Application
             }
         }
 
-        private int GetOnLedID()
-        {
-            int onLed = LED_1_ON;
-            if(cmbLed.SelectedIndex == 0)
-            {
-                onLed = LED_1_ON;
-            }
-            if (cmbLed.SelectedIndex == 1)
-            {
-                onLed = LED_2_ON;
-            }
-            if (cmbLed.SelectedIndex == 2)
-            {
-                onLed = LED_3_ON;
-            }
-            
-            return onLed;
-        }
+        
 
-        private int GetOffLedID()
-        {
-            int offLed = LED_1_OFF;
-            if (cmbLed.SelectedIndex == 0)
-            {
-                offLed = LED_1_OFF;
-            }
-            if (cmbLed.SelectedIndex == 1)
-            {
-                offLed = LED_2_OFF;
-            }
-            if (cmbLed.SelectedIndex == 2)
-            {
-                offLed = LED_3_OFF;
-            }
 
-            return offLed;
-        }
     }
 }
